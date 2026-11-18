@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>৪০ দিনের Spoken English Roadmap</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#1b2236;--mute:#667089;--line:#e3e7f1;--acc:#2f6fed;--accbg:#eaf1ff;--ok:#1f9d63;--okbg:#e8f7ef;--warn:#f59e0b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans Bengali',system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:780px;margin:0 auto;padding:18px 14px 70px}
+.hero{background:linear-gradient(135deg,#2f6fed,#6a4df0);color:#fff;border-radius:18px;padding:20px 18px;margin-bottom:14px}
+.hero h1{font-size:1.45rem;margin:0 0 4px}
+.hero p{margin:0;opacity:.9;font-size:.92rem}
+.prog{display:flex;align-items:center;gap:16px;margin-top:16px}
+.ring{width:84px;height:84px;flex:0 0 auto;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.stats{display:flex;gap:8px;flex:1}
+.stat{flex:1;background:rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;text-align:center}
+.stat b{display:block;font-size:1.2rem}
+.stat span{font-size:.72rem;opacity:.9}
+.cta{display:block;width:100%;margin-top:14px;border:0;border-radius:12px;padding:11px;font:inherit;font-weight:700;background:#fff;color:var(--acc);cursor:pointer}
+.how{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:14px;font-size:.9rem}
+.how b{display:block;margin-bottom:2px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none;position:sticky;top:0;background:var(--bg);z-index:5}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 12px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--ink);text-align:left;min-width:92px}
+.tab small{display:block;color:var(--mute);font-size:.72rem}
+.tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tab.on small{color:#dbe6ff}
+.tab .m{height:4px;border-radius:9px;background:#0001;margin-top:5px;overflow:hidden}
+.tab .m i{display:block;height:100%;background:var(--ok)}
+.ph{margin:10px 2px 12px}
+.ph h2{font-size:1.1rem;margin:0}
+.ph p{margin:2px 0 0;color:var(--mute);font-size:.88rem}
+.day{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.day.done{border-color:#bfe6d0}
+.dh{display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer}
+.badge{flex:0 0 auto;width:46px;height:46px;border-radius:12px;background:var(--accbg);color:var(--acc);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1.1}
+.badge small{font-size:.6rem;font-weight:600}
+.day.done .badge{background:var(--ok);color:#fff}
+.dt{flex:1;min-width:0}
+.dt b{display:block}
+.dt span{font-size:.8rem;color:var(--mute)}
+.mini{height:5px;background:var(--line);border-radius:9px;margin-top:6px;overflow:hidden}
+.mini i{display:block;height:100%;background:var(--ok);transition:width .25s}
+.chev{color:var(--mute);transition:transform .2s;font-size:1.3rem}
+.day.open>.dh .chev{transform:rotate(90deg)}
+.db{display:none;padding:0 12px 12px}
+.day.open>.db{display:block}
+.task{border:1px solid var(--line);border-radius:12px;margin-top:8px;background:#fff}
+.task.ck{background:var(--okbg);border-color:#bfe6d0}
+.th{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer}
+.th input{width:22px;height:22px;accent-color:var(--ok);flex:0 0 auto;cursor:pointer}
+.ic{font-size:1.25rem;flex:0 0 auto}
+.tt{flex:1;min-width:0}
+.tt b{display:block;font-size:.95rem}
+.tt span{font-size:.76rem;color:var(--mute)}
+.task.ck .tt b{text-decoration:line-through;text-decoration-color:#0003}
+.tb{display:none;padding:2px 14px 14px 14px;border-top:1px dashed var(--line);font-size:.92rem}
+.task.open>.tb{display:block}
+.task.open>.th .chev{transform:rotate(90deg)}
+.tb p{margin:10px 0 6px}
+.tb ul{margin:4px 0 8px;padding-left:20px}
+.tb li{margin:2px 0}
+.say{background:var(--accbg);border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.92rem}
+.say div{margin:2px 0}
+.rl{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.rl a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--acc);background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem;font-weight:600}
+.rl a:hover{background:var(--accbg)}
+.rl a small{display:block;font-weight:400;color:var(--mute);font-size:.74rem}
+.rl em{font-style:normal}
+.rlt{font-size:.78rem;color:var(--mute);margin-top:10px;font-weight:600}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px;color:var(--mute);font-size:.8rem}
+button.link{background:none;border:0;color:#c0392b;font:inherit;cursor:pointer;text-decoration:underline;padding:0}
+.confirm{display:none;gap:8px;align-items:center}
+.confirm button{font:inherit;border-radius:8px;border:1px solid var(--line);padding:4px 10px;cursor:pointer;background:var(--card)}
+.confirm .y{background:#c0392b;color:#fff;border-color:#c0392b}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:.9rem;transition:transform .3s;z-index:20;max-width:90%}
+.toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>৪০ দিনের Spoken English Roadmap</h1>
+    <p>৬টি ফেজ · প্রতিদিন ৬টি কাজ · প্রতিটি কাজের সাথে রিসোর্স</p>
+    <div class="prog">
+      <div class="ring">
+        <svg width="84" height="84" viewBox="0 0 84 84"><circle cx="42" cy="42" r="36" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="9"/><circle id="arc" cx="42" cy="42" r="36" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-dasharray="226.2" stroke-dashoffset="226.2" style="transition:stroke-dashoffset .4s"/></svg>
+        <b id="pct">০%</b>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="sDone">০</b><span>দিন শেষ</span></div>
+        <div class="stat"><b id="sLeft">৪০</b><span>বাকি</span></div>
+        <div class="stat"><b id="sStreak">০</b><span>টানা দিন</span></div>
+      </div>
+    </div>
+    <button class="cta" id="cont">▶ আজকের পাঠে যাও</button>
+  </div>
+
+  <div class="how"><b>কীভাবে ব্যবহার করবে</b>দিনের কার্ডে ট্যাপ করো → ৬টি কাজ দেখাবে → যেকোনো কাজে ট্যাপ করলে নির্দেশনা ও রিসোর্স খুলবে → শেষ হলে টিক দাও। ৬টি টিক দিলে দিন সম্পন্ন। (প্রতিদিন প্রায় ৬৫ মিনিট)</div>
+
+  <div class="tabs" id="tabs"></div>
+  <div class="ph" id="phase"></div>
+  <div id="days"></div>
+
+  <div class="foot">
+    <span>অগ্রগতি এই ব্রাউজারে সেভ থাকে।</span>
+    <span>
+      <button class="link" id="resetBtn">রিসেট করো</button>
+      <span class="confirm" id="confirm">নিশ্চিত? <button class="y" id="yes">হ্যাঁ</button><button id="no">না</button></span>
+    </span>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* [বাংলা শিরোনাম, ইংরেজি কীওয়ার্ড, ৩টি উদাহরণ বাক্য, বলার বিষয় (বাংলায়)] */
+const PHASES=[
+{n:"ভিত্তি",d:"উচ্চারণ, সহজ বাক্য আর নিজের পরিচয়",days:[
+ ["নিজের পরিচয় দাও","self introduction",["My name is Rina, and I live in Dhaka.","I am a teacher, and I love reading.","Nice to meet you. How about you?"],"নিজের নাম, কোথায় থাকো, কী করো ও কী ভালোবাসো — ৪–৫টি বাক্যে বলো।"],
+ ["Vowel sound ও উচ্চারণ","English vowel sounds",["Sit down, please. / Seat is here.","Full of food. / Fool me not.","Cat, cut, cot — say them slowly."],"৫টি করে মিনিমাল-পেয়ার (ship/sheep, full/fool) জোরে বলে রেকর্ড করো।"],
+ ["কঠিন ধ্বনি: th, v, w, r","th v w r pronunciation",["Thank you for the three things.","Very well, we will visit on Wednesday.","Run right to the red road."],"th, v, w, r আছে এমন ১০টি শব্দ বলো এবং নিজের উচ্চারণ ভিডিওর সাথে মেলাও।"],
+ ["বাক্য গঠন: am / is / are","English sentence structure",["I am happy today.","She is a good cook.","They are at home."],"আজকের আবহাওয়া, নিজের অনুভূতি ও ঘরের মানুষদের নিয়ে ৫টি বাক্য বলো।"],
+ ["Present Simple: দৈনন্দিন রুটিন","present simple daily routine",["I wake up at six every day.","She cooks breakfast for the kids.","We don't watch TV in the morning."],"সকাল থেকে রাত পর্যন্ত নিজের রুটিন ১ মিনিটে বলো।"],
+ ["সংখ্যা, সময়, তারিখ","numbers time dates",["It's half past seven.","My birthday is on the fifth of May.","The bill is one thousand two hundred taka."],"এখন কটা বাজে, আজ কত তারিখ, ফোন নম্বর ও দাম — ইংরেজিতে বলো।"],
+ ["Greetings ও Small Talk","greetings and small talk",["Hi, how's it going?","Long time no see! What have you been up to?","It was nice talking to you."],"অচেনা কারও সাথে প্রথম ৩০ সেকেন্ডের কথোপকথন কল্পনা করে বলো। সপ্তাহের রিভিউ করো।"]]},
+{n:"দৈনন্দিন বাক্য",d:"Tense, প্রশ্ন আর প্রতিদিনের শব্দভাণ্ডার",days:[
+ ["Present Continuous","present continuous tense",["I am cooking dinner right now.","The kids are playing outside.","What are you doing?"],"এই মুহূর্তে ঘরে সবাই কী করছে — ৫টি বাক্যে বর্ণনা করো।"],
+ ["Past Simple: গতকালের কথা","past simple tense",["I went to the market yesterday.","We watched a movie last night.","She didn't call me."],"গতকাল সারাদিন কী করেছ ১ মিনিটে বলো।"],
+ ["Irregular Verbs (২০টি)","irregular verbs",["I ate rice and fish.","He came late and said sorry.","They bought a new phone."],"go-went-gone, eat-ate-eaten ধরনের ১০টি verb দিয়ে নিজের বাক্য বানাও।"],
+ ["Future: will / going to","will vs going to",["I will call you tomorrow.","We are going to visit my aunt.","It will probably rain tonight."],"আগামী সপ্তাহে কী করবে — ৫টি পরিকল্পনা বলো।"],
+ ["Wh- Questions","wh questions English",["What do you do?","Where are you from?","Why did you come late?"],"কাল্পনিক ইন্টারভিউয়ে ৮টি প্রশ্ন করো ও উত্তর দাও।"],
+ ["Yes/No প্রশ্ন, Negative, can","yes no questions can cannot",["Do you like tea?","Can you help me, please?","I can't speak very fast yet."],"নিজের ৫টি যা পারো আর ৫টি যা পারো না — বলো।"],
+ ["ঘর ও খাবারের শব্দ","home and food vocabulary",["Please put the plates on the table.","The rice is too hot.","Could you pass me the salt?"],"নিজের রান্নাঘর ঘুরে ২০টি জিনিসের নাম ইংরেজিতে বলো। সপ্তাহের রিভিউ করো।"]]},
+{n:"শোনা ও অনুকরণ",d:"Shadowing, intonation আর স্বাভাবিক বাক্য",days:[
+ ["Shadowing শুরু","English shadowing technique",["Listen first, then repeat after the speaker.","Try to copy the rhythm, not only the words.","Speak a little after the speaker."],"১ মিনিটের একটি ভিডিও ৫ বার শ্যাডোইং করো, শেষবার রেকর্ড করো।"],
+ ["Common Phrasal Verbs","common phrasal verbs",["Please turn off the light.","I woke up late and ran out of time.","Let's catch up soon."],"৫টি phrasal verb দিয়ে নিজের জীবনের বাক্য বানাও।"],
+ ["Connectors: and, but, because, so","linking words because so but",["I was tired, so I slept early.","I like tea, but I don't like coffee.","She is happy because she passed."],"একটি ছোট গল্প বলো, প্রতিটি বাক্যে connector ব্যবহার করো।"],
+ ["Word Stress ও Intonation","word stress and intonation",["PHOtograph, phoTOgrapher, photoGRAPHic.","Are you COMing? (rising)","I'm FINE. (falling)"],"একই বাক্য ৩ ভিন্ন সুরে বলো: প্রশ্ন, বিস্ময়, সাধারণ।"],
+ ["Connected Speech","connected speech gonna wanna",["I'm gonna go now.","What do you wanna eat?","Give me a lot of it."],"৫টি বাক্য আস্তে ও স্বাভাবিক গতিতে — দু'ভাবেই বলো।"],
+ ["Polite Requests","polite requests English",["Could you help me, please?","Would you mind closing the window?","Excuse me, is this seat taken?"],"বাসা, রাস্তা ও দোকানে ৬টি ভদ্র অনুরোধ বলো।"],
+ ["পথ জিজ্ঞাসা ও সাহায্য চাওয়া","asking for directions English",["Excuse me, how do I get to the station?","Go straight and turn left.","It's next to the bank."],"নিজের বাড়ি থেকে বাজারের পথ ইংরেজিতে বোঝাও। সপ্তাহের রিভিউ করো।"]]},
+{n:"প্রবাহ তৈরি",d:"বর্ণনা, গল্প বলা আর বেশি সময় ধরে বলা",days:[
+ ["জায়গার বর্ণনা","describing a place English",["My room is small but cozy.","There is a big tree in front of my house.","It's very noisy near the road."],"নিজের এলাকা ১ মিনিটে বর্ণনা করো।"],
+ ["মানুষ ও অনুভূতির বর্ণনা","describing people and feelings",["He is tall, kind, and funny.","I feel nervous before speaking.","She looked really excited."],"পরিবারের একজনকে বর্ণনা করো — চেহারা, স্বভাব, কেমন লাগে।"],
+ ["অতীতের গল্প বলা","storytelling in English past",["Last year, I visited my village.","Suddenly, it started to rain.","In the end, everything was fine."],"জীবনের একটি স্মরণীয় ঘটনা শুরু-মাঝ-শেষ সাজিয়ে বলো।"],
+ ["Present Perfect","present perfect tense",["I have lived here for ten years.","She has already eaten.","Have you ever been to Cox's Bazar?"],"জীবনে কী কী করেছ — ৫টি 'I have…' বাক্য বলো।"],
+ ["তুলনা: bigger, the best","comparatives and superlatives",["This phone is cheaper than that one.","Dhaka is the busiest city in Bangladesh.","Tea is better than coffee for me."],"দুটি জিনিস বা জায়গার তুলনা করে ১ মিনিট বলো।"],
+ ["মত, কারণ ও উদাহরণ","giving opinions with reasons",["In my opinion, children should read daily.","For example, I read ten pages every night.","That's why I think it helps."],"'মোবাইল শিশুদের জন্য ভালো না খারাপ?' — মত, কারণ, উদাহরণসহ ১ মিনিট বলো।"],
+ ["২ মিনিটের টপিক টক","two minute speaking practice",["Let me tell you about my favorite day.","First of all… Secondly… Finally…","To sum up, it was a wonderful day."],"একটি বিষয় নিয়ে ২ মিনিট থামা ছাড়া বলো ও রেকর্ড করো। সপ্তাহের রিভিউ করো।"]]},
+{n:"বাস্তব কথোপকথন",d:"ফোন, বাজার, ডাক্তার, স্কুল — বাস্তব পরিস্থিতি",days:[
+ ["ফোনে কথা বলা","English phone conversation",["Hello, this is Rina speaking.","Could I speak to Mr. Karim, please?","Sorry, could you repeat that?"],"ফোনে অ্যাপয়েন্টমেন্ট নেওয়ার ভূমিকা-অভিনয় করো।"],
+ ["দোকান ও রেস্টুরেন্ট","shopping and restaurant English",["How much is this?","I'd like a cup of tea, please.","Can I have the bill, please?"],"দোকানে দরদাম ও রেস্টুরেন্টে অর্ডারের পুরো কথোপকথন বলো।"],
+ ["ডাক্তার ও স্বাস্থ্য","English at the doctor",["I have a headache and a fever.","How long have you had this?","Take this medicine twice a day."],"ডাক্তারকে নিজের (বা শিশুর) সমস্যা বোঝানোর কথোপকথন বলো।"],
+ ["বাচ্চা ও স্কুল নিয়ে কথা","talking about children school English",["My son is in class five.","How is my daughter doing in class?","She needs help with her homework."],"শিক্ষকের সাথে সন্তানের অগ্রগতি নিয়ে কথা বলার অভিনয় করো।"],
+ ["কাজ/পড়াশোনার কথোপকথন","workplace English conversation",["Could we reschedule the meeting?","I'll send you the details by evening.","Let me check and get back to you."],"নিজের কাজ বা পড়াশোনা সম্পর্কে ১ মিনিট বলো।"],
+ ["Role-play ও সপ্তাহ রিভিউ","English conversation practice role play",["Let's practice a real conversation.","Could you give me feedback?","Let me try that again."],"AI বা বন্ধুর সাথে ৫ মিনিট কথোপকথন করো, ভুলগুলো টুকে রাখো।"]]},
+{n:"আত্মবিশ্বাস",d:"ভুল শোধরানো, দ্রুত চিন্তা আর ফাইনাল পরীক্ষা",days:[
+ ["নিজের Common Mistakes ঠিক করো","common English mistakes Bengali speakers",["I am agree. ✗ → I agree. ✓","He don't know. ✗ → He doesn't know. ✓","I have 25 years. ✗ → I am 25. ✓"],"আগের রেকর্ডিং শুনে ৫টি পুনরাবৃত্ত ভুল লেখো ও সঠিকভাবে ৩ বার করে বলো।"],
+ ["Idioms ও Natural Phrases","common English idioms",["It's a piece of cake.","I'm all ears.","Let's call it a day."],"৫টি idiom দিয়ে নিজের পরিস্থিতির বাক্য বানাও।"],
+ ["প্রস্তুতি ছাড়া বলা (Impromptu)","impromptu speaking practice",["Let me think for a second.","That's a good question.","What I mean is…"],"র‍্যান্ডম একটি শব্দ নাও (যেমন 'rain') এবং ১ মিনিট অনর্গল বলো।"],
+ ["ভিডিও/খবরের সারাংশ","summarize a video in English",["The video is about…","The main point is…","In short, the speaker says that…"],"৩ মিনিটের ভিডিও দেখো, নিজের ভাষায় ১ মিনিটে সারাংশ বলো।"],
+ ["Mock Conversation","English speaking mock interview",["Tell me a little about yourself.","What are your strengths?","Where do you see yourself in five years?"],"কাউকে বা AI-কে দিয়ে ১০ মিনিটের মক কথোপকথন করো।"],
+ ["ফাইনাল ৫ মিনিটের স্পিচ","five minute speech English",["Good morning, everyone. Today I'll talk about…","My first point is…","Thank you for listening."],"নিজের পছন্দের বিষয়ে ৫ মিনিটের স্পিচ রেকর্ড করো, দিন ১-এর রেকর্ডিংয়ের সাথে তুলনা করো। পরবর্তী ৩০ দিনের লক্ষ্য ঠিক করো।"]]}
+];
+const q=encodeURIComponent;
+const yt=s=>"https://www.youtube.com/results?search_query="+q(s);
+function build(kw,ex,sp){return[
+ {ic:"📚",t:"শব্দ ও বাক্য শেখো",m:10,
+  d:"আজকের টপিকের ৫টি নতুন শব্দ/বাক্য ডায়েরিতে লেখো এবং অর্থসহ মুখস্থ করো। প্রতিটি শব্দ দিয়ে নিজের একটি বাক্য বানাও।",
+  ex:ex,
+  r:[["Cambridge Dictionary — শব্দের অর্থ ও উচ্চারণ","dictionary.cambridge.org","https://dictionary.cambridge.org/search/english/direct/?q="+q(kw)],
+     ["YouTube — "+kw+" vocabulary","ভিডিও লেসন",yt(kw+" vocabulary spoken English")]]},
+ {ic:"🧩",t:"প্যাটার্ন ও গ্রামার",m:10,
+  d:"আজকের টপিকের গঠন বুঝো: কখন ব্যবহার হয়, বাক্যের সাজ কেমন। ৩টি উদাহরণ দেখে একই ছাঁচে ৩টি নিজের বাক্য লেখো।",
+  ex:null,
+  r:[["British Council LearnEnglish — Grammar","learnenglish.britishcouncil.org","https://learnenglish.britishcouncil.org/grammar"],
+     ["YouTube — "+kw+" lesson","গ্রামার ব্যাখ্যা",yt(kw+" English lesson")]]},
+ {ic:"🎧",t:"শোনো",m:10,
+  d:"১০ মিনিট ইংরেজি শোনো (সাবটাইটেলসহ)। প্রথমবার পুরোটা বোঝার চেষ্টা, দ্বিতীয়বার নতুন শব্দ নোট করো।",
+  ex:null,
+  r:[["BBC 6 Minute English","ছোট পডকাস্ট + ট্রান্সক্রিপ্ট","https://www.bbc.co.uk/learningenglish/english/features/6-minute-english"],
+     ["ELLLO — বিভিন্ন উচ্চারণে শোনা","elllo.org","https://elllo.org/"],
+     ["YouTube — "+kw+" conversation","বাস্তব উদাহরণ",yt(kw+" English conversation")]]},
+ {ic:"🗣️",t:"Shadowing ও উচ্চারণ",m:10,
+  d:"স্পিকারের পরপরই একই সুর, গতি ও stress-এ বলো। কঠিন শব্দ আলাদা করে ৫ বার বলো।",
+  ex:ex,
+  r:[["YouGlish — বাস্তব মানুষের উচ্চারণ শোনো","youglish.com","https://youglish.com/pronounce/"+q(kw)+"/english"],
+     ["Rachel's English — উচ্চারণ লেসন","YouTube",yt("Rachel's English "+kw)]]},
+ {ic:"💬",t:"বলার অনুশীলন",m:15,
+  d:sp,
+  ex:null,
+  r:[["AI পার্টনারের সাথে অনুশীলন","claude.ai-তে লেখো: “আমার সাথে "+kw+" নিয়ে কথোপকথন করো ও আমার ভুল ঠিক করো”","https://claude.ai/"],
+     ["YouTube — "+kw+" sample answers","নমুনা উত্তর শুনে তুলনা করো",yt(kw+" speaking practice sample")]]},
+ {ic:"🎙️",t:"রেকর্ড ও রিভিউ",m:10,
+  d:"আজকের বলার অনুশীলন ১ মিনিট ফোনে রেকর্ড করো। শোনো এবং ২টি ভুল (উচ্চারণ/গ্রামার) লেখো, তারপর ঠিক করে আবার রেকর্ড করো। রেকর্ডিং সংরক্ষণ করো — ফাইনাল দিনে তুলনা করবে।",
+  ex:null,
+  r:[["Dictation.io — বলো, লেখা দেখো (উচ্চারণ ঠিক কি না যাচাই)","dictation.io","https://dictation.io/speech"],
+     ["Google Translate — বাংলা থেকে ইংরেজি যাচাই","translate.google.com","https://translate.google.com/?sl=bn&tl=en"]]}
+]}
+const DAYS=[];PHASES.forEach((p,pi)=>p.days.forEach(x=>DAYS.push({pi,bn:x[0],kw:x[1],ex:x[2],sp:x[3]})));
+const KEY="se40-v1";
+let state={t:{}};
+try{const s=localStorage.getItem(KEY);if(s)state=JSON.parse(s)}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
+const bn=n=>String(n).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
+const cnt=d=>[0,1,2,3,4,5].filter(k=>state.t[d+"-"+k]).length;
+const isDone=d=>cnt(d)===6;
+let cur=0;
+const $=id=>document.getElementById(id);
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200)}
+function phaseRange(pi){let s=1;for(let i=0;i<pi;i++)s+=PHASES[i].days.length;return[s,s+PHASES[pi].days.length-1]}
+function nextDay(){for(let d=1;d<=40;d++)if(!isDone(d))return d;return 40}
+
+function renderTabs(){
+  $('tabs').innerHTML=PHASES.map((p,i)=>{const[a,b]=phaseRange(i);let c=0;for(let d=a;d<=b;d++)if(isDone(d))c++;
+   return `<button class="tab ${i===cur?'on':''}" data-i="${i}">ফেজ ${bn(i+1)}: ${p.n}<small>দিন ${bn(a)}–${bn(b)} · ${bn(c)}/${bn(b-a+1)}</small><div class="m"><i style="width:${c/(b-a+1)*100}%"></i></div></button>`}).join('');
+}
+function renderDays(openDay){
+  const p=PHASES[cur],[a,b]=phaseRange(cur);
+  $('phase').innerHTML=`<h2>ফেজ ${bn(cur+1)}: ${p.n}</h2><p>${p.d}</p>`;
+  let h='';
+  for(let d=a;d<=b;d++){
+    const D=DAYS[d-1],T=build(D.kw,D.ex,D.sp),c=cnt(d);
+    h+=`<div class="day ${c===6?'done':''} ${d===openDay?'open':''}" id="day${d}"><div class="dh" data-d="${d}"><div class="badge"><small>দিন</small>${bn(d)}</div><div class="dt"><b>${D.bn}</b><span id="cc${d}">${bn(c)}/৬ কাজ সম্পন্ন</span><div class="mini"><i id="mi${d}" style="width:${c/6*100}%"></i></div></div><span class="chev">›</span></div><div class="db">`;
+    T.forEach((t,k)=>{
+      const ck=!!state.t[d+"-"+k];
+      h+=`<div class="task ${ck?'ck':''}" id="t${d}-${k}"><div class="th" data-t="${d}-${k}"><input type="checkbox" data-c="${d}-${k}" ${ck?'checked':''} aria-label="সম্পন্ন"><span class="ic">${t.ic}</span><div class="tt"><b>${k+1}. ${t.t}</b><span>⏱ ${bn(t.m)} মিনিট</span></div><span class="chev">›</span></div><div class="tb"><p>${t.d}</p>`;
+      if(t.ex)h+=`<div class="say"><b>উদাহরণ:</b>${t.ex.map(e=>`<div>• ${e}</div>`).join('')}</div>`;
+      h+=`<div class="rlt">🔗 রিসোর্স</div><div class="rl">${t.r.map(r=>`<a href="${r[2]}" target="_blank" rel="noopener"><em>↗</em><span>${r[0]}<small>${r[1]}</small></span></a>`).join('')}</div></div></div>`;
+    });
+    h+=`</div></div>`;
+  }
+  $('days').innerHTML=h;
+}
+function stats(){
+  let n=0,streak=0,run=0;
+  for(let d=1;d<=40;d++){if(isDone(d)){n++;run++;streak=Math.max(streak,run)}else run=0}
+  const pc=Math.round(n/40*100);
+  $('pct').textContent=bn(pc)+'%';
+  $('arc').style.strokeDashoffset=226.2*(1-n/40);
+  $('sDone').textContent=bn(n);$('sLeft').textContent=bn(40-n);$('sStreak').textContent=bn(streak);
+  $('cont').textContent=n===40?'🎉 সম্পূর্ণ! আবার দেখো':'▶ আজকের পাঠে যাও: দিন '+bn(nextDay());
+}
+function renderAll(openDay){renderTabs();renderDays(openDay);stats()}
+function goDay(d){cur=DAYS[d-1].pi;renderAll(d);setTimeout(()=>{const el=$('day'+d);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})},50)}
+
+$('tabs').onclick=e=>{const b=e.target.closest('.tab');if(b){cur=+b.dataset.i;renderAll()}};
+$('cont').onclick=()=>goDay(nextDay());
+$('days').onclick=e=>{
+  const c=e.target.closest('input[data-c]');
+  if(c){
+    const[d,k]=c.dataset.c.split('-').map(Number),was=isDone(d);
+    state.t[d+"-"+k]=c.checked;save();
+    $('t'+d+'-'+k).classList.toggle('ck',c.checked);
+    const n=cnt(d);$('cc'+d).textContent=bn(n)+'/৬ কাজ সম্পন্ন';$('mi'+d).style.width=(n/6*100)+'%';
+    $('day'+d).classList.toggle('done',n===6);
+    stats();renderTabs();
+    if(n===6&&!was)toast('🎉 দিন '+bn(d)+' সম্পন্ন! চমৎকার!');
+    return}
+  const th=e.target.closest('.th');
+  if(th){$('t'+th.dataset.t).classList.toggle('open');return}
+  const h=e.target.closest('.dh');
+  if(h)$('day'+h.dataset.d).classList.toggle('open');
+};
+const rb=$('resetBtn'),cf=$('confirm');
+rb.onclick=()=>{rb.style.display='none';cf.style.display='inline-flex'};
+$('no').onclick=()=>{cf.style.display='none';rb.style.display=''};
+$('yes').onclick=()=>{state={t:{}};save();cf.style.display='none';rb.style.display='';cur=0;renderAll()};
+cur=DAYS[nextDay()-1].pi;
+renderAll(nextDay());
+</script>
+</body>
+</html>
