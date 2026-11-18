@@ -223,6 +223,50 @@ h1.pt{font-size:1.5rem;margin:0 0 4px}
 }
 @media(min-width:600px) and (max-width:899px){.layer{align-items:center}.sheet{border-radius:26px;max-height:86dvh;transform:translateY(40px) scale(.96);opacity:0;transition:transform .3s,opacity .25s}.layer.on .sheet{transform:none;opacity:1}}
 @media(min-width:900px){.layer{align-items:center}.sheet{border-radius:26px;max-height:86dvh;transform:translateY(30px) scale(.96);opacity:0;transition:transform .3s,opacity .25s}.layer.on .sheet{transform:none;opacity:1}.grab{display:none}.sh{padding-top:18px}}
+
+.goal{background:linear-gradient(135deg,var(--accbg),transparent);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:0 0 12px;font-size:.9rem}
+.exc{border:1px solid var(--line);border-radius:14px;padding:11px 12px;margin-bottom:10px;background:var(--card)}
+.exc .en{font-weight:700;font-size:1.02rem;line-height:1.45}
+.exc .bnm{color:var(--mute);font-size:.88rem;margin-top:2px}
+.exc .pr{margin-top:6px;background:var(--accbg);color:var(--ink);border-radius:10px;padding:6px 10px;font-size:.88rem}
+.exc .pr b{color:var(--acc)}
+.spb{display:flex;gap:8px;margin-top:8px}
+.spb button{min-height:40px;padding:0 14px;border-radius:12px;background:var(--bg);font-weight:600;font-size:.84rem;border:1px solid var(--line);transition:transform .15s,background .2s}
+.spb button:active{transform:scale(.95);background:var(--accbg)}
+.spb button.on{background:var(--acc);color:#fff}
+.pwc{display:flex;gap:10px;align-items:center;border:1px dashed var(--line);border-radius:14px;padding:9px 12px;margin-bottom:8px}
+.pwc .w{flex:1;min-width:0}
+.pwc .w b{display:block}
+.pwc .w span{display:block;font-size:.8rem;color:var(--mute)}
+.pwc button{width:44px;height:44px;border-radius:50%;background:var(--accbg);font-size:1.1rem;flex:0 0 auto}
+.tipbox{background:var(--okbg);border-radius:14px;padding:10px 12px;margin:6px 0 12px;font-size:.9rem}
+.goalbox{margin-top:12px;background:var(--accbg);border-radius:12px;padding:9px 12px;font-size:.88rem}
+.acc{margin-bottom:10px;overflow:hidden}
+.acc .ah{display:flex;align-items:center;gap:12px;padding:13px 14px;width:100%;text-align:left}
+.acc .ah .n{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex:0 0 auto}
+.acc .ah .t{flex:1;min-width:0}
+.acc .ah .t b{display:block}
+.acc .ah .t small{color:var(--mute)}
+.acc .ab{display:none;padding:0 14px 14px;font-size:.92rem}
+.acc.open .ab{display:block;animation:up .3s}
+.acc.open .chev{transform:rotate(90deg)}
+.acc ul{margin:4px 0 10px;padding-left:20px}
+.acc .lab{font-weight:700;margin:10px 0 4px;font-size:.85rem;color:var(--mute)}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:8px 0;min-height:44px;cursor:pointer}
+.chk input{width:22px;height:22px;accent-color:var(--ok);flex:0 0 auto;margin-top:2px}
+.dchips{display:flex;flex-wrap:wrap;gap:6px}
+.dchips button{min-width:44px;height:36px;border-radius:10px;background:var(--bg);font-weight:700;font-size:.8rem;border:1px solid var(--line)}
+.dchips button.f{background:var(--ok);color:#fff;border-color:var(--ok)}
+.info{padding:16px;margin-bottom:12px}
+.info p{margin:0 0 8px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.steps div{background:var(--bg);border-radius:12px;padding:10px;text-align:center;font-size:.82rem}
+.steps b{display:block;color:var(--acc)}
+details.faq{border-bottom:1px solid var(--line);padding:10px 0}
+details.faq summary{font-weight:600;cursor:pointer;min-height:36px}
+details.faq p{margin:6px 0 0;color:var(--mute);font-size:.9rem}
+.stl{display:flex;flex-direction:column;gap:6px;font-size:.88rem;margin-bottom:10px}
+@media(max-width:899px){.steps{grid-template-columns:1fr}.bnav a{font-size:.64rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -241,8 +285,10 @@ h1.pt{font-size:1.5rem;margin:0 0 4px}
   <nav class="bnav" id="bnav" aria-label="নিচের নেভিগেশন"></nav>
 </div>
 <div class="layer" id="layer" role="dialog" aria-modal="true"><div class="bd" id="bd"></div><div id="lc"></div></div>
+<input type="file" id="rfile" accept=".json,application/json" hidden>
 <div class="toast" id="toast" role="status"></div>
 
+<script src="content.js"></script>
 <script>
 /* [বাংলা শিরোনাম, ইংরেজি কীওয়ার্ড, ৩টি উদাহরণ বাক্য, বলার বিষয় (বাংলায়)] */
 const PHASES=[
@@ -297,7 +343,7 @@ const q=encodeURIComponent;
 const yt=s=>"https://www.youtube.com/results?search_query="+q(s);
 function build(kw,ex,sp){return[
  {ic:"📚",t:"শব্দ ও বাক্য শেখো",m:10,
-  d:"আজকের টপিকের ৫টি নতুন শব্দ/বাক্য ডায়েরিতে লেখো এবং অর্থসহ মুখস্থ করো। প্রতিটি শব্দ দিয়ে নিজের একটি বাক্য বানাও।",
+  d:"নিচের ৫টি উদাহরণ একটি একটি করে পড়ো: ইংরেজি → বাংলা অর্থ → উচ্চারণ। 🔊 চেপে শোনো, তারপর খাতায় লেখো এবং প্রতিটির আদলে নিজের একটি বাক্য বানাও।",
   ex:ex,
   r:[["Cambridge Dictionary — শব্দের অর্থ ও উচ্চারণ","dictionary.cambridge.org","https://dictionary.cambridge.org/search/english/direct/?q="+q(kw)],
      ["YouTube — "+kw+" vocabulary","ভিডিও লেসন",yt(kw+" vocabulary spoken English")]]},
@@ -313,7 +359,7 @@ function build(kw,ex,sp){return[
      ["ELLLO — বিভিন্ন উচ্চারণে শোনা","elllo.org","https://elllo.org/"],
      ["YouTube — "+kw+" conversation","বাস্তব উদাহরণ",yt(kw+" English conversation")]]},
  {ic:"🗣️",t:"Shadowing ও উচ্চারণ",m:10,
-  d:"স্পিকারের পরপরই একই সুর, গতি ও stress-এ বলো। কঠিন শব্দ আলাদা করে ৫ বার বলো।",
+  d:"প্রতিটি উদাহরণ 🔊 শুনে স্পিকারের পরপরই একই সুর, গতি ও stress-এ বলো। নিচের উচ্চারণ-ফোকাসের কঠিন শব্দগুলো আলাদা করে ৫ বার বলো।",
   ex:ex,
   r:[["YouGlish — বাস্তব মানুষের উচ্চারণ শোনো","youglish.com","https://youglish.com/pronounce/"+q(kw)+"/english"],
      ["Rachel's English — উচ্চারণ লেসন","YouTube",yt("Rachel's English "+kw)]]},
@@ -331,9 +377,26 @@ function build(kw,ex,sp){return[
 const DAYS=[];PHASES.forEach((p,pi)=>p.days.forEach(x=>DAYS.push({pi,bn:x[0],kw:x[1],ex:x[2],sp:x[3]})));
 
 const KEY="se40-v1";
-let state={t:{},seen:{}};
-try{const s=localStorage.getItem(KEY);if(s)state=Object.assign({t:{},seen:{}},JSON.parse(s))}catch(e){}
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
+const fresh=()=>({v:2,t:{},c:{},at:{},seen:{},updated:0});
+let state=fresh();
+const store={idb:false,persisted:null};
+/* IndexedDB — প্রধান ডেটাবেস; localStorage — ব্যাকআপ কপি */
+let dbp=null;
+function getDB(){return dbp||(dbp=new Promise(res=>{try{const r=indexedDB.open('se40-db',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>res(null);r.onblocked=()=>res(null)}catch(e){res(null)}}))}
+async function idbGet(k){const db=await getDB();if(!db)return undefined;return new Promise(res=>{try{const q=db.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>res(q.result);q.onerror=()=>res(undefined)}catch(e){res(undefined)}})}
+async function idbSet(k,v){const db=await getDB();if(!db)return false;return new Promise(res=>{try{const tx=db.transaction('kv','readwrite');tx.objectStore('kv').put(v,k);tx.oncomplete=()=>res(true);tx.onerror=()=>res(false);tx.onabort=()=>res(false)}catch(e){res(false)}})}
+function normalize(o){const f=fresh();if(!o||typeof o!=='object')return f;return Object.assign(f,o,{t:o.t||{},c:o.c||{},at:o.at||{},seen:o.seen||{}})}
+async function loadState(){
+  let a=null,b=null;
+  try{a=await idbGet('state')}catch(e){}
+  try{const s=localStorage.getItem(KEY);if(s)b=JSON.parse(s)}catch(e){}
+  const pick=(a&&b)?((b.updated||0)>(a.updated||0)?b:a):(a||b);
+  state=normalize(pick);
+  store.idb=!!(await getDB());
+  if(store.idb&&!a&&pick)idbSet('state',JSON.parse(JSON.stringify(state)));
+  try{if(navigator.storage&&navigator.storage.persisted){store.persisted=await navigator.storage.persisted();if(!store.persisted&&navigator.storage.persist)store.persisted=await navigator.storage.persist()}}catch(e){}
+}
+function save(){state.updated=Date.now();try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}idbSet('state',JSON.parse(JSON.stringify(state)))}
 const bn=n=>String(n).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
 const $=id=>document.getElementById(id);
 const cnt=d=>[0,1,2,3,4,5].filter(k=>state.t[d+"-"+k]).length;
@@ -345,14 +408,25 @@ const nextDay=()=>{for(let d=1;d<=40;d++)if(!isDone(d))return d;return 40};
 const phaseRange=pi=>{let s=1;for(let i=0;i<pi;i++)s+=PHASES[i].days.length;return[s,s+PHASES[pi].days.length-1]};
 const phaseDone=pi=>{const[a,b]=phaseRange(pi);let c=0;for(let d=a;d<=b;d++)if(isDone(d))c++;return c};
 const cache={};
-const tasksOf=d=>cache[d]||(cache[d]=build(DAYS[d-1].kw,DAYS[d-1].ex,DAYS[d-1].sp));
+const tasksOf=d=>cache[d]||(cache[d]=(()=>{const T=build(DAYS[d-1].kw,null,DAYS[d-1].sp),C=(typeof CONTENT!=='undefined'&&CONTENT[d-1])||{};
+  T.forEach(t=>t.ex=null);T.goal=C.g||'';T[0].exr=C.ex||null;T[3].exr=C.ex||null;T[3].pw=C.pw||null;T[3].tip=C.tip||'';return T})());
 const ring=(r,p,sw)=>{const c=2*Math.PI*r;return`<svg viewBox="0 0 ${2*(r+sw)} ${2*(r+sw)}" width="100%" height="100%"><circle cx="${r+sw}" cy="${r+sw}" r="${r}" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="${sw}"/><circle cx="${r+sw}" cy="${r+sw}" r="${r}" fill="none" stroke="#fff" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}" style="transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.2,1)"/></svg>`};
 
+/* ---------- উচ্চারণ শোনা (ডিভাইসের Text-to-Speech) ---------- */
+const esc=t=>String(t).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+const clean=t=>t.replace(/\(.*?\)/g,'').replace(/[↗↘]/g,'').replace(/\//g,',').replace(/\s+/g,' ').trim();
+function speak(text,rate,btn){
+  if(!('speechSynthesis' in window)){toast('এই ডিভাইসে উচ্চারণ শোনা সম্ভব নয়');return}
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(clean(text));u.lang='en-US';u.rate=rate;
+   const v=speechSynthesis.getVoices().find(x=>/^en[-_]US/i.test(x.lang))||speechSynthesis.getVoices().find(x=>/^en/i.test(x.lang));if(v)u.voice=v;
+   document.querySelectorAll('.spb button.on').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on');
+   u.onend=u.onerror=()=>{if(btn)btn.classList.remove('on')};speechSynthesis.speak(u)}catch(e){toast('উচ্চারণ চালানো যায়নি')}
+}
 /* ---------- routing ---------- */
 let route={n:'home'},pendingScroll=null;
 function parse(){const h=location.hash.slice(1);let m;
   if(m=h.match(/^day-(\d+)$/)){const d=+m[1];if(d>=1&&d<=40)return{n:'day',d}}
-  if(h==='roadmap'||h==='progress')return{n:h};
+  if(h==='roadmap'||h==='progress'||h==='curriculum')return{n:h};
   return{n:'home'}}
 function go(h){if(location.hash.slice(1)===h){onRoute();}else location.hash=h}
 window.addEventListener('hashchange',onRoute);
@@ -367,6 +441,7 @@ function renderSide(){
   <nav class="nav">
     <a href="#home" class="${on('home')}"><span class="i">🏠</span>হোম</a>
     <a href="#day-${nd}" class="${route.n==='day'&&route.d===nd?'on':''}"><span class="i">▶️</span>আজকের পাঠ (দিন ${bn(nd)})</a>
+    <a href="#curriculum" class="${on('curriculum')}"><span class="i">📘</span>কারিকুলাম</a>
     <a href="#roadmap" class="${on('roadmap')}"><span class="i">🗺️</span>পুরো রোডম্যাপ</a>
     <a href="#progress" class="${on('progress')}"><span class="i">📊</span>আমার অগ্রগতি</a>
   </nav>
@@ -374,7 +449,7 @@ function renderSide(){
   <div class="pl">${PHASES.map((p,i)=>{const[a,b]=phaseRange(i),c=phaseDone(i);return`<a href="#roadmap" data-ph="${i}" class="${c===b-a+1?'full':''}"><span>${bn(i+1)}. ${p.n}</span><span class="c">${bn(c)}/${bn(b-a+1)}</span></a>`}).join('')}</div>
   <div class="sfoot"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button></div>`;
   $('pill').textContent=bn(pc)+'%';
-  $('bnav').innerHTML=[['home','🏠','হোম','#home'],['roadmap','🗺️','রোডম্যাপ','#roadmap'],['today','▶️','আজ','#day-'+nd],['progress','📊','অগ্রগতি','#progress']]
+  $('bnav').innerHTML=[['home','🏠','হোম','#home'],['curriculum','📘','কারিকুলাম','#curriculum'],['today','▶️','আজ','#day-'+nd],['roadmap','🗺️','রোডম্যাপ','#roadmap'],['progress','📊','অগ্রগতি','#progress']]
    .map(x=>`<a href="${x[3]}" class="${(x[0]==='today'?route.n==='day':route.n===x[0])?'on':''}"><span class="i">${x[1]}</span>${x[2]}</a>`).join('');
 }
 function openDrawer(o){$('side').classList.toggle('open',o);$('scrim').classList.toggle('on',o);document.body.classList.toggle('lock',o)}
@@ -415,7 +490,7 @@ function vDay(d){
   return`<div class="view"><button class="back" data-go="roadmap">‹ রোডম্যাপ</button>
   <div class="card dhead st"><div class="row"><div class="badge" style="${c===6?'background:var(--ok);color:#fff':''}"><small>দিন</small>${bn(d)}</div><div style="flex:1;min-width:0"><small style="color:var(--mute)">ফেজ ${bn(pi+1)}: ${PHASES[pi].n}</small><h1 class="pt" style="font-size:1.2rem;margin:0">${D.bn}</h1></div></div>
   <div class="mb" style="margin-top:14px"><i style="width:${c/6*100}%"></i></div><div class="cnt" style="font-size:.8rem;color:var(--mute);margin-top:6px">${bn(c)}/৬ কাজ সম্পন্ন · প্রায় ৬৫ মিনিট</div>
-  <div class="dnav"><button class="btn g" data-go="day-${d-1}" ${d<=1?'disabled':''}>‹ আগের দিন</button><button class="btn g" data-go="day-${d+1}" ${d>=40?'disabled':''}>পরের দিন ›</button></div></div>
+  <div class="goalbox">🎯 <b>লক্ষ্য:</b> ${tasksOf(d).goal}</div><div class="dnav"><button class="btn g" data-go="day-${d-1}" ${d<=1?'disabled':''}>‹ আগের দিন</button><button class="btn g" data-go="day-${d+1}" ${d>=40?'disabled':''}>পরের দিন ›</button></div></div>
   ${[0,1,2,3,4,5].map(k=>taskRow(d,k,k+1)).join('')}</div>`}
 
 function vProgress(){
@@ -427,12 +502,35 @@ function vProgress(){
   <div class="card st" style="--i:5;padding:14px"><div class="heat">${Array.from({length:40},(_,i)=>{const d=i+1,c=cnt(d);return`<button class="hc ${c===6?'f':c?'p':''}" data-go="day-${d}" aria-label="দিন ${d}">${bn(d)}</button>`}).join('')}</div>
   <div style="display:flex;gap:14px;font-size:.75rem;color:var(--mute);margin-top:10px"><span>⬜ শুরু হয়নি</span><span style="color:var(--acc)">🟦 আংশিক</span><span style="color:var(--ok)">🟩 সম্পন্ন</span></div></div>
   <div class="h3 st" style="--i:6"><b>সেটিংস</b></div>
-  <div class="card st" style="--i:7;padding:14px;display:flex;flex-direction:column;gap:10px"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button><button class="btn d blk" data-act="reset">🗑️ সব অগ্রগতি রিসেট করো</button><small style="color:var(--mute);text-align:center">অগ্রগতি শুধু এই ডিভাইসে সেভ থাকে।</small></div></div>`}
+  <div class="card st" style="--i:7;padding:14px;display:flex;flex-direction:column;gap:10px"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button><button class="btn d blk" data-act="reset">🗑️ সব অগ্রগতি রিসেট করো</button><small style="color:var(--mute);text-align:center">অগ্রগতি শুধু এই ডিভাইসে সেভ থাকে।</small></div>
+  <div class="h3 st" style="--i:8"><b>ডেটা ও ব্যাকআপ</b></div>
+  <div class="card st" style="--i:9;padding:14px"><div class="stl"><span>💾 লোকাল ডেটাবেস (IndexedDB): <b>${store.idb?'চালু ✓':'পাওয়া যায়নি (ব্রাউজার স্টোরেজ ব্যবহার হচ্ছে)'}</b></span><span>🔒 স্থায়ী স্টোরেজ: <b>${store.persisted===true?'নিশ্চিত ✓':store.persisted===false?'ব্রাউজারের ইচ্ছাধীন':'অজানা'}</b></span><span>🕒 শেষ অনুশীলন: <b>${lastActive()}</b></span><span>✅ চেকপয়েন্ট: <b>${bn(Object.values(state.c).filter(Boolean).length)}/২৪</b></span></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn g" style="flex:1" data-act="backup">⬇️ ব্যাকআপ নামাও</button><button class="btn g" style="flex:1" data-act="restore">⬆️ ব্যাকআপ ফেরাও</button></div>
+  <small style="display:block;color:var(--mute);margin-top:8px">ফোন বদলালে বা ব্রাউজারের ডেটা মুছলে ব্যাকআপ ফাইল দিয়ে অগ্রগতি ফেরত পাবে।</small></div></div>`}
+function lastActive(){const v=Object.values(state.at||{});if(!v.length)return 'এখনো শুরু হয়নি';const m=Math.max(...v);try{return new Date(m).toLocaleString('bn-BD',{dateStyle:'medium',timeStyle:'short'})}catch(e){return new Date(m).toLocaleString()}}
 
-function titleFor(){return route.n==='day'?'দিন '+bn(route.d):route.n==='roadmap'?'রোডম্যাপ':route.n==='progress'?'অগ্রগতি':'Spoken English'}
+
+const openAcc=new Set([0]);
+function vCurriculum(){
+  const A=CURR.about;
+  let h=`<div class="view"><h1 class="pt st">কোর্স কারিকুলাম</h1><p class="sub st" style="--i:1">৪০ দিনের পুরো পরিকল্পনা, লক্ষ্য ও মূল্যায়ন</p>
+  <div class="card info st" style="--i:2"><b>🎓 কোর্স পরিচিতি</b><p style="margin-top:6px">${A.who}</p><p>⏱ ${A.time}</p><b style="display:block;margin-top:8px">প্রতিদিনের ৩ ধাপ</b><div class="steps">${A.method.map(m=>`<div><b>${m[0]}</b>${m[1]}</div>`).join('')}</div></div>
+  <div class="h3 st" style="--i:3"><b>ফেজ অনুযায়ী পরিকল্পনা</b></div>`;
+  PHASES.forEach((p,pi)=>{const[a,b]=phaseRange(pi),c=phaseDone(pi),t=b-a+1,P=CURR.phases[pi],ck=P.check.filter((_,j)=>state.c[pi+'-'+j]).length;
+    h+=`<div class="card acc st ${openAcc.has(pi)?'open':''}" style="--i:${4+pi}" data-accw="${pi}"><button class="ah" data-acc="${pi}" aria-expanded="${openAcc.has(pi)}"><span class="n">${bn(pi+1)}</span><span class="t"><b>${p.n}</b><small>দিন ${bn(a)}–${bn(b)} · ${bn(c)}/${bn(t)} দিন · চেকপয়েন্ট ${bn(ck)}/${bn(P.check.length)}</small></span><span class="chev">›</span></button>
+    <div class="ab"><div class="lab">🎯 ফেজের লক্ষ্য</div><div>${P.goal}</div>
+    <div class="lab">📌 শেষে যা পারবে</div><ul>${P.outcomes.map(o=>`<li>${o}</li>`).join('')}</ul>
+    <div class="lab">📅 দিনসমূহ</div><div class="dchips">${Array.from({length:t},(_,i)=>{const d=a+i;return`<button class="${isDone(d)?'f':''}" data-go="day-${d}">${bn(d)}</button>`}).join('')}</div>
+    <div class="lab">✅ চেকপয়েন্ট (নিজেকে যাচাই করো)</div>${P.check.map((x,j)=>`<label class="chk"><input type="checkbox" data-chk="${pi}-${j}" ${state.c[pi+'-'+j]?'checked':''}><span>${x}</span></label>`).join('')}
+    <div class="lab">📝 ফেজ শেষের টাস্ক</div><div>${P.test}</div></div></div>`});
+  h+=`<div class="h3 st" style="--i:11"><b>সফল হওয়ার টিপস</b></div><div class="card info st" style="--i:12"><ul style="margin:0;padding-left:20px">${A.tips.map(t=>`<li style="margin:4px 0">${t}</li>`).join('')}</ul></div>
+  <div class="h3 st" style="--i:13"><b>সাধারণ প্রশ্ন</b></div><div class="card info st" style="--i:14">${A.faq.map(f=>`<details class="faq"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}</div></div>`;
+  return h}
+
+function titleFor(){return route.n==='day'?'দিন '+bn(route.d):route.n==='roadmap'?'রোডম্যাপ':route.n==='progress'?'অগ্রগতি':route.n==='curriculum'?'কারিকুলাম':'Spoken English'}
 function paint(keepScroll){
   const y=window.scrollY;
-  $('view').innerHTML=route.n==='day'?vDay(route.d):route.n==='roadmap'?vRoadmap():route.n==='progress'?vProgress():vHome();
+  $('view').innerHTML=route.n==='day'?vDay(route.d):route.n==='roadmap'?vRoadmap():route.n==='progress'?vProgress():route.n==='curriculum'?vCurriculum():vHome();
   $('ttl').textContent=titleFor();renderSide();
   if(keepScroll){window.scrollTo(0,y);document.querySelectorAll('.st,.view').forEach(e=>e.style.animation='none')}
 }
@@ -463,8 +561,10 @@ function sheetHTML(d,k){
   const t=tasksOf(d)[k],ck=!!state.t[d+'-'+k],prev=k>0||d>1,next=k<5||d<40;
   return`<div class="sheet" id="sheet"><div class="grab"></div>
   <div class="sh" id="shh"><div class="ic">${t.ic}</div><div class="tt"><small>দিন ${bn(d)} · কাজ ${bn(k+1)}/৬ · ⏱ ${bn(t.m)} মিনিট</small><b>${t.t}</b></div><button class="x" data-act="close" aria-label="বন্ধ করো" data-autofocus>✕</button></div>
-  <div class="sb"><p>${t.d}</p>
-  ${t.ex?`<div class="say"><b>✍️ উদাহরণ</b>${t.ex.map(e=>`<div>• ${e}</div>`).join('')}</div>`:''}
+  <div class="sb"><div class="goal">🎯 <b>আজকের লক্ষ্য:</b> ${tasksOf(d).goal}</div><p>${t.d}</p>
+  ${t.exr?`<div class="rt">✍️ উদাহরণ ও উচ্চারণ</div>${t.exr.map(e=>`<div class="exc"><div class="en">${e[0]}</div><div class="bnm">${e[1]}</div><div class="pr"><b>🔤 উচ্চারণ:</b> ${e[2]}</div><div class="spb"><button data-say="${esc(e[0])}" data-rate="0.95">🔊 শোনো</button><button data-say="${esc(e[0])}" data-rate="0.6">🐢 ধীরে</button></div></div>`).join('')}`:''}
+  ${t.pw?`<div class="rt" style="margin-top:14px">🎯 উচ্চারণ ফোকাস (কঠিন শব্দ)</div>${t.pw.map(w=>`<div class="pwc"><div class="w"><b>${w[0]} <span style="display:inline;color:var(--acc)">— ${w[1]}</span></b><span>${w[2]}</span></div><button data-say="${esc(w[0])}" data-rate="0.7" aria-label="শোনো">🔊</button></div>`).join('')}`:''}
+  ${t.tip?`<div class="tipbox">💡 <b>টিপ:</b> ${t.tip}</div>`:''}
   <div class="rt">🔗 রিসোর্স</div><div class="rl">${t.r.map(r=>`<a href="${r[2]}" target="_blank" rel="noopener"><span>↗</span><span>${r[0]}<small>${r[1]}</small></span></a>`).join('')}</div></div>
   <div class="sf"><button class="btn g sq" data-sh="-1" ${prev?'':'disabled'} aria-label="আগের কাজ">‹</button><button class="btn ${ck?'done':'p'}" data-toggle="${d}-${k}" data-inshet="1">${ck?'✓ সম্পন্ন (বাতিল করো)':'✓ সম্পন্ন করো'}</button><button class="btn g sq" data-sh="1" ${next?'':'disabled'} aria-label="পরের কাজ">›</button></div></div>`}
 function openTask(d,k){cur={d,k};
@@ -488,7 +588,7 @@ function confetti(){const c=document.createElement('div');c.className='conf';con
   for(let i=0;i<48;i++){const e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.background=cols[i%6];e.style.animationDelay=Math.random()*.6+'s';e.style.animationDuration=1.8+Math.random()*1.4+'s';c.appendChild(e)}
   document.body.appendChild(c);setTimeout(()=>c.remove(),3600)}
 function toggle(d,k,fromSheet){
-  const was=isDone(d),key=d+'-'+k;state.t[key]=!state.t[key];save();
+  const was=isDone(d),key=d+'-'+k;state.t[key]=!state.t[key];if(state.t[key])state.at[key]=Date.now();else delete state.at[key];save();
   paint(true);
   const tk=document.querySelector(`[data-toggle="${key}"] .tick`);if(tk&&state.t[key])tk.classList.add('pop');
   if(fromSheet&&cur){const sh=$('sheet');if(sh){const b=sh.querySelector('[data-toggle]');const ck=!!state.t[key];b.className='btn '+(ck?'done':'p');b.textContent=ck?'✓ সম্পন্ন (বাতিল করো)':'✓ সম্পন্ন করো'}}
@@ -524,16 +624,23 @@ document.addEventListener('click',e=>{
     if(a==='close'){const g=ac.dataset.go;closeLayer();if(g)go(g);return}
     if(a==='install'){openDrawer(false);install();return}
     if(a==='reset'){resetAsk();return}
-    if(a==='reset-yes'){state={t:{},seen:state.seen};save();closeLayer();toast('রিসেট হয়েছে');paint(false);return}}
+    if(a==='reset-yes'){const sn=state.seen;state=fresh();state.seen=sn;save();closeLayer();toast('রিসেট হয়েছে');paint(false);return}
+    if(a==='backup'){backup();return}
+    if(a==='restore'){$('rfile').click();return}}
+  const sy=t.closest('[data-say]');if(sy){speak(sy.dataset.say,+sy.dataset.rate||1,sy);return}
+  const ah=t.closest('[data-acc]');if(ah){const i=+ah.dataset.acc,w=ah.closest('.acc'),o=!w.classList.contains('open');w.classList.toggle('open',o);ah.setAttribute('aria-expanded',o);o?openAcc.add(i):openAcc.delete(i);return}
   const sh=t.closest('[data-sh]');if(sh){stepTask(+sh.dataset.sh);return}
   const tk=t.closest('[data-task]');if(tk){const[d,k]=tk.dataset.task.split('-').map(Number);openTask(d,k);return}
   const ph=t.closest('[data-ph]');if(ph){e.preventDefault();pendingScroll=+ph.dataset.ph;go('roadmap');return}
   const g=t.closest('[data-go]');if(g){go(g.dataset.go);return}
 });
+document.addEventListener('change',e=>{const c=e.target.closest&&e.target.closest('input[data-chk]');if(c){state.c[c.dataset.chk]=c.checked;save();const pi=+c.dataset.chk.split('-')[0];const w=c.closest('.acc'),P=CURR.phases[pi],n=P.check.filter((_,j)=>state.c[pi+'-'+j]).length,sm=w.querySelector('.ah small');if(sm)sm.textContent=sm.textContent.replace(/চেকপয়েন্ট .*$/,'চেকপয়েন্ট '+bn(n)+'/'+bn(P.check.length));if(c.checked)toast('✅ চেকপয়েন্ট সম্পন্ন!')}});
+function backup(){try{const blob=new Blob([JSON.stringify({app:'spoken-english-40',exported:new Date().toISOString(),data:state},null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='spoken-english-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast('ব্যাকআপ ফাইল নামানো হয়েছে')}catch(e){toast('ব্যাকআপ নামানো যায়নি')}}
+$('rfile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const j=JSON.parse(r.result),d=j.data||j;if(!d||typeof d.t!=='object')throw 0;state=normalize(d);save();paint(false);toast('✅ অগ্রগতি ফিরে এসেছে')}catch(x){toast('ফাইলটি সঠিক নয়')}e.target.value=''};r.readAsText(f)});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-task]')){e.preventDefault();const[d,k]=e.target.dataset.task.split('-').map(Number);openTask(d,k)}});
 
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
-onRoute();
+loadState().then(()=>{onRoute()});
 </script>
 </body>
 </html>
