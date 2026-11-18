@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#2f6fed">
+<meta name="color-scheme" content="light dark">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -14,115 +15,233 @@
 <title>৪০ দিনের Spoken English Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
 <style>
-:root{--bg:#f4f6fb;--card:#fff;--ink:#1b2236;--mute:#667089;--line:#e3e7f1;--acc:#2f6fed;--accbg:#eaf1ff;--ok:#1f9d63;--okbg:#e8f7ef;--warn:#f59e0b}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans Bengali',system-ui,sans-serif;line-height:1.6}
-.wrap{max-width:780px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 14px calc(70px + env(safe-area-inset-bottom))}
-.hero{background:linear-gradient(135deg,#2f6fed,#6a4df0);color:#fff;border-radius:18px;padding:20px 18px;margin-bottom:14px}
-.hero h1{font-size:1.45rem;margin:0 0 4px}
-.hero p{margin:0;opacity:.9;font-size:.92rem}
-.prog{display:flex;align-items:center;gap:16px;margin-top:16px}
-.ring{width:84px;height:84px;flex:0 0 auto;position:relative}
+:root{--bg:#f3f5fb;--card:#fff;--ink:#1b2236;--mute:#636d86;--line:#e2e6f0;--acc:#2f6fed;--acc2:#6a4df0;--accbg:#eaf1ff;--ok:#1f9d63;--okbg:#e7f7ee;--shadow:0 6px 24px rgba(30,40,90,.08);--sat:env(safe-area-inset-top);--sab:env(safe-area-inset-bottom)}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1322;--card:#171f35;--ink:#eef1fa;--mute:#9ba5c0;--line:#27314c;--acc:#6b9bff;--acc2:#8f7dff;--accbg:#1c2a4e;--ok:#34c985;--okbg:#10301f;--shadow:0 6px 24px rgba(0,0,0,.35)}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans Bengali',system-ui,-apple-system,sans-serif;line-height:1.6;touch-action:manipulation;-webkit-text-size-adjust:100%}
+body.lock{overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px;border-radius:8px}
+.app{min-height:100dvh}
+
+/* sidebar */
+.side{position:fixed;top:0;bottom:0;left:0;width:292px;background:var(--card);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:60;overflow-y:auto;overscroll-behavior:contain;padding:calc(16px + var(--sat)) 14px calc(16px + var(--sab))}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 14px}
+.brand img{width:42px;height:42px;border-radius:12px}
+.brand b{display:block;line-height:1.2}
+.brand small{color:var(--mute);font-size:.78rem}
+.sprog{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border-radius:14px;padding:12px;margin-bottom:12px}
+.sprog .r{display:flex;justify-content:space-between;font-size:.82rem;opacity:.95}
+.bar{height:8px;background:rgba(255,255,255,.28);border-radius:9px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:#fff;border-radius:9px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.nav a,.pl a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:12px;text-decoration:none;font-weight:600;min-height:44px;transition:background .2s,transform .15s}
+.nav a:hover,.pl a:hover{background:var(--accbg)}
+.nav a:active,.pl a:active{transform:scale(.98)}
+.nav a.on{background:var(--accbg);color:var(--acc)}
+.nav .i{width:24px;text-align:center;font-size:1.15rem}
+.sec{font-size:.72rem;letter-spacing:.04em;color:var(--mute);margin:14px 12px 4px;font-weight:700}
+.pl a{font-weight:500;font-size:.9rem;justify-content:space-between}
+.pl a span.c{font-size:.75rem;color:var(--mute);background:var(--bg);padding:2px 8px;border-radius:99px}
+.pl a.full span.c{background:var(--ok);color:#fff}
+.sfoot{margin-top:auto;padding-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border-radius:14px;font-weight:700;transition:transform .15s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn.p{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;box-shadow:0 6px 16px rgba(47,111,237,.35)}
+.btn.w{background:#fff;color:#2f6fed}
+.btn.g{background:var(--accbg);color:var(--acc)}
+.btn.d{background:#fdeaea;color:#c0392b}
+.btn.blk{display:flex;width:100%}
+.scrim{position:fixed;inset:0;background:rgba(10,15,35,.5);opacity:0;pointer-events:none;transition:opacity .25s;z-index:55;backdrop-filter:blur(2px)}
+.scrim.on{opacity:1;pointer-events:auto}
+
+/* main */
+.main{margin-left:292px}
+.topbar,.bnav{display:none}
+.view{max-width:900px;margin:0 auto;padding:28px 28px 40px;animation:up .4s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.st{animation:up .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+h1.pt{font-size:1.5rem;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 18px;font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;border-radius:22px;padding:22px;position:relative;overflow:hidden;margin-bottom:18px}
+.hero:after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.1)}
+.hero h2{margin:0 0 2px;font-size:1.3rem}
+.hero p{margin:0;opacity:.92;font-size:.92rem}
+.hr{display:flex;align-items:center;gap:18px;margin:16px 0}
+.ring{width:96px;height:96px;flex:0 0 auto;position:relative}
 .ring svg{transform:rotate(-90deg)}
-.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
-.stats{display:flex;gap:8px;flex:1}
-.stat{flex:1;background:rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;text-align:center}
-.stat b{display:block;font-size:1.2rem}
-.stat span{font-size:.72rem;opacity:.9}
-.cta{display:block;width:100%;margin-top:14px;border:0;border-radius:12px;padding:11px;font:inherit;font-weight:700;background:#fff;color:var(--acc);cursor:pointer}
-.how{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:14px;font-size:.9rem}
-.how b{display:block;margin-bottom:2px}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none;position:sticky;top:0;background:var(--bg);z-index:5}
-.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 12px;font:inherit;font-size:.82rem;cursor:pointer;color:var(--ink);text-align:left;min-width:92px}
-.tab small{display:block;color:var(--mute);font-size:.72rem}
-.tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
-.tab.on small{color:#dbe6ff}
-.tab .m{height:4px;border-radius:9px;background:#0001;margin-top:5px;overflow:hidden}
-.tab .m i{display:block;height:100%;background:var(--ok)}
-.ph{margin:10px 2px 12px}
-.ph h2{font-size:1.1rem;margin:0}
-.ph p{margin:2px 0 0;color:var(--mute);font-size:.88rem}
-.day{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
-.day.done{border-color:#bfe6d0}
-.dh{display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer}
-.badge{flex:0 0 auto;width:46px;height:46px;border-radius:12px;background:var(--accbg);color:var(--acc);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1.1}
-.badge small{font-size:.6rem;font-weight:600}
-.day.done .badge{background:var(--ok);color:#fff}
-.dt{flex:1;min-width:0}
-.dt b{display:block}
-.dt span{font-size:.8rem;color:var(--mute)}
-.mini{height:5px;background:var(--line);border-radius:9px;margin-top:6px;overflow:hidden}
-.mini i{display:block;height:100%;background:var(--ok);transition:width .25s}
-.chev{color:var(--mute);transition:transform .2s;font-size:1.3rem}
-.day.open>.dh .chev{transform:rotate(90deg)}
-.db{display:none;padding:0 12px 12px}
-.day.open>.db{display:block}
-.task{border:1px solid var(--line);border-radius:12px;margin-top:8px;background:#fff}
-.task.ck{background:var(--okbg);border-color:#bfe6d0}
-.th{display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer}
-.th input{width:22px;height:22px;accent-color:var(--ok);flex:0 0 auto;cursor:pointer}
-.ic{font-size:1.25rem;flex:0 0 auto}
-.tt{flex:1;min-width:0}
-.tt b{display:block;font-size:.95rem}
-.tt span{font-size:.76rem;color:var(--mute)}
-.task.ck .tt b{text-decoration:line-through;text-decoration-color:#0003}
-.tb{display:none;padding:2px 14px 14px 14px;border-top:1px dashed var(--line);font-size:.92rem}
-.task.open>.tb{display:block}
-.task.open>.th .chev{transform:rotate(90deg)}
-.tb p{margin:10px 0 6px}
-.tb ul{margin:4px 0 8px;padding-left:20px}
-.tb li{margin:2px 0}
-.say{background:var(--accbg);border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.92rem}
-.say div{margin:2px 0}
-.rl{display:flex;flex-direction:column;gap:6px;margin-top:8px}
-.rl a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--acc);background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem;font-weight:600}
-.rl a:hover{background:var(--accbg)}
-.rl a small{display:block;font-weight:400;color:var(--mute);font-size:.74rem}
-.rl em{font-style:normal}
-.rlt{font-size:.78rem;color:var(--mute);margin-top:10px;font-weight:600}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:20px;color:var(--mute);font-size:.8rem}
-button.link{background:none;border:0;color:#c0392b;font:inherit;cursor:pointer;text-decoration:underline;padding:0}
-.confirm{display:none;gap:8px;align-items:center}
-.confirm button{font:inherit;border-radius:8px;border:1px solid var(--line);padding:4px 10px;cursor:pointer;background:var(--card)}
-.confirm .y{background:#c0392b;color:#fff;border-color:#c0392b}
-.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:.9rem;transition:transform .3s;z-index:20;max-width:90%}
-.toast.show{transform:translateX(-50%) translateY(0)}
+.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.25rem}
+.stats{display:flex;gap:8px;flex:1;position:relative;z-index:1}
+.stat{flex:1;background:rgba(255,255,255,.18);border-radius:14px;padding:8px 4px;text-align:center}
+.stat b{display:block;font-size:1.25rem;line-height:1.3}
+.stat span{font-size:.72rem;opacity:.92}
+.h3{display:flex;justify-content:space-between;align-items:baseline;margin:22px 2px 10px}
+.h3 b{font-size:1.1rem}
+.h3 a,.h3 button{color:var(--acc);font-weight:600;font-size:.88rem;text-decoration:none}
+
+/* task rows/cards */
+.tk{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;margin-bottom:10px;width:100%;text-align:left;transition:transform .15s,box-shadow .2s,background .2s}
+.tk:hover{box-shadow:var(--shadow)}
+.tk:active{transform:scale(.985)}
+.tk .ic{width:44px;height:44px;border-radius:13px;background:var(--accbg);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex:0 0 auto}
+.tk .tt{flex:1;min-width:0}
+.tk .tt b{display:block;font-size:.98rem}
+.tk .tt span{font-size:.78rem;color:var(--mute)}
+.tk.ck{background:var(--okbg);border-color:transparent}
+.tk.ck .tt b{opacity:.65;text-decoration:line-through}
+.tick{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:1rem;color:transparent;transition:all .2s;background:var(--card)}
+.tk.ck .tick{background:var(--ok);border-color:var(--ok);color:#fff}
+.tick.pop{animation:pop .4s}
+@keyframes pop{40%{transform:scale(1.35)}100%{transform:scale(1)}}
+.tickhit{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;margin:-6px -6px -6px 0}
+
+/* phases cards */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pc{padding:16px;text-align:left;width:100%;transition:transform .15s,box-shadow .2s}
+.pc:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.pc:active{transform:scale(.98)}
+.pc .n{display:inline-flex;width:30px;height:30px;border-radius:9px;background:var(--accbg);color:var(--acc);align-items:center;justify-content:center;font-weight:700;margin-bottom:6px}
+.pc b{display:block}
+.pc small{color:var(--mute);display:block;margin-bottom:8px;font-size:.82rem}
+.mb{height:7px;background:var(--line);border-radius:9px;overflow:hidden}
+.mb i{display:block;height:100%;background:var(--ok);border-radius:9px;transition:width .5s}
+.pc .cnt{font-size:.76rem;color:var(--mute);margin-top:6px}
+
+/* day rows */
+.dr{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;margin-bottom:10px;width:100%;text-align:left;transition:transform .15s,box-shadow .2s}
+.dr:hover{box-shadow:var(--shadow)}
+.dr:active{transform:scale(.985)}
+.badge{flex:0 0 auto;width:48px;height:48px;border-radius:14px;background:var(--accbg);color:var(--acc);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1.1}
+.badge small{font-size:.58rem;font-weight:600}
+.dr.done .badge{background:var(--ok);color:#fff}
+.dr .dt{flex:1;min-width:0}
+.dr .dt b{display:block}
+.dr .dt span{font-size:.78rem;color:var(--mute)}
+.chev{color:var(--mute);font-size:1.3rem}
+.phh{margin:22px 2px 10px;display:flex;align-items:center;gap:10px}
+.phh .n{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.phh small{display:block;color:var(--mute);font-size:.8rem;line-height:1.3}
+
+/* day view */
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--acc);font-weight:600;margin-bottom:10px;min-height:44px}
+.dhead{padding:18px;margin-bottom:16px}
+.dhead .row{display:flex;align-items:center;gap:12px}
+.dnav{display:flex;gap:8px;margin-top:14px}
+.dnav .btn{flex:1}
+.dnav .btn[disabled]{opacity:.4;pointer-events:none}
+
+/* heat grid */
+.heat{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.hc{aspect-ratio:1;border-radius:9px;background:var(--line);font-size:.72rem;font-weight:700;color:var(--mute);display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.hc:active{transform:scale(.92)}
+.hc.p{background:var(--accbg);color:var(--acc)}
+.hc.f{background:var(--ok);color:#fff}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sc{padding:14px 8px;text-align:center}
+.sc b{display:block;font-size:1.4rem;color:var(--acc);line-height:1.3}
+.sc span{font-size:.75rem;color:var(--mute)}
+.banner{display:flex;align-items:center;gap:12px;padding:14px;margin-bottom:16px}
+.banner .ic{font-size:1.6rem}
+.banner>div:not(.ic){flex:1;min-width:0}
+.banner .ic{flex:0 0 auto}
+.banner b{display:block}
+.banner small{color:var(--mute)}
+
+/* layers */
+.layer{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;transition:visibility 0s .36s}
+.layer.on{visibility:visible;transition-delay:0s}
+#lc{position:relative;width:100%;display:flex;justify-content:center}
+.layer.mid #lc{align-self:center}
+.layer .bd{position:absolute;inset:0;background:rgba(10,15,35,.55);opacity:0;transition:opacity .3s;backdrop-filter:blur(3px)}
+.layer.on .bd{opacity:1}
+.sheet{position:relative;background:var(--card);width:100%;max-width:560px;max-height:90dvh;border-radius:26px 26px 0 0;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.9,.25,1);box-shadow:0 -10px 40px rgba(0,0,0,.25)}
+.layer.on .sheet{transform:translateY(0)}
+.sheet.drag{transition:none}
+.grab{width:42px;height:5px;border-radius:9px;background:var(--line);margin:10px auto 2px;flex:0 0 auto}
+.sh{display:flex;align-items:center;gap:12px;padding:8px 18px 12px;touch-action:none}
+.sh .ic{width:52px;height:52px;border-radius:15px;background:var(--accbg);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex:0 0 auto}
+.sh .tt{flex:1;min-width:0}
+.sh .tt small{color:var(--mute)}
+.sh .tt b{display:block;line-height:1.3}
+.x{width:44px;height:44px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex:0 0 auto}
+.sb{padding:0 18px 14px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.sb p{margin:0 0 12px}
+.say{background:var(--accbg);border-radius:14px;padding:10px 14px;margin:0 0 12px}
+.say b{display:block;margin-bottom:2px}
+.say div{margin:3px 0}
+.rt{font-size:.8rem;font-weight:700;color:var(--mute);margin:6px 0}
+.rl{display:flex;flex-direction:column;gap:8px}
+.rl a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--acc);border:1px solid var(--line);border-radius:14px;padding:11px 12px;font-weight:600;font-size:.9rem;min-height:48px;transition:background .2s}
+.rl a:active{background:var(--accbg)}
+.rl a small{display:block;font-weight:400;color:var(--mute);font-size:.75rem}
+.sf{display:flex;gap:8px;padding:12px 18px calc(14px + var(--sab));border-top:1px solid var(--line);background:var(--card)}
+.sf .btn{flex:1}
+.sf .sq{flex:0 0 52px;padding:0}
+.sf .sq[disabled]{opacity:.35;pointer-events:none}
+.sf .done{background:var(--ok);color:#fff;box-shadow:0 6px 16px rgba(31,157,99,.35)}
+
+.modal{position:relative;background:var(--card);width:calc(100% - 32px);max-width:420px;border-radius:26px;padding:26px 22px 20px;text-align:center;margin:auto;transform:scale(.88);opacity:0;transition:transform .35s cubic-bezier(.2,.9,.25,1),opacity .25s;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.layer.on .modal{transform:none;opacity:1}
+.layer.mid{align-items:center}
+.modal h3{margin:6px 0 4px;font-size:1.3rem}
+.modal p{color:var(--mute);margin:0 0 16px}
+.modal .em{font-size:3.2rem;line-height:1.2}
+.modal .btns{display:flex;flex-direction:column;gap:8px}
+.modal ol{text-align:left;padding-left:22px;margin:0 0 16px}
+.conf{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:101}
+.conf i{position:absolute;top:-20px;width:9px;height:14px;border-radius:2px;animation:fall 2.4s linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg);opacity:.9}}
+.toast{position:fixed;left:50%;bottom:calc(86px + var(--sab));transform:translate(-50%,100px);opacity:0;pointer-events:none;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:14px;font-size:.9rem;transition:transform .35s cubic-bezier(.2,.9,.25,1);z-index:120;max-width:90%;text-align:center}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+/* mobile */
+@media(max-width:899px){
+  .side{width:min(86vw,320px);transform:translateX(-104%);transition:transform .32s cubic-bezier(.2,.8,.2,1);box-shadow:none}
+  .side.open{transform:none;box-shadow:12px 0 40px rgba(0,0,0,.3)}
+  .main{margin-left:0}
+  .topbar{display:flex;position:sticky;top:0;z-index:40;align-items:center;gap:8px;padding:calc(8px + var(--sat)) 12px 8px;background:var(--bg);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .topbar .t{flex:1;font-weight:700;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .menu{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+  .pill{background:var(--accbg);color:var(--acc);font-weight:700;font-size:.82rem;padding:6px 12px;border-radius:99px}
+  .bnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--card);background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + var(--sab))}
+  .bnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:0;text-decoration:none;color:var(--mute);font-size:.7rem;font-weight:600;min-height:50px;justify-content:center;border-radius:12px;transition:color .2s,transform .15s}
+  .bnav a:active{transform:scale(.92)}
+  .bnav a .i{font-size:1.35rem;line-height:1.2;transition:transform .25s}
+  .bnav a.on{color:var(--acc)}
+  .bnav a.on .i{transform:translateY(-2px) scale(1.12)}
+  .view{padding:16px 14px calc(96px + var(--sab))}
+  .grid{grid-template-columns:1fr}
+  .hero{padding:18px;border-radius:20px}
+  .ring{width:84px;height:84px}
+  .ring svg{width:84px;height:84px}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  h1.pt{font-size:1.3rem}
+}
+@media(min-width:600px) and (max-width:899px){.layer{align-items:center}.sheet{border-radius:26px;max-height:86dvh;transform:translateY(40px) scale(.96);opacity:0;transition:transform .3s,opacity .25s}.layer.on .sheet{transform:none;opacity:1}}
+@media(min-width:900px){.layer{align-items:center}.sheet{border-radius:26px;max-height:86dvh;transform:translateY(30px) scale(.96);opacity:0;transition:transform .3s,opacity .25s}.layer.on .sheet{transform:none;opacity:1}.grab{display:none}.sh{padding-top:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="hero">
-    <h1>৪০ দিনের Spoken English Roadmap</h1>
-    <p>৬টি ফেজ · প্রতিদিন ৬টি কাজ · প্রতিটি কাজের সাথে রিসোর্স</p>
-    <div class="prog">
-      <div class="ring">
-        <svg width="84" height="84" viewBox="0 0 84 84"><circle cx="42" cy="42" r="36" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="9"/><circle id="arc" cx="42" cy="42" r="36" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-dasharray="226.2" stroke-dashoffset="226.2" style="transition:stroke-dashoffset .4s"/></svg>
-        <b id="pct">০%</b>
-      </div>
-      <div class="stats">
-        <div class="stat"><b id="sDone">০</b><span>দিন শেষ</span></div>
-        <div class="stat"><b id="sLeft">৪০</b><span>বাকি</span></div>
-        <div class="stat"><b id="sStreak">০</b><span>টানা দিন</span></div>
-      </div>
-    </div>
-    <button class="cta" id="cont">▶ আজকের পাঠে যাও</button>
+<div class="app">
+  <aside class="side" id="side" aria-label="মেনু"></aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="main">
+    <header class="topbar">
+      <button class="menu" id="menuBtn" aria-label="মেনু খুলুন">☰</button>
+      <div class="t" id="ttl">Spoken English</div>
+      <div class="pill" id="pill">০%</div>
+    </header>
+    <main id="view"></main>
   </div>
-
-  <div class="how"><b>কীভাবে ব্যবহার করবে</b>দিনের কার্ডে ট্যাপ করো → ৬টি কাজ দেখাবে → যেকোনো কাজে ট্যাপ করলে নির্দেশনা ও রিসোর্স খুলবে → শেষ হলে টিক দাও। ৬টি টিক দিলে দিন সম্পন্ন। (প্রতিদিন প্রায় ৬৫ মিনিট)</div>
-
-  <div class="tabs" id="tabs"></div>
-  <div class="ph" id="phase"></div>
-  <div id="days"></div>
-
-  <div class="foot">
-    <span>অগ্রগতি এই ব্রাউজারে সেভ থাকে।</span>
-    <span>
-      <button class="link" id="resetBtn">রিসেট করো</button>
-      <span class="confirm" id="confirm">নিশ্চিত? <button class="y" id="yes">হ্যাঁ</button><button id="no">না</button></span>
-    </span>
-  </div>
+  <nav class="bnav" id="bnav" aria-label="নিচের নেভিগেশন"></nav>
 </div>
-<div class="toast" id="toast"></div>
+<div class="layer" id="layer" role="dialog" aria-modal="true"><div class="bd" id="bd"></div><div id="lc"></div></div>
+<div class="toast" id="toast" role="status"></div>
 
 <script>
 /* [বাংলা শিরোনাম, ইংরেজি কীওয়ার্ড, ৩টি উদাহরণ বাক্য, বলার বিষয় (বাংলায়)] */
@@ -210,77 +329,211 @@ function build(kw,ex,sp){return[
      ["Google Translate — বাংলা থেকে ইংরেজি যাচাই","translate.google.com","https://translate.google.com/?sl=bn&tl=en"]]}
 ]}
 const DAYS=[];PHASES.forEach((p,pi)=>p.days.forEach(x=>DAYS.push({pi,bn:x[0],kw:x[1],ex:x[2],sp:x[3]})));
+
 const KEY="se40-v1";
-let state={t:{}};
-try{const s=localStorage.getItem(KEY);if(s)state=JSON.parse(s)}catch(e){}
+let state={t:{},seen:{}};
+try{const s=localStorage.getItem(KEY);if(s)state=Object.assign({t:{},seen:{}},JSON.parse(s))}catch(e){}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
 const bn=n=>String(n).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
+const $=id=>document.getElementById(id);
 const cnt=d=>[0,1,2,3,4,5].filter(k=>state.t[d+"-"+k]).length;
 const isDone=d=>cnt(d)===6;
-let cur=0;
-const $=id=>document.getElementById(id);
-function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200)}
-function phaseRange(pi){let s=1;for(let i=0;i<pi;i++)s+=PHASES[i].days.length;return[s,s+PHASES[pi].days.length-1]}
-function nextDay(){for(let d=1;d<=40;d++)if(!isDone(d))return d;return 40}
+const doneDays=()=>{let n=0;for(let d=1;d<=40;d++)if(isDone(d))n++;return n};
+const totalTasks=()=>Object.values(state.t).filter(Boolean).length;
+const streak=()=>{let b=0,r=0;for(let d=1;d<=40;d++){if(isDone(d)){r++;b=Math.max(b,r)}else r=0}return b};
+const nextDay=()=>{for(let d=1;d<=40;d++)if(!isDone(d))return d;return 40};
+const phaseRange=pi=>{let s=1;for(let i=0;i<pi;i++)s+=PHASES[i].days.length;return[s,s+PHASES[pi].days.length-1]};
+const phaseDone=pi=>{const[a,b]=phaseRange(pi);let c=0;for(let d=a;d<=b;d++)if(isDone(d))c++;return c};
+const cache={};
+const tasksOf=d=>cache[d]||(cache[d]=build(DAYS[d-1].kw,DAYS[d-1].ex,DAYS[d-1].sp));
+const ring=(r,p,sw)=>{const c=2*Math.PI*r;return`<svg viewBox="0 0 ${2*(r+sw)} ${2*(r+sw)}" width="100%" height="100%"><circle cx="${r+sw}" cy="${r+sw}" r="${r}" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="${sw}"/><circle cx="${r+sw}" cy="${r+sw}" r="${r}" fill="none" stroke="#fff" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}" style="transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.2,1)"/></svg>`};
 
-function renderTabs(){
-  $('tabs').innerHTML=PHASES.map((p,i)=>{const[a,b]=phaseRange(i);let c=0;for(let d=a;d<=b;d++)if(isDone(d))c++;
-   return `<button class="tab ${i===cur?'on':''}" data-i="${i}">ফেজ ${bn(i+1)}: ${p.n}<small>দিন ${bn(a)}–${bn(b)} · ${bn(c)}/${bn(b-a+1)}</small><div class="m"><i style="width:${c/(b-a+1)*100}%"></i></div></button>`}).join('');
+/* ---------- routing ---------- */
+let route={n:'home'},pendingScroll=null;
+function parse(){const h=location.hash.slice(1);let m;
+  if(m=h.match(/^day-(\d+)$/)){const d=+m[1];if(d>=1&&d<=40)return{n:'day',d}}
+  if(h==='roadmap'||h==='progress')return{n:h};
+  return{n:'home'}}
+function go(h){if(location.hash.slice(1)===h){onRoute();}else location.hash=h}
+window.addEventListener('hashchange',onRoute);
+
+/* ---------- sidebar & nav ---------- */
+function renderSide(){
+  const n=doneDays(),pc=Math.round(n/40*100),nd=nextDay();
+  const on=x=>route.n===x?'on':'';
+  $('side').innerHTML=`
+  <div class="brand"><img src="icon-192.png" alt=""><div><b>Spoken English</b><small>৪০ দিনের রোডম্যাপ</small></div></div>
+  <div class="sprog"><div class="r"><span>অগ্রগতি</span><b>${bn(pc)}%</b></div><div class="bar"><i style="width:${pc}%"></i></div><div class="r" style="margin-top:6px"><span>${bn(n)}/৪০ দিন</span><span>🔥 ${bn(streak())} টানা</span></div></div>
+  <nav class="nav">
+    <a href="#home" class="${on('home')}"><span class="i">🏠</span>হোম</a>
+    <a href="#day-${nd}" class="${route.n==='day'&&route.d===nd?'on':''}"><span class="i">▶️</span>আজকের পাঠ (দিন ${bn(nd)})</a>
+    <a href="#roadmap" class="${on('roadmap')}"><span class="i">🗺️</span>পুরো রোডম্যাপ</a>
+    <a href="#progress" class="${on('progress')}"><span class="i">📊</span>আমার অগ্রগতি</a>
+  </nav>
+  <div class="sec">ফেজ</div>
+  <div class="pl">${PHASES.map((p,i)=>{const[a,b]=phaseRange(i),c=phaseDone(i);return`<a href="#roadmap" data-ph="${i}" class="${c===b-a+1?'full':''}"><span>${bn(i+1)}. ${p.n}</span><span class="c">${bn(c)}/${bn(b-a+1)}</span></a>`}).join('')}</div>
+  <div class="sfoot"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button></div>`;
+  $('pill').textContent=bn(pc)+'%';
+  $('bnav').innerHTML=[['home','🏠','হোম','#home'],['roadmap','🗺️','রোডম্যাপ','#roadmap'],['today','▶️','আজ','#day-'+nd],['progress','📊','অগ্রগতি','#progress']]
+   .map(x=>`<a href="${x[3]}" class="${(x[0]==='today'?route.n==='day':route.n===x[0])?'on':''}"><span class="i">${x[1]}</span>${x[2]}</a>`).join('');
 }
-function renderDays(openDay){
-  const p=PHASES[cur],[a,b]=phaseRange(cur);
-  $('phase').innerHTML=`<h2>ফেজ ${bn(cur+1)}: ${p.n}</h2><p>${p.d}</p>`;
-  let h='';
-  for(let d=a;d<=b;d++){
-    const D=DAYS[d-1],T=build(D.kw,D.ex,D.sp),c=cnt(d);
-    h+=`<div class="day ${c===6?'done':''} ${d===openDay?'open':''}" id="day${d}"><div class="dh" data-d="${d}"><div class="badge"><small>দিন</small>${bn(d)}</div><div class="dt"><b>${D.bn}</b><span id="cc${d}">${bn(c)}/৬ কাজ সম্পন্ন</span><div class="mini"><i id="mi${d}" style="width:${c/6*100}%"></i></div></div><span class="chev">›</span></div><div class="db">`;
-    T.forEach((t,k)=>{
-      const ck=!!state.t[d+"-"+k];
-      h+=`<div class="task ${ck?'ck':''}" id="t${d}-${k}"><div class="th" data-t="${d}-${k}"><input type="checkbox" data-c="${d}-${k}" ${ck?'checked':''} aria-label="সম্পন্ন"><span class="ic">${t.ic}</span><div class="tt"><b>${k+1}. ${t.t}</b><span>⏱ ${bn(t.m)} মিনিট</span></div><span class="chev">›</span></div><div class="tb"><p>${t.d}</p>`;
-      if(t.ex)h+=`<div class="say"><b>উদাহরণ:</b>${t.ex.map(e=>`<div>• ${e}</div>`).join('')}</div>`;
-      h+=`<div class="rlt">🔗 রিসোর্স</div><div class="rl">${t.r.map(r=>`<a href="${r[2]}" target="_blank" rel="noopener"><em>↗</em><span>${r[0]}<small>${r[1]}</small></span></a>`).join('')}</div></div></div>`;
-    });
-    h+=`</div></div>`;
+function openDrawer(o){$('side').classList.toggle('open',o);$('scrim').classList.toggle('on',o);document.body.classList.toggle('lock',o)}
+$('menuBtn').onclick=()=>openDrawer(true);
+$('scrim').onclick=()=>openDrawer(false);
+
+/* ---------- views ---------- */
+function taskRow(d,k,i){const t=tasksOf(d)[k],ck=!!state.t[d+'-'+k];
+  return`<div class="tk card st ${ck?'ck':''}" style="--i:${i}" data-task="${d}-${k}" role="button" tabindex="0"><div class="ic">${t.ic}</div><div class="tt"><b>${k+1}. ${t.t}</b><span>⏱ ${bn(t.m)} মিনিট · রিসোর্স দেখতে ট্যাপ করো</span></div><button class="tickhit" data-toggle="${d}-${k}" aria-label="সম্পন্ন চিহ্নিত করো"><span class="tick">✓</span></button></div>`}
+
+function vHome(){
+  const n=doneDays(),nd=nextDay(),all=n===40,D=DAYS[nd-1],c=cnt(nd);
+  const showInstall=!isStandalone()&&!state.seen.inst;
+  return`<div class="view">
+  <div class="hero st">
+    <h2>${all?'🎉 অভিনন্দন! ৪০ দিন শেষ':'আজকের লক্ষ্য: দিন '+bn(nd)}</h2>
+    <p>${all?'এখন পরবর্তী ৩০ দিনের লক্ষ্য ঠিক করো।':D.bn}</p>
+    <div class="hr"><div class="ring">${ring(36,n/40,9)}<b>${bn(Math.round(n/40*100))}%</b></div>
+      <div class="stats"><div class="stat"><b>${bn(n)}</b><span>দিন শেষ</span></div><div class="stat"><b>${bn(40-n)}</b><span>বাকি</span></div><div class="stat"><b>${bn(streak())}</b><span>🔥 টানা</span></div></div></div>
+    <button class="btn w blk" data-go="day-${nd}">${all?'আবার দেখো':(c?'চালিয়ে যাও ▶':'শুরু করো ▶')}</button>
+  </div>
+  ${showInstall?`<div class="banner card st" style="--i:1"><div class="ic">📲</div><div><b>ফোনে অ্যাপ হিসেবে রাখো</b><small>হোম স্ক্রিন থেকে এক ট্যাপে খুলবে, অফলাইনেও চলবে</small></div><button class="btn p" data-act="install">ইনস্টল</button></div>`:''}
+  <div class="h3 st" style="--i:2"><b>আজকের ৬টি কাজ</b><a href="#day-${nd}">সব দেখো</a></div>
+  ${[0,1,2,3,4,5].map(k=>taskRow(nd,k,k+3)).join('')}
+  <div class="h3 st" style="--i:9"><b>ফেজসমূহ</b><a href="#roadmap">পুরো রোডম্যাপ</a></div>
+  <div class="grid">${PHASES.map((p,i)=>{const[a,b]=phaseRange(i),c=phaseDone(i),t=b-a+1;return`<button class="pc card st" style="--i:${10+i}" data-ph="${i}"><span class="n">${bn(i+1)}</span><b>${p.n}</b><small>${p.d}</small><div class="mb"><i style="width:${c/t*100}%"></i></div><div class="cnt">দিন ${bn(a)}–${bn(b)} · ${bn(c)}/${bn(t)} শেষ</div></button>`}).join('')}</div>
+  </div>`}
+
+function dayRow(d,i){const D=DAYS[d-1],c=cnt(d);
+  return`<button class="dr card st ${c===6?'done':''}" style="--i:${i}" data-go="day-${d}"><div class="badge"><small>দিন</small>${bn(d)}</div><div class="dt"><b>${D.bn}</b><span>${bn(c)}/৬ কাজ সম্পন্ন</span><div class="mb" style="margin-top:6px"><i style="width:${c/6*100}%"></i></div></div><span class="chev">›</span></button>`}
+function vRoadmap(){
+  let h=`<div class="view"><h1 class="pt st">পুরো রোডম্যাপ</h1><p class="sub st" style="--i:1">৬টি ফেজ · ৪০ দিন · যেকোনো দিনে ট্যাপ করো</p>`;let i=2;
+  PHASES.forEach((p,pi)=>{const[a,b]=phaseRange(pi);h+=`<div class="phh st" style="--i:${i++}" id="ph${pi}"><div class="n">${bn(pi+1)}</div><div><b>${p.n}</b><small>${p.d}</small></div></div>`;for(let d=a;d<=b;d++)h+=dayRow(d,Math.min(i++,14))});
+  return h+`</div>`}
+
+function vDay(d){
+  const D=DAYS[d-1],c=cnt(d),pi=D.pi;
+  return`<div class="view"><button class="back" data-go="roadmap">‹ রোডম্যাপ</button>
+  <div class="card dhead st"><div class="row"><div class="badge" style="${c===6?'background:var(--ok);color:#fff':''}"><small>দিন</small>${bn(d)}</div><div style="flex:1;min-width:0"><small style="color:var(--mute)">ফেজ ${bn(pi+1)}: ${PHASES[pi].n}</small><h1 class="pt" style="font-size:1.2rem;margin:0">${D.bn}</h1></div></div>
+  <div class="mb" style="margin-top:14px"><i style="width:${c/6*100}%"></i></div><div class="cnt" style="font-size:.8rem;color:var(--mute);margin-top:6px">${bn(c)}/৬ কাজ সম্পন্ন · প্রায় ৬৫ মিনিট</div>
+  <div class="dnav"><button class="btn g" data-go="day-${d-1}" ${d<=1?'disabled':''}>‹ আগের দিন</button><button class="btn g" data-go="day-${d+1}" ${d>=40?'disabled':''}>পরের দিন ›</button></div></div>
+  ${[0,1,2,3,4,5].map(k=>taskRow(d,k,k+1)).join('')}</div>`}
+
+function vProgress(){
+  const n=doneDays();
+  return`<div class="view"><h1 class="pt st">আমার অগ্রগতি</h1><p class="sub st" style="--i:1">তুমি কতদূর এসেছ</p>
+  <div class="hero st" style="--i:2"><div class="hr" style="margin:0"><div class="ring" style="width:110px;height:110px">${ring(36,n/40,9)}<b>${bn(Math.round(n/40*100))}%</b></div><div style="position:relative;z-index:1"><h2>${bn(n)}/৪০ দিন</h2><p>${n===40?'সব শেষ! 🎉':'চালিয়ে যাও, তুমি পারবে!'}</p></div></div></div>
+  <div class="sg st" style="--i:3"><div class="card sc"><b>${bn(n)}</b><span>দিন শেষ</span></div><div class="card sc"><b>${bn(totalTasks())}/২৪০</b><span>কাজ শেষ</span></div><div class="card sc"><b>${bn(streak())}</b><span>🔥 টানা দিন</span></div><div class="card sc"><b>${bn(40-n)}</b><span>দিন বাকি</span></div></div>
+  <div class="h3 st" style="--i:4"><b>৪০ দিনের মানচিত্র</b></div>
+  <div class="card st" style="--i:5;padding:14px"><div class="heat">${Array.from({length:40},(_,i)=>{const d=i+1,c=cnt(d);return`<button class="hc ${c===6?'f':c?'p':''}" data-go="day-${d}" aria-label="দিন ${d}">${bn(d)}</button>`}).join('')}</div>
+  <div style="display:flex;gap:14px;font-size:.75rem;color:var(--mute);margin-top:10px"><span>⬜ শুরু হয়নি</span><span style="color:var(--acc)">🟦 আংশিক</span><span style="color:var(--ok)">🟩 সম্পন্ন</span></div></div>
+  <div class="h3 st" style="--i:6"><b>সেটিংস</b></div>
+  <div class="card st" style="--i:7;padding:14px;display:flex;flex-direction:column;gap:10px"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button><button class="btn d blk" data-act="reset">🗑️ সব অগ্রগতি রিসেট করো</button><small style="color:var(--mute);text-align:center">অগ্রগতি শুধু এই ডিভাইসে সেভ থাকে।</small></div></div>`}
+
+function titleFor(){return route.n==='day'?'দিন '+bn(route.d):route.n==='roadmap'?'রোডম্যাপ':route.n==='progress'?'অগ্রগতি':'Spoken English'}
+function paint(keepScroll){
+  const y=window.scrollY;
+  $('view').innerHTML=route.n==='day'?vDay(route.d):route.n==='roadmap'?vRoadmap():route.n==='progress'?vProgress():vHome();
+  $('ttl').textContent=titleFor();renderSide();
+  if(keepScroll){window.scrollTo(0,y);document.querySelectorAll('.st,.view').forEach(e=>e.style.animation='none')}
+}
+function onRoute(){
+  route=parse();openDrawer(false);paint(false);
+  if(pendingScroll!==null){const el=$('ph'+pendingScroll);pendingScroll=null;if(el)setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),60)}else window.scrollTo(0,0);
+}
+
+/* ---------- layers (sheet / modals) ---------- */
+let lastFocus=null,cur=null;
+function layer(html,mid){
+  lastFocus=document.activeElement;
+  $('layer').classList.toggle('mid',!!mid);$('lc').innerHTML=html;
+  document.body.classList.add('lock');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>$('layer').classList.add('on')));
+  const f=$('lc').querySelector('[data-autofocus]');if(f)setTimeout(()=>f.focus({preventScroll:true}),320);
+}
+function closeLayer(){
+  $('layer').classList.remove('on');cur=null;
+  document.body.classList.remove('lock');
+  setTimeout(()=>{if(!$('layer').classList.contains('on'))$('lc').innerHTML=''},350);
+  if(lastFocus&&lastFocus.focus)try{lastFocus.focus({preventScroll:true})}catch(e){}
+}
+$('bd').onclick=closeLayer;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('layer').classList.contains('on'))closeLayer();else openDrawer(false)}});
+
+function sheetHTML(d,k){
+  const t=tasksOf(d)[k],ck=!!state.t[d+'-'+k],prev=k>0||d>1,next=k<5||d<40;
+  return`<div class="sheet" id="sheet"><div class="grab"></div>
+  <div class="sh" id="shh"><div class="ic">${t.ic}</div><div class="tt"><small>দিন ${bn(d)} · কাজ ${bn(k+1)}/৬ · ⏱ ${bn(t.m)} মিনিট</small><b>${t.t}</b></div><button class="x" data-act="close" aria-label="বন্ধ করো" data-autofocus>✕</button></div>
+  <div class="sb"><p>${t.d}</p>
+  ${t.ex?`<div class="say"><b>✍️ উদাহরণ</b>${t.ex.map(e=>`<div>• ${e}</div>`).join('')}</div>`:''}
+  <div class="rt">🔗 রিসোর্স</div><div class="rl">${t.r.map(r=>`<a href="${r[2]}" target="_blank" rel="noopener"><span>↗</span><span>${r[0]}<small>${r[1]}</small></span></a>`).join('')}</div></div>
+  <div class="sf"><button class="btn g sq" data-sh="-1" ${prev?'':'disabled'} aria-label="আগের কাজ">‹</button><button class="btn ${ck?'done':'p'}" data-toggle="${d}-${k}" data-inshet="1">${ck?'✓ সম্পন্ন (বাতিল করো)':'✓ সম্পন্ন করো'}</button><button class="btn g sq" data-sh="1" ${next?'':'disabled'} aria-label="পরের কাজ">›</button></div></div>`}
+function openTask(d,k){cur={d,k};
+  if($('layer').classList.contains('on')){$('lc').innerHTML=sheetHTML(d,k);attachDrag();return}
+  layer(sheetHTML(d,k));setTimeout(attachDrag,50)}
+function stepTask(s){let{d,k}=cur;k+=s;if(k>5){k=0;d++}if(k<0){k=5;d--}if(d<1||d>40)return;
+  const sb=$('sheet');openTask(d,k);if(sb)$('sheet').style.transition='none',requestAnimationFrame(()=>$('sheet').style.transition='')}
+
+function attachDrag(){
+  const sh=$('sheet'),hd=$('shh');if(!sh||!hd||matchMedia('(min-width:600px)').matches)return;
+  let y0=null,dy=0;
+  const st=e=>{y0=e.touches[0].clientY;dy=0;sh.classList.add('drag')};
+  const mv=e=>{if(y0===null)return;dy=Math.max(0,e.touches[0].clientY-y0);sh.style.transform=`translateY(${dy}px)`};
+  const en=()=>{if(y0===null)return;sh.classList.remove('drag');y0=null;if(dy>110){closeLayer()}sh.style.transform='';};
+  [hd,sh.querySelector('.grab')].forEach(el=>{el.addEventListener('touchstart',st,{passive:true});el.addEventListener('touchmove',mv,{passive:true});el.addEventListener('touchend',en)});
+}
+
+/* ---------- actions ---------- */
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2300)}
+function confetti(){const c=document.createElement('div');c.className='conf';const cols=['#2f6fed','#6a4df0','#1f9d63','#f59e0b','#ef4444','#ec4899'];
+  for(let i=0;i<48;i++){const e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.background=cols[i%6];e.style.animationDelay=Math.random()*.6+'s';e.style.animationDuration=1.8+Math.random()*1.4+'s';c.appendChild(e)}
+  document.body.appendChild(c);setTimeout(()=>c.remove(),3600)}
+function toggle(d,k,fromSheet){
+  const was=isDone(d),key=d+'-'+k;state.t[key]=!state.t[key];save();
+  paint(true);
+  const tk=document.querySelector(`[data-toggle="${key}"] .tick`);if(tk&&state.t[key])tk.classList.add('pop');
+  if(fromSheet&&cur){const sh=$('sheet');if(sh){const b=sh.querySelector('[data-toggle]');const ck=!!state.t[key];b.className='btn '+(ck?'done':'p');b.textContent=ck?'✓ সম্পন্ন (বাতিল করো)':'✓ সম্পন্ন করো'}}
+  if(isDone(d)&&!was){
+    setTimeout(()=>{confetti();const all=doneDays()===40;
+      layer(`<div class="modal"><div class="em">${all?'🏆':'🎉'}</div><h3>${all?'৪০ দিন সম্পন্ন!':'দিন '+bn(d)+' সম্পন্ন!'}</h3><p>${all?'অসাধারণ! তুমি পুরো রোডম্যাপ শেষ করেছ।':'চমৎকার! '+bn(doneDays())+'/৪০ দিন শেষ। এভাবেই চালিয়ে যাও।'}</p><div class="btns">${!all&&d<40?`<button class="btn p" data-go="day-${d+1}" data-act="close" data-autofocus>পরের দিনে যাও ▶</button>`:''}<button class="btn g" data-act="close">এখন নয়</button></div></div>`,true)},fromSheet?250:150);
+    if(fromSheet){$('layer').classList.remove('on')}
   }
-  $('days').innerHTML=h;
 }
-function stats(){
-  let n=0,streak=0,run=0;
-  for(let d=1;d<=40;d++){if(isDone(d)){n++;run++;streak=Math.max(streak,run)}else run=0}
-  const pc=Math.round(n/40*100);
-  $('pct').textContent=bn(pc)+'%';
-  $('arc').style.strokeDashoffset=226.2*(1-n/40);
-  $('sDone').textContent=bn(n);$('sLeft').textContent=bn(40-n);$('sStreak').textContent=bn(streak);
-  $('cont').textContent=n===40?'🎉 সম্পূর্ণ! আবার দেখো':'▶ আজকের পাঠে যাও: দিন '+bn(nextDay());
+/* install */
+let deferred=null;
+const isStandalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e});
+window.addEventListener('appinstalled',()=>{deferred=null;toast('✅ অ্যাপ ইনস্টল হয়েছে!')});
+function install(){
+  state.seen.inst=1;save();
+  if(isStandalone()){toast('অ্যাপ ইতিমধ্যে ইনস্টল করা আছে ✅');return}
+  if(deferred){deferred.prompt();deferred.userChoice.finally(()=>{deferred=null});return}
+  const ios=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  layer(`<div class="modal"><div class="em">📲</div><h3>ফোনে ইনস্টল করো</h3><p>${ios?'iPhone/iPad-এ Safari দিয়ে:':'Android-এ Chrome দিয়ে:'}</p>
+  <ol>${ios?'<li>নিচের <b>Share</b> (⬆️) বাটনে ট্যাপ করো</li><li><b>Add to Home Screen</b> বেছে নাও</li><li><b>Add</b> চাপো</li>':'<li>ব্রাউজারের <b>⋮ মেনু</b> খোলো</li><li><b>Install app</b> বা <b>Add to Home screen</b> বেছে নাও</li><li><b>Install</b> চাপো</li>'}</ol>
+  <button class="btn p blk" data-act="close" data-autofocus>বুঝেছি</button></div>`,true);
+  paint(true);
 }
-function renderAll(openDay){renderTabs();renderDays(openDay);stats()}
-function goDay(d){cur=DAYS[d-1].pi;renderAll(d);setTimeout(()=>{const el=$('day'+d);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})},50)}
+function resetAsk(){layer(`<div class="modal"><div class="em">⚠️</div><h3>রিসেট করবে?</h3><p>সব অগ্রগতি মুছে যাবে। এটি ফেরানো যাবে না।</p><div class="btns"><button class="btn d" data-act="reset-yes">হ্যাঁ, রিসেট করো</button><button class="btn g" data-act="close" data-autofocus>না, থাক</button></div></div>`,true)}
 
-$('tabs').onclick=e=>{const b=e.target.closest('.tab');if(b){cur=+b.dataset.i;renderAll()}};
-$('cont').onclick=()=>goDay(nextDay());
-$('days').onclick=e=>{
-  const c=e.target.closest('input[data-c]');
-  if(c){
-    const[d,k]=c.dataset.c.split('-').map(Number),was=isDone(d);
-    state.t[d+"-"+k]=c.checked;save();
-    $('t'+d+'-'+k).classList.toggle('ck',c.checked);
-    const n=cnt(d);$('cc'+d).textContent=bn(n)+'/৬ কাজ সম্পন্ন';$('mi'+d).style.width=(n/6*100)+'%';
-    $('day'+d).classList.toggle('done',n===6);
-    stats();renderTabs();
-    if(n===6&&!was)toast('🎉 দিন '+bn(d)+' সম্পন্ন! চমৎকার!');
-    return}
-  const th=e.target.closest('.th');
-  if(th){$('t'+th.dataset.t).classList.toggle('open');return}
-  const h=e.target.closest('.dh');
-  if(h)$('day'+h.dataset.d).classList.toggle('open');
-};
-const rb=$('resetBtn'),cf=$('confirm');
-rb.onclick=()=>{rb.style.display='none';cf.style.display='inline-flex'};
-$('no').onclick=()=>{cf.style.display='none';rb.style.display=''};
-$('yes').onclick=()=>{state={t:{}};save();cf.style.display='none';rb.style.display='';cur=0;renderAll()};
-cur=DAYS[nextDay()-1].pi;
-renderAll(nextDay());
+document.addEventListener('click',e=>{
+  const t=e.target;
+  const tg=t.closest('[data-toggle]');
+  if(tg){e.stopPropagation();const[d,k]=tg.dataset.toggle.split('-').map(Number);toggle(d,k,!!tg.dataset.inshet);return}
+  const ac=t.closest('[data-act]');
+  if(ac){const a=ac.dataset.act;
+    if(a==='close'){const g=ac.dataset.go;closeLayer();if(g)go(g);return}
+    if(a==='install'){openDrawer(false);install();return}
+    if(a==='reset'){resetAsk();return}
+    if(a==='reset-yes'){state={t:{},seen:state.seen};save();closeLayer();toast('রিসেট হয়েছে');paint(false);return}}
+  const sh=t.closest('[data-sh]');if(sh){stepTask(+sh.dataset.sh);return}
+  const tk=t.closest('[data-task]');if(tk){const[d,k]=tk.dataset.task.split('-').map(Number);openTask(d,k);return}
+  const ph=t.closest('[data-ph]');if(ph){e.preventDefault();pendingScroll=+ph.dataset.ph;go('roadmap');return}
+  const g=t.closest('[data-go]');if(g){go(g.dataset.go);return}
+});
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-task]')){e.preventDefault();const[d,k]=e.target.dataset.task.split('-').map(Number);openTask(d,k)}});
+
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
+onRoute();
 </script>
 </body>
 </html>
