@@ -521,7 +521,7 @@ D("সম্পূর্ণ রিভিউ ২: উচ্চারণ ও ক�
 ["pronunciation|প্রনানসিয়েইশন|pro-NUN-ci-A-tion","assessment|অ্যাসেসমেন্ট|সেস-এ জোর","fluency|ফ্লুয়েন্সি|ফ্লু-এন-সি"],
 ["How do you feel about your English?|ইংরেজি নিয়ে কেমন লাগছে?","Much more confident than before.|আগের চেয়ে অনেক আত্মবিশ্বাসী।","What is your next goal?|পরের লক্ষ্য কী?","To speak fluently with foreigners.|বিদেশিদের সাথে সাবলীল কথা বলা।"],
 "৩ মিনিটের একটি স্বাধীন বক্তৃতা রেকর্ড করে দিন ১০-এর সাথে তুলনা করো এবং ৩টি উন্নতি ও ৩টি পরের লক্ষ্য লেখো।",
-"তুমি ৬০ দিন নিয়মিত ছিলে — এটাই সবচেয়ে বড় সাফল্য। পরের ধাপ: রোজ ৩০ মিনিট বলা চালিয়ে যাও।");
+"তুমি ৬০ দিন নিয়মিত ছিলে — এটাই সবচেয়ে বড় সাফল্য। এবার আরও ৪০ দিনের উন্নত স্তর (ফেজ ৭–১০) অপেক্ষা করছে।");
 D("ব্যাংক, ডাকঘর ও সেবা প্রতিষ্ঠানে কথা","bank post office english conversation","ব্যাংক, ডাকঘর ও সরকারি সেবায় প্রয়োজনীয় কথা বলতে পারা।",
 "I would like to… (open an account / send a parcel) / How long will it take? / What documents do I need? / Please fill in this form।",
 ["I would like to open an account.|আমি একটি অ্যাকাউন্ট খুলতে চাই।|আই উড লাইক টু ওপেন অ্যান অ্যাকাউন্ট।","What documents do I need?|আমার কী কী কাগজ লাগবে?|হোয়াট ডকুমেন্টস ডু আই নীড?","How long will it take?|কতক্ষণ লাগবে?|হাউ লং উইল ইট টেইক?","I want to send this parcel to Dhaka.|আমি এই পার্সেল ঢাকায় পাঠাতে চাই।|আই ওয়ান্ট টু সেন্ড দিস পার্সেল টু ঢাকা।","Please fill in this form.|দয়া করে এই ফর্মটি পূরণ করুন।|প্লিজ ফিল ইন দিস ফর্ম।"],
@@ -551,6 +551,369 @@ D("প্রতিদিনের ক্রিয়া ও Phrasal Verb","every
 
 /* ---- ক্রম ঠিক করা: ফেজ ৪ ও ৬-এ অতিরিক্ত ৩ দিন বসানো ---- */
 (()=>{const x=C60.splice(57,3);C60.splice(38,0,x[0]);C60.splice(56,0,x[1],x[2])})();
+/* ===== ফেজ ৭: মধ্যম স্তরের গ্রামার (দিন ৬১–৭০) ===== */
+D("Present Perfect: have/has + verb(3)","present perfect tense have has done","অভিজ্ঞতা ও এইমাত্র শেষ হওয়া কাজ Present Perfect-এ বলা।",
+"have/has + verb-এর ৩য় রূপ (V3): I have eaten. She has gone. ever, never, already, yet, just-এর সাথে ব্যবহৃত হয়। অনিয়মিত V3: go-went-gone, eat-ate-eaten, see-saw-seen।",
+["I have visited Cox's Bazar twice.|আমি দুবার কক্সবাজার গিয়েছি।|আই হ্যাভ ভিজিটেড কক্সেস বাজার টোয়াইস।","She has already finished her homework.|সে ইতিমধ্যে হোমওয়ার্ক শেষ করেছে।|শি হ্যাজ অলরেডি ফিনিশ্ড হার হোমওয়ার্ক।","Have you ever eaten sushi?|তুমি কি কখনো সুশি খেয়েছ?|হ্যাভ ইউ এভার ইটেন সুশি?","I have never seen snow.|আমি কখনো তুষার দেখিনি।|আই হ্যাভ নেভার সীন স্নো।","He has just left the office.|সে এইমাত্র অফিস ছেড়েছে।|হি হ্যাজ জাস্ট লেফট দি অফিস।"],
+["ever|কখনো|এভার","never|কখনোই না|নেভার","already|ইতিমধ্যে|অলরেডি","yet|এখনো|ইয়েট","just|এইমাত্র|জাস্ট","since|থেকে|সিন্স","for|ধরে|ফর","recently|সম্প্রতি|রীসেন্টলি","so far|এ পর্যন্ত|সো ফার","experience|অভিজ্ঞতা|ইক্সপীরিয়েন্স"],
+["been|বিন (US: বিন / UK: বীন)|দুটোই চলে","eaten|ইটেন|ই-টেন","seen|সীন|লম্বা 'ঈ'"],
+["Have you ever been abroad?|তুমি কি কখনো বিদেশে গিয়েছ?","Yes, I have been to Malaysia twice.|হ্যাঁ, দুবার মালয়েশিয়া গিয়েছি।","Have you visited Japan?|জাপান গিয়েছ?","No, not yet. I hope to go soon.|না, এখনো না। শিগগির যাওয়ার আশা।"],
+"জীবনের ৮টি অভিজ্ঞতা 'I have…' দিয়ে বলো (গিয়েছি, খেয়েছি, দেখেছি, শিখেছি)।",
+"নির্দিষ্ট অতীত সময় (yesterday, in 2020) থাকলে Past Simple; সময় নির্দিষ্ট না থাকলে Present Perfect।");
+
+D("Present Perfect বনাম Past Simple","present perfect vs past simple difference","দুই tense-এর পার্থক্য বুঝে সঠিকটি বেছে নেওয়া।",
+"নির্দিষ্ট অতীত সময় → Past Simple (I went there in 2020)। অনির্দিষ্ট সময় / এখনও প্রাসঙ্গিক → Present Perfect (I have been there)। for = সময়কাল, since = শুরুর সময়।",
+["I lived in Dhaka for five years.|আমি পাঁচ বছর ঢাকায় ছিলাম (এখন নেই)।|আই লিভড ইন ঢাকা ফর ফাইভ ইয়ার্স।","I have lived in Dhaka for five years.|আমি পাঁচ বছর ধরে ঢাকায় আছি (এখনও)।|আই হ্যাভ লিভড ইন ঢাকা ফর ফাইভ ইয়ার্স।","I lost my keys yesterday.|আমি গতকাল চাবি হারিয়েছি।|আই লস্ট মাই কীজ ইয়েস্টারডে।","I have lost my keys.|আমার চাবি হারিয়ে গেছে (এখনও পাইনি)।|আই হ্যাভ লস্ট মাই কীজ।","She has worked here since 2021.|সে ২০২১ থেকে এখানে কাজ করছে।|শি হ্যাজ ওয়ার্কড হিয়ার সিন্স টুয়েন্টি টোয়েন্টি-ওয়ান।"],
+["ago|আগে|অ্যাগো","last year|গত বছর|লাস্ট ইয়ার","in 2020|২০২০ সালে|ইন টোয়েন্টি টোয়েন্টি","until now|এখন পর্যন্ত|আনটিল নাউ","lately|ইদানীং|লেইটলি","once|একবার|ওয়ান্স","several times|বেশ কয়েকবার|সেভারাল টাইমস","at the moment|এই মুহূর্তে|অ্যাট দ্য মোমেন্ট","experience|অভিজ্ঞতা|ইক্সপীরিয়েন্স","result|ফল|রিজাল্ট"],
+["since / for|সিন্স / ফর|দুটো আলাদা অর্থ","lived|লিভড|d ধ্বনি","worked|ওয়ার্কড্|শেষে t ধ্বনি"],
+["How long have you worked here?|কতদিন ধরে এখানে কাজ করছেন?","I have worked here for three years.|তিন বছর ধরে।","Where did you work before?|আগে কোথায় ছিলেন?","I worked at a bank in Chittagong.|চট্টগ্রামের এক ব্যাংকে।"],
+"নিজের জীবনের ৫টি ঘটনা Past Simple-এ এবং ৫টি অভিজ্ঞতা Present Perfect-এ বলো।",
+"'ago' থাকলে সবসময় Past Simple: I met him two years ago (✓), I have met him two years ago (✗)।");
+
+D("Past Continuous ও Past Perfect","past continuous past perfect english","অতীতে চলমান কাজ ও আগে ঘটা কাজ বোঝাতে পারা।",
+"Past Continuous: was/were + verb-ing (I was sleeping when you called)। Past Perfect: had + V3 (I had left before he came)। while = চলমান কাজ; when = ঘটনা।",
+["I was studying when the light went out.|আমি পড়ছিলাম যখন বিদ্যুৎ গেল।|আই ওয়জ স্টাডিইং হোয়েন দ্য লাইট ওয়েন্ট আউট।","They were playing football at five.|পাঁচটায় তারা ফুটবল খেলছিল।|দে ওয়ার প্লেইং ফুটবল অ্যাট ফাইভ।","I had finished dinner before he arrived.|সে আসার আগেই আমি খাবার শেষ করেছিলাম।|আই হ্যাড ফিনিশ্ড ডিনার বিফোর হি অ্যারাইভড।","She was cooking while I was cleaning.|সে রান্না করছিল আর আমি পরিষ্কার করছিলাম।|শি ওয়জ কুকিং হোয়াইল আই ওয়জ ক্লিনিং।","By the time we reached, the train had left.|আমরা পৌঁছানোর আগেই ট্রেন ছেড়ে গিয়েছিল।|বাই দ্য টাইম উই রীচ্ড, দ্য ট্রেইন হ্যাড লেফট।"],
+["while|যখন (চলাকালীন)|হোয়াইল","when|যখন|হোয়েন","by the time|ততক্ষণে|বাই দ্য টাইম","before|আগে|বিফোর","after|পরে|আফটার","suddenly|হঠাৎ|সাডেনলি","meanwhile|এদিকে|মীনহোয়াইল","already|ইতিমধ্যে|অলরেডি","arrive|পৌঁছানো|অ্যারাইভ","reach|পৌঁছানো|রীচ"],
+["was|ওয়জ|দুর্বল রূপ 'ওয়জ'","were|ওয়ার|দুর্বল রূপ","had|হ্যাড|দ্রুত 'হ্যাড/আড'"],
+["What were you doing at ten last night?|গত রাত দশটায় কী করছিলে?","I was watching a movie. What about you?|সিনেমা দেখছিলাম। তুমি?","I was studying. I had already eaten dinner.|পড়ছিলাম। আগেই খাবার খেয়েছিলাম।","That is good. You were busy.|ভালো। তুমি ব্যস্ত ছিলে।"],
+"গত সপ্তাহের একটি ঘটনা বলো যেখানে একটি কাজ চলছিল আর হঠাৎ কিছু ঘটল (was doing… when…)।",
+"দুটি অতীত ঘটনার আগেরটিতে had+V3, পরেরটিতে Past Simple।");
+
+D("Modal Verbs: must, may, might, could, would","modal verbs must may might could would","সম্ভাবনা, বাধ্যবাধকতা ও ভদ্র অনুরোধে modal ঠিকভাবে ব্যবহার করা।",
+"modal + verb (মূল রূপ): must (অবশ্যই), may/might (হয়তো), could (পারতাম/ভদ্র অনুরোধ), would (ভদ্র/শর্ত)। must not = নিষেধ; don't have to = বাধ্য নও।",
+["You must wear a helmet.|তোমাকে অবশ্যই হেলমেট পরতে হবে।|ইউ মাস্ট ওয়ার আ হেলমেট।","It may rain this evening.|আজ সন্ধ্যায় বৃষ্টি হতে পারে।|ইট মে রেইন দিস ঈভনিং।","He might be late.|সে হয়তো দেরি করবে।|হি মাইট বি লেইট।","Could you open the window?|জানালাটি খুলবে কি?|কুড ইউ ওপেন দ্য উইন্ডো?","You don't have to come tomorrow.|তোমাকে কাল আসতেই হবে না।|ইউ ডোন্ট হ্যাভ টু কাম টুমরো।"],
+["must|অবশ্যই|মাস্ট","may|হতে পারে/অনুমতি|মে","might|হয়তো|মাইট","could|পারতাম|কুড","would|করতাম/ভদ্র|উড","allowed|অনুমোদিত|অ্যালাউড","forbidden|নিষিদ্ধ|ফরবিডেন","necessary|প্রয়োজনীয়|নেসেসারি","possible|সম্ভব|পসিবল","probably|সম্ভবত|প্রবাবলি"],
+["could|কুড|l নীরব","would|উড|l নীরব","might|মাইট|gh নীরব"],
+["May I come in?|ভেতরে আসতে পারি?","Yes, you may. Please sit down.|হ্যাঁ, বসুন।","Could you help me with this form?|এই ফর্মে সাহায্য করবেন?","Of course. You must sign here.|অবশ্যই। এখানে সই করতে হবে।"],
+"নিজের ঘর ও অফিসের ৫টি নিয়ম (must / must not) এবং ৫টি সম্ভাবনা (may / might) বলো।",
+"modal-এর পরে verb মূল রূপে এবং কোনো s/ed/ing নেই: He can swim (✓)।");
+
+D("Used to ও অভ্যাসের কথা","used to past habits english","অতীতের অভ্যাস ও বর্তমানের পরিবর্তন বলতে পারা।",
+"used to + verb = আগে করতাম (এখন করি না)। be used to + ing = অভ্যস্ত। would = অতীতের অভ্যাস (শুধু কাজের ক্ষেত্রে)।",
+["I used to play cricket every day.|আমি আগে প্রতিদিন ক্রিকেট খেলতাম।|আই ইউস্ট টু প্লে ক্রিকেট এভরি ডে।","She didn't use to wake up early.|সে আগে ভোরে উঠত না।|শি ডিডন্ট ইউস টু ওয়েক আপ আর্লি।","Did you use to live here?|তুমি কি আগে এখানে থাকতে?|ডিড ইউ ইউস টু লিভ হিয়ার?","I am used to waking up early.|আমি ভোরে ওঠায় অভ্যস্ত।|আই অ্যাম ইউস্ট টু ওয়েকিং আপ আর্লি।","Life was different. We would walk to school.|জীবন অন্যরকম ছিল। আমরা হেঁটে স্কুলে যেতাম।|লাইফ ওয়জ ডিফারেন্ট। উই উড ওয়াক টু স্কুল।"],
+["habit|অভ্যাস|হ্যাবিট","childhood|শৈশব|চাইল্ডহুড","change|পরিবর্তন|চেইঞ্জ","used to|আগে করতাম|ইউস্ট টু","get used to|অভ্যস্ত হওয়া|গেট ইউস্ট টু","different|আলাদা|ডিফারেন্ট","past|অতীত|পাস্ট","these days|আজকাল|দীজ ডেইজ","no longer|আর না|নো লংগার","once|একসময়|ওয়ান্স"],
+["used to|ইউস্ট টু|'ইউজড' নয় — 'ইউস্ট'","childhood|চাইল্ডহুড|ল্ড-হুড","different|ডিফারেন্ট|ডিফ-রেন্ট"],
+["Did you use to play outside?|আগে বাইরে খেলতে?","Yes, we used to play all day.|হ্যাঁ, সারাদিন খেলতাম।","And now?|এখন?","Now I am used to staying at home with my phone.|এখন ফোন নিয়ে ঘরে থাকতে অভ্যস্ত।"],
+"তোমার শৈশব ও এখনকার জীবনের ৬টি পার্থক্য used to দিয়ে বলো।",
+"used to-এর প্রশ্ন ও না-বাচকে use to (d ছাড়া): Did you use to…?");
+
+D("Passive Voice: কাজটি কে করল তা নয়, কী হল","passive voice english","Active ও Passive voice আলাদা করে বলতে পারা।",
+"Passive = be + V3 (by + কর্তা): The book was written by him। ব্যবহার: কর্তা অজানা বা গুরুত্বহীন হলে। Present: is/are + V3; Past: was/were + V3; Future: will be + V3।",
+["English is spoken all over the world.|সারা বিশ্বে ইংরেজি বলা হয়।|ইংলিশ ইজ স্পোকেন অল ওভার দ্য ওয়ার্ল্ড।","The window was broken yesterday.|জানালাটি গতকাল ভাঙা হয়েছে।|দ্য উইন্ডো ওয়জ ব্রোকেন ইয়েস্টারডে।","This house was built in 1990.|এই বাড়ি ১৯৯০ সালে তৈরি হয়েছে।|দিস হাউস ওয়জ বিল্ট ইন নাইনটিন নাইন্টি।","The work will be finished tomorrow.|কাজটি কাল শেষ হবে।|দ্য ওয়ার্ক উইল বি ফিনিশ্ড টুমরো।","My phone has been stolen.|আমার ফোন চুরি গেছে।|মাই ফোন হ্যাজ বিন স্টোলেন।"],
+["built|তৈরি হয়েছে|বিল্ট","written|লেখা হয়েছে|রিটেন","broken|ভাঙা|ব্রোকেন","stolen|চুরি|স্টোলেন","made|তৈরি|মেইড","sent|পাঠানো|সেন্ট","invited|আমন্ত্রিত|ইনভাইটেড","cancelled|বাতিল|ক্যানসেল্ড","delivered|সরবরাহ|ডেলিভার্ড","repaired|মেরামত|রিপেয়ার্ড"],
+["written|রিটেন|w নীরব","cancelled|ক্যানসেল্ড|c = ক","delivered|ডেলিভার্ড|v = দাঁত-ঠোঁট"],
+["Where is your phone?|তোমার ফোন কোথায়?","It was stolen yesterday.|গতকাল চুরি হয়েছে।","Has it been reported to the police?|পুলিশে জানানো হয়েছে?","Yes, a report has been filed.|হ্যাঁ, অভিযোগ দাখিল হয়েছে।"],
+"নিজের চারপাশের ৮টি জিনিস কে/কীভাবে তৈরি বা কী হয়েছে তা Passive-এ বলো।",
+"Passive-এ verb-এর তৃতীয় রূপ (V3) ভুল হলে পুরো বাক্য ভুল হয়ে যায়; অনিয়মিত V3 মুখস্থ করো।");
+
+D("Conditional ১: যদি ... তাহলে (Zero ও First)","conditionals zero first if clause","বাস্তব সম্ভাবনার শর্ত বলতে পারা।",
+"Zero: If + Present, Present (সবসময় সত্য: If you heat ice, it melts)। First: If + Present, will + verb (সম্ভাব্য: If it rains, I will stay home)। unless = if not।",
+["If you heat water, it boils.|পানি গরম করলে তা ফোটে।|ইফ ইউ হীট ওয়াটার, ইট বয়েলস।","If it rains, I will stay home.|বৃষ্টি হলে আমি বাড়িতে থাকব।|ইফ ইট রেইনস, আই উইল স্টে হোম।","If you study hard, you will pass.|কঠোর পড়লে তুমি পাস করবে।|ইফ ইউ স্টাডি হার্ড, ইউ উইল পাস।","Unless you hurry, you will be late.|তাড়াতাড়ি না করলে দেরি হবে।|আনলেস ইউ হারি, ইউ উইল বি লেইট।","I will call you if I get time.|সময় পেলে ফোন করব।|আই উইল কল ইউ ইফ আই গেট টাইম।"],
+["if|যদি|ইফ","unless|না হলে|আনলেস","otherwise|নয়তো|আদারওয়াইজ","as long as|যতক্ষণ|অ্যাজ লং অ্যাজ","in case|যদি...হয়|ইন কেইস","provided|শর্তে|প্রোভাইডেড","condition|শর্ত|কন্ডিশন","chance|সুযোগ|চান্স","maybe|হয়তো|মেইবি","depend|নির্ভর করা|ডিপেন্ড"],
+["unless|আনলেস|আন-লেস","otherwise|আদারওয়াইজ|আদার + ওয়াইজ","depend|ডিপেন্ড|পেন-এ জোর"],
+["What will you do if it rains tomorrow?|কাল বৃষ্টি হলে কী করবে?","If it rains, I will stay home and study.|বৃষ্টি হলে বাড়িতে পড়ব।","And if it doesn't rain?|আর না হলে?","I will go to the park with my friends.|বন্ধুদের সাথে পার্কে যাব।"],
+"৮টি 'যদি…তাহলে' বাক্য বলো — লক্ষ্য, আবহাওয়া ও পরিকল্পনা নিয়ে।",
+"if-clause-এ will বসে না: If it rains (✓), If it will rain (✗)।");
+
+D("Comparative আরও: as…as, too, enough, so…that","too enough so that as as english","পরিমাণ ও মাত্রা বোঝাতে too, enough, so…that ব্যবহার করা।",
+"too + adj = অতিরিক্ত (নেতিবাচক): too hot। adj + enough = যথেষ্ট: tall enough। so + adj + that = এত…যে: so tired that I slept। as…as = সমান।",
+["It is too hot to go outside.|বাইরে যাওয়ার জন্য অনেক গরম।|ইট ইজ টু হট টু গো আউটসাইড।","He is old enough to drive.|সে গাড়ি চালানোর মতো বয়সী।|হি ইজ ওল্ড ইনাফ টু ড্রাইভ।","I was so tired that I slept early.|আমি এত ক্লান্ত ছিলাম যে তাড়াতাড়ি ঘুমালাম।|আই ওয়জ সো টায়ার্ড দ্যাট আই স্লেপ্ট আর্লি।","This bag is as heavy as that one.|এই ব্যাগ ওটার মতোই ভারী।|দিস ব্যাগ ইজ অ্যাজ হেভি অ্যাজ দ্যাট ওয়ান।","The food is not spicy enough.|খাবার যথেষ্ট ঝাল নয়।|দ্য ফুড ইজ নট স্পাইসি ইনাফ।"],
+["too|অতিরিক্ত|টু","enough|যথেষ্ট|ইনাফ","so|এত|সো","such|এমন|সাচ","quite|বেশ|কোয়াইট","rather|কিছুটা|র‍্যাদার","really|সত্যিই|রিয়্যালি","extremely|অত্যন্ত|এক্সট্রীমলি","slightly|সামান্য|স্লাইটলি","almost|প্রায়|অলমোস্ট"],
+["enough|ইনাফ|gh = ফ","quite|কোয়াইট|qu = কোয়া","rather|র‍্যাদার|th কণ্ঠ কাঁপিয়ে"],
+["Is the soup hot enough?|স্যুপ কি যথেষ্ট গরম?","No, it is not hot enough.|না, যথেষ্ট গরম নয়।","Shall I heat it again?|আবার গরম করব?","Yes, but not too hot, please.|হ্যাঁ, তবে বেশি গরম নয়।"],
+"নিজের ঘর, শহর ও কাজ নিয়ে ৮টি বাক্য বলো (too / enough / so…that)।",
+"too-এর অর্থ নেতিবাচক (অতিরিক্ত); 'very' ইতিবাচক। I am too happy (সাধারণত নেতিবাচক ইঙ্গিত দেয়)।");
+
+D("মধ্যম স্তরের শব্দভান্ডার: কাজ, শিক্ষা, প্রযুক্তি","intermediate vocabulary work education technology","শিক্ষা, প্রযুক্তি ও কাজ-সংক্রান্ত দৈনন্দিন শব্দ আয়ত্ত করা।",
+"শব্দ-পরিবার (word family): create → creation → creative → creatively। এক শব্দ থেকে noun/adjective/adverb বানানো শিখলে শব্দভান্ডার দ্রুত বাড়ে।",
+["Technology has changed our lives.|প্রযুক্তি আমাদের জীবন বদলেছে।|টেকনোলজি হ্যাজ চেইঞ্জড আওয়ার লাইভস।","I work on a computer all day.|আমি সারাদিন কম্পিউটারে কাজ করি।|আই ওয়ার্ক অন আ কম্পিউটার অল ডে।","She is a creative designer.|সে একজন সৃজনশীল ডিজাইনার।|শি ইজ আ ক্রিয়েটিভ ডিজাইনার।","Education is the key to success.|শিক্ষা সাফল্যের চাবিকাঠি।|এডুকেশন ইজ দ্য কী টু সাকসেস।","We use apps to learn new skills.|আমরা নতুন দক্ষতা শিখতে অ্যাপ ব্যবহার করি।|উই ইউজ অ্যাপস টু লার্ন নিউ স্কিলস।"],
+["technology|প্রযুক্তি|টেকনোলজি","education|শিক্ষা|এডুকেশন","career|ক্যারিয়ার|ক্যারিয়ার","skill|দক্ষতা|স্কিল","internet|ইন্টারনেট|ইন্টারনেট","software|সফটওয়্যার|সফটওয়্যার","online|অনলাইন|অনলাইন","develop|উন্নয়ন করা|ডেভেলপ","creative|সৃজনশীল|ক্রিয়েটিভ","achieve|অর্জন করা|অ্যাচীভ"],
+["technology|টেকনোলজি|নল-এ জোর","career|ক্যারিয়ার|র-য়ার","achieve|অ্যাচীভ|ch = চ"],
+["What do you do?|তুমি কী করো?","I work in software development.|আমি সফটওয়্যার ডেভেলপমেন্টে কাজ করি।","Is it a good career?|এটা কি ভালো ক্যারিয়ার?","Yes, but you must learn new skills all the time.|হ্যাঁ, তবে সবসময় নতুন দক্ষতা শিখতে হয়।"],
+"তোমার পেশা বা পড়াশোনা নিয়ে ২ মিনিট মধ্যম স্তরের শব্দ দিয়ে বলো।",
+"একই শব্দের noun, verb ও adjective রূপ একসাথে শেখো।");
+
+D("ফেজ ৭ রিভিউ: মধ্যম স্তরের গ্রামার","intermediate english grammar review","এ পর্যন্ত শেখা মধ্যম স্তরের tense ও modal মিলিয়ে বলতে পারা।",
+"Present Perfect, Past Continuous, Past Perfect, Modals, Used to, Passive ও Conditionals — সব একটি অনুচ্ছেদে ব্যবহার করে নিজের জীবনের গল্প বলো।",
+["I have lived in Dhaka for ten years.|আমি দশ বছর ধরে ঢাকায় আছি।|আই হ্যাভ লিভড ইন ঢাকা ফর টেন ইয়ার্স।","I used to live in a village.|আমি আগে গ্রামে থাকতাম।|আই ইউস্ট টু লিভ ইন আ ভিলেজ।","When I moved here, I had never seen a tall building.|এখানে আসার আগে আমি কখনো উঁচু ভবন দেখিনি।|হোয়েন আই মুভড হিয়ার, আই হ্যাড নেভার সীন আ টল বিল্ডিং।","If I work hard, I will achieve my dream.|কঠোর পরিশ্রম করলে স্বপ্ন পূরণ হবে।|ইফ আই ওয়ার্ক হার্ড, আই উইল অ্যাচীভ মাই ড্রীম।","My dream can be reached only by effort.|আমার স্বপ্ন শুধু চেষ্টা দিয়েই পূরণ করা যায়।|মাই ড্রীম ক্যান বি রীচ্ড ওনলি বাই এফোর্ট।"],
+["review|পুনরালোচনা|রিভিউ","tense|কাল|টেন্স","structure|গঠন|স্ট্রাকচার","accuracy|নির্ভুলতা|অ্যাক্যুরেসি","mistake|ভুল|মিসটেইক","improve|উন্নতি|ইম্প্রুভ","practice|অনুশীলন|প্র্যাকটিস","correct|শুদ্ধ|কারেক্ট","explain|ব্যাখ্যা|ইক্সপ্লেইন","example|উদাহরণ|ইগজ্যাম্পল"],
+["accuracy|অ্যাক্যুরেসি|অ্যাক-ইউ-রা-সি","structure|স্ট্রাকচার|স্ট্রাক-চার","explain|ইক্সপ্লেইন|প্লেইন-এ জোর"],
+["Tell me about your life.|তোমার জীবনের কথা বলো।","I used to live in a village, but I have lived in Dhaka for ten years.|আগে গ্রামে ছিলাম, ঢাকায় দশ বছর।","What do you plan to do?|কী পরিকল্পনা?","If I work hard, I will achieve my dream.|কঠোর পরিশ্রম করলে স্বপ্ন পূরণ হবে।"],
+"নিজের জীবনের গল্প ৩ মিনিটে বলো — অতীত, বর্তমান ও ভবিষ্যৎ সব মিলিয়ে।",
+"নিজের রেকর্ডিং শুনে কোন tense-এ বেশি ভুল হচ্ছে চিহ্নিত করো ও সেটি আবার অনুশীলন করো।");
+
+/* ===== ফেজ ৮: উন্নত গ্রামার ও প্রকাশভঙ্গি (দিন ৭১–৮০) ===== */
+D("Conditional ২ ও ৩: কাল্পনিক শর্ত","second third conditional if I were","অবাস্তব ও অতীতের কাল্পনিক শর্ত বলতে পারা।",
+"Second: If + Past, would + verb (If I had money, I would buy a car)। Third: If + had + V3, would have + V3 (If I had studied, I would have passed)। If I were you…",
+["If I had a car, I would drive to work.|আমার গাড়ি থাকলে আমি গাড়ি চালিয়ে কাজে যেতাম।|ইফ আই হ্যাড আ কার, আই উড ড্রাইভ টু ওয়ার্ক।","If I were you, I would accept the offer.|আমি তোমার জায়গায় হলে প্রস্তাবটি নিতাম।|ইফ আই ওয়ার ইউ, আই উড অ্যাকসেপ্ট দ্য অফার।","If I had studied, I would have passed.|পড়লে আমি পাস করতাম (কিন্তু পড়িনি)।|ইফ আই হ্যাড স্টাডিড, আই উড হ্যাভ পাসড।","I wish I had more time.|ইশ, যদি আমার আরও সময় থাকত!|আই উইশ আই হ্যাড মোর টাইম।","She would have come if you had called her.|তুমি ফোন করলে সে আসত।|শি উড হ্যাভ কাম ইফ ইউ হ্যাড কলড হার।"],
+["wish|আকাঙ্ক্ষা করা|উইশ","regret|অনুশোচনা|রিগ্রেট","imagine|কল্পনা করা|ইমাজিন","suppose|ধরো|সাপোজ","chance|সুযোগ|চান্স","opportunity|সুযোগ|অপরচুনিটি","mistake|ভুল|মিসটেইক","advice|পরামর্শ|অ্যাডভাইস","decision|সিদ্ধান্ত|ডিসিশন","lucky|ভাগ্যবান|লাকি"],
+["would have|উড হ্যাভ|দ্রুত: 'উডভ'","wish|উইশ|শেষে শ","imagine|ইমাজিন|জি = জ"],
+["What would you do if you won a lottery?|লটারি জিতলে কী করতে?","I would buy a house for my parents.|বাবা-মায়ের জন্য বাড়ি কিনতাম।","And if you could travel anywhere?|আর যেখানে খুশি ভ্রমণ করতে পারলে?","I would go to Japan.|জাপানে যেতাম।"],
+"৬টি কাল্পনিক ইচ্ছা (If I…, I would…) ও ৪টি অতীতের অনুশোচনা (If I had…, I would have…) বলো।",
+"If-clause-এ I/he/she-এর সাথেও were ব্যবহার করা হয়: If I were you (✓)।");
+
+D("Reported Speech: অন্যের কথা বলা","reported speech indirect speech english","অন্যের বলা কথা বর্ণনা করতে পারা।",
+"Direct: He said, \"I am tired.\" → Indirect: He said that he was tired। কাল এক ধাপ পিছিয়ে যায়: am → was, will → would, today → that day, tomorrow → the next day। প্রশ্ন: He asked if/whether…",
+["She said that she was busy.|সে বলল যে সে ব্যস্ত।|শি সেড দ্যাট শি ওয়জ বিজি।","He told me that he would call later.|সে আমাকে বলল সে পরে ফোন করবে।|হি টোল্ড মি দ্যাট হি উড কল লেইটার।","They said that they had finished.|তারা বলল যে তারা শেষ করেছে।|দে সেড দ্যাট দে হ্যাড ফিনিশ্ড।","She asked me where I lived.|সে আমাকে জিজ্ঞাসা করল আমি কোথায় থাকি।|শি আস্কড মি হোয়ার আই লিভড।","He asked if I could help him.|সে জিজ্ঞাসা করল আমি সাহায্য করতে পারি কিনা।|হি আস্কড ইফ আই কুড হেল্প হিম।"],
+["say / said|বলা / বলেছিল|সে / সেড","tell / told|বলা / বলেছিল|টেল / টোল্ড","ask / asked|জিজ্ঞাসা|আস্ক / আস্কড","reply|জবাব|রিপ্লাই","explain|ব্যাখ্যা|ইক্সপ্লেইন","mention|উল্লেখ করা|মেনশন","suggest|পরামর্শ দেওয়া|সাজেস্ট","promise|প্রতিশ্রুতি|প্রমিস","complain|অভিযোগ করা|কমপ্লেইন","announce|ঘোষণা করা|অ্যানাউন্স"],
+["said|সেড|'সেড' (সেইড নয়)","asked|আস্কড্|শেষে t ধ্বনি","announce|অ্যানাউন্স|নাউন্স-এ জোর"],
+["What did the doctor say?|ডাক্তার কী বললেন?","He said that I should rest for a week.|তিনি বললেন এক সপ্তাহ বিশ্রাম নিতে।","Did he ask about your diet?|তিনি কি খাবার নিয়ে জিজ্ঞাসা করেছেন?","Yes, he asked what I usually ate.|হ্যাঁ, আমি সাধারণত কী খাই তা জিজ্ঞাসা করলেন।"],
+"আজ দিনে কেউ তোমাকে কী বলেছে তা Reported Speech-এ ৬টি বাক্যে বলো।",
+"reported question-এ প্রশ্নবোধক বসে না এবং subject আগে: He asked where I lived (✓)।");
+
+D("Relative Clause: who, which, that, whose","relative clauses who which that whose","একটি বাক্যে বিস্তারিত তথ্য জুড়ে দীর্ঘ বাক্য তৈরি করা।",
+"who = মানুষ; which = জিনিস; that = মানুষ/জিনিস; whose = যার; where = জায়গা। The man who lives next door is a doctor।",
+["The man who lives next door is a doctor.|পাশের বাড়ির লোকটি ডাক্তার।|দ্য ম্যান হু লিভস নেক্সট ডোর ইজ আ ডক্টর।","This is the book which I bought yesterday.|এটাই সেই বই যেটা আমি গতকাল কিনেছি।|দিস ইজ দ্য বুক হুইচ আই বট ইয়েস্টারডে।","I know a girl whose father is a pilot.|আমি এক মেয়েকে চিনি যার বাবা পাইলট।|আই নো আ গার্ল হুজ ফাদার ইজ আ পাইলট।","That is the school where I studied.|ওটাই সেই স্কুল যেখানে আমি পড়েছি।|দ্যাট ইজ দ্য স্কুল হোয়ার আই স্টাডিড।","The phone that I lost was new.|আমি যে ফোন হারিয়েছি সেটি নতুন ছিল।|দ্য ফোন দ্যাট আই লস্ট ওয়জ নিউ।"],
+["who|যে (মানুষ)|হু","which|যেটি|হুইচ","that|যেটি / যে|দ্যাট","whose|যার|হুজ","where|যেখানে|হোয়ার","neighbor|প্রতিবেশী|নেইবার","pilot|বৈমানিক|পাইলট","describe|বর্ণনা করা|ডিস্ক্রাইব","person|ব্যক্তি|পার্সন","place|জায়গা|প্লেইস"],
+["whose|হুজ|'হু-জ' = who's-এর মতো","which|হুইচ|wh = 'হ্‌ও'","describe|ডিস্ক্রাইব|ক্রাইব-এ জোর"],
+["Who is that man?|ওই লোকটি কে?","He is the man who lives next door.|সে পাশের বাড়ির লোক।","What does he do?|সে কী করে?","He is a doctor who works at the city hospital.|সে ডাক্তার, শহরের হাসপাতালে কাজ করে।"],
+"একজন মানুষ, একটি জায়গা ও একটি জিনিস who/which/where দিয়ে বর্ণনা করো (৬টি বাক্য)।",
+"মানুষের জন্য who, জিনিসের জন্য which; that দুটোর জন্যই চলে।");
+
+D("Gerund ও Infinitive: verb-ing বনাম to + verb","gerund infinitive english enjoy want","কোন verb-এর পরে -ing আর কোনটির পরে to+verb তা জানা।",
+"enjoy/finish/avoid/mind + -ing (enjoy reading)। want/hope/decide/plan/learn + to + verb (want to learn)। like/love/hate উভয়ই চলে। stop to do (থেমে করা) ≠ stop doing (বন্ধ করা)।",
+["I enjoy playing cricket.|আমি ক্রিকেট খেলতে উপভোগ করি।|আই ইনজয় প্লেইং ক্রিকেট।","She decided to learn English.|সে ইংরেজি শেখার সিদ্ধান্ত নিল।|শি ডিসাইডেড টু লার্ন ইংলিশ।","I finished doing my homework.|আমি হোমওয়ার্ক করা শেষ করেছি।|আই ফিনিশ্ড ডুইং মাই হোমওয়ার্ক।","He avoids eating fast food.|সে ফাস্ট ফুড খাওয়া এড়িয়ে চলে।|হি অ্যাভয়েডস ইটিং ফাস্ট ফুড।","I stopped to buy some water.|আমি পানি কিনতে থামলাম।|আই স্টপ্ড টু বাই সাম ওয়াটার।"],
+["enjoy|উপভোগ|ইনজয়","avoid|এড়ানো|অ্যাভয়েড","finish|শেষ করা|ফিনিশ","suggest|প্রস্তাব|সাজেস্ট","consider|বিবেচনা|কনসিডার","decide|সিদ্ধান্ত|ডিসাইড","hope|আশা|হোপ","plan|পরিকল্পনা|প্ল্যান","manage|সামলানো|ম্যানেজ","refuse|প্রত্যাখ্যান|রিফিউজ"],
+["avoid|অ্যাভয়েড|ভয়েড-এ জোর","consider|কনসিডার|সিড-এ জোর","manage|ম্যানেজ|ম্যান-ইজ"],
+["What do you enjoy doing?|তুমি কী করতে উপভোগ করো?","I enjoy reading and cooking.|আমি পড়া ও রান্না উপভোগ করি।","What do you want to do next year?|আগামী বছর কী করতে চাও?","I want to learn a new language.|নতুন ভাষা শিখতে চাই।"],
+"৫টি 'enjoy/finish/avoid + -ing' বাক্য ও ৫টি 'want/plan/decide + to' বাক্য বলো।",
+"মনে রাখো: enjoy to read (✗), enjoy reading (✓)।");
+
+D("Question Tag ও Short Answers","question tags short answers english","বাক্যের শেষে tag প্রশ্ন দিয়ে সম্মতি বা নিশ্চিতকরণ চাওয়া।",
+"ইতিবাচক বাক্যের পর না-বাচক tag, না-বাচকের পর ইতিবাচক: You are a student, aren't you? / She doesn't like tea, does she? সুর নামলে নিশ্চিত, উঠলে জিজ্ঞাসা।",
+["It is a nice day, isn't it?|সুন্দর দিন, তাই না?|ইট ইজ আ নাইস ডে, ইজন্ট ইট?","You speak English, don't you?|তুমি ইংরেজি বলো, তাই না?|ইউ স্পীক ইংলিশ, ডোন্ট ইউ?","She can't swim, can she?|সে সাঁতার জানে না, তাই না?|শি ক্যান্ট সুইম, ক্যান শি?","They have left, haven't they?|তারা চলে গেছে, তাই না?|দে হ্যাভ লেফট, হ্যাভন্ট দে?","Let's go, shall we?|চলো যাই, কেমন?|লেটস গো, শ্যাল উই?"],
+["tag|ট্যাগ|ট্যাগ","confirm|নিশ্চিত করা|কনফার্ম","agree|একমত|অ্যাগ্রী","check|যাচাই|চেক","sure|নিশ্চিত|শুর","right|ঠিক|রাইট","correct|শুদ্ধ|কারেক্ট","exactly|ঠিক তাই|ইগজ্যাক্টলি","indeed|সত্যিই|ইনডীড","really|সত্যিই|রিয়্যালি"],
+["isn't it|ইজন্ট ইট|দ্রুত 'ইজনিট'","don't you|ডোন্ট ইউ|'ডোন্ট চু'","shall we|শ্যাল উই|শ্যাল-উই"],
+["It is a nice day, isn't it?|সুন্দর দিন, তাই না?","Yes, it is. It isn't too hot.|হ্যাঁ, বেশি গরম নয়।","You live nearby, don't you?|তুমি কাছেই থাকো, তাই না?","Yes, I do. Just two streets away.|হ্যাঁ, মাত্র দুই রাস্তা দূরে।"],
+"পরিচিত ১০টি তথ্য নিশ্চিত করতে tag প্রশ্ন করো (কণ্ঠ নামিয়ে ও উঠিয়ে দুভাবে)।",
+"I am-এর tag হয় aren't I?; Let's-এর tag হয় shall we?");
+D("Linking Words: সংযোজক শব্দ","linking words however although therefore english","however, although, therefore ইত্যাদি দিয়ে বাক্য জুড়ে সাবলীল করা।",
+"বিপরীত: but, however, although। কারণ: because, since। ফল: so, therefore। যোগ: and, also, moreover। ক্রম: first, then, finally। although-এর পরে পূর্ণ বাক্য: Although it was late, I went।",
+["Although it was raining, we went out.|বৃষ্টি হলেও আমরা বাইরে গেলাম।|অলদো ইট ওয়জ রেইনিং, উই ওয়েন্ট আউট।","He is rich. However, he is not happy.|সে ধনী। তবুও সে সুখী নয়।|হি ইজ রিচ। হাউএভার, হি ইজ নট হ্যাপি।","I was tired; therefore, I went to bed.|আমি ক্লান্ত ছিলাম, তাই ঘুমাতে গেলাম।|আই ওয়জ টায়ার্ড; দেয়ারফোর, আই ওয়েন্ট টু বেড।","She is smart. Moreover, she is hard-working.|সে বুদ্ধিমান। তাছাড়া সে পরিশ্রমীও।|শি ইজ স্মার্ট। মোরওভার, শি ইজ হার্ড-ওয়ার্কিং।","In addition, we need more time.|এছাড়া আমাদের আরও সময় দরকার।|ইন অ্যাডিশন, উই নীড মোর টাইম।"],
+["however|তবে|হাউএভার","although|যদিও|অলদো","therefore|তাই|দেয়ারফোর","moreover|তাছাড়া|মোরওভার","in addition|এছাড়া|ইন অ্যাডিশন","as a result|ফলস্বরূপ|অ্যাজ আ রিজাল্ট","for example|যেমন|ফর ইগজ্যাম্পল","in contrast|বিপরীতে|ইন কনট্রাস্ট","on the other hand|অন্যদিকে|অন দি আদার হ্যান্ড","finally|অবশেষে|ফাইনালি"],
+["although|অলদো|gh নীরব","therefore|দেয়ারফোর|দেয়ার + ফোর","moreover|মোরওভার|মোর + ওভার"],
+["Do you like living in the city?|শহরে থাকতে কেমন লাগে?","I like it. However, it is too noisy.|ভালো লাগে, তবে খুব গোলমাল।","Why do you stay then?|তাহলে থাকো কেন?","Because my job is here. Moreover, my family lives here.|কারণ কাজ এখানে, তাছাড়া পরিবারও।"],
+"একটি বিষয়ে (শহরে থাকা, অনলাইন পড়া) ইতিবাচক ও নেতিবাচক দিক ৪টি linking word দিয়ে বলো।",
+"কথায় but, so, because বেশি; however, therefore লেখায় ও ফরমালে বেশি।");
+
+D("Phrasal Verbs ২ ও কথোপকথনের Expression","advanced phrasal verbs english expressions","আরও ১০টি জরুরি phrasal verb ও কথ্য expression শেখা।",
+"phrasal verb-এর কিছু আলাদা করা যায় (turn it off), কিছু যায় না (look after him)। কথ্য expression: Never mind, No worries, I see, Sounds good।",
+["Can you look after my bag?|আমার ব্যাগটি দেখে রাখবে?|ক্যান ইউ লুক আফটার মাই ব্যাগ?","We ran out of milk.|আমাদের দুধ ফুরিয়ে গেছে।|উই র‍্যান আউট অভ মিল্ক।","Let's catch up this weekend.|এই সপ্তাহান্তে দেখা করে গল্প করি।|লেটস ক্যাচ আপ দিস উইকএন্ড।","I can't put up with this noise.|আমি এই গোলমাল সহ্য করতে পারছি না।|আই ক্যান্ট পুট আপ উইথ দিস নয়েজ।","Never mind. It's not important.|কিছু না। এটা গুরুত্বপূর্ণ নয়।|নেভার মাইন্ড। ইটস নট ইমপোর্ট্যান্ট।"],
+["look after|দেখাশোনা করা|লুক আফটার","run out of|ফুরিয়ে যাওয়া|র‍্যান আউট অভ","catch up|পিছিয়ে থাকা মেটানো|ক্যাচ আপ","put up with|সহ্য করা|পুট আপ উইথ","get along|মিলেমিশে থাকা|গেট অ্যালং","figure out|বুঝে ফেলা|ফিগার আউট","set up|প্রতিষ্ঠা করা|সেট আপ","carry on|চালিয়ে যাওয়া|ক্যারি অন","call off|বাতিল করা|কল অফ","show up|হাজির হওয়া|শো আপ"],
+["figure out|ফিগার আউট|দ্রুত 'ফিগারাউট'","carry on|ক্যারি অন|ক্যারিঅন","get along|গেট অ্যালং|গেটালং"],
+["Did the meeting go ahead?|মিটিং কি হয়েছে?","No, they called it off.|না, বাতিল হয়েছে।","Why?|কেন?","The manager didn't show up.|ম্যানেজার আসেননি।"],
+"৮টি phrasal verb দিয়ে গত সপ্তাহের ঘটনা বলো।",
+"phrasal verb আলাদা করে নয়, বাক্যের ভেতরে শেখো।");
+
+D("Idioms ও Common Expressions","english idioms common expressions","১০টি জনপ্রিয় idiom দিয়ে কথাকে স্বাভাবিক ও জীবন্ত করা।",
+"Idiom-এর আক্ষরিক অর্থ নয়, ভাবার্থ বোঝো: a piece of cake = খুব সহজ; hit the books = কঠোর পড়া; break the ice = আড়ষ্টতা ভাঙা।",
+["The exam was a piece of cake.|পরীক্ষা খুব সহজ ছিল।|দ্য ইগজ্যাম ওয়জ আ পীস অভ কেইক।","I have to hit the books tonight.|আজ রাতে আমাকে কঠোর পড়তে হবে।|আই হ্যাভ টু হিট দ্য বুকস টুনাইট।","He told a joke to break the ice.|সে আড়ষ্টতা ভাঙতে একটি জোক বলল।|হি টোল্ড আ জোক টু ব্রেক দ্য আইস।","It is raining cats and dogs.|মুষলধারে বৃষ্টি হচ্ছে।|ইট ইজ রেইনিং ক্যাটস অ্যান্ড ডগস।","Let's call it a day.|আজকের মতো শেষ করি।|লেটস কল ইট আ ডে।"],
+["piece of cake|সহজ কাজ|পীস অভ কেইক","hit the books|কঠোর পড়া|হিট দ্য বুকস","break the ice|আড়ষ্টতা ভাঙা|ব্রেক দ্য আইস","call it a day|শেষ করা|কল ইট আ ডে","under the weather|অসুস্থ|আন্ডার দ্য ওয়েদার","once in a blue moon|কালেভদ্রে|ওয়ান্স ইন আ ব্লু মুন","spill the beans|গোপন ফাঁস|স্পিল দ্য বীনস","on cloud nine|আনন্দে আত্মহারা|অন ক্লাউড নাইন","cost an arm and a leg|খুব দামি|কস্ট অ্যান আর্ম অ্যান্ড আ লেগ","the ball is in your court|এখন তোমার পালা|দ্য বল ইজ ইন ইয়োর কোর্ট"],
+["spill the beans|স্পিল দ্য বীনস|স্পিল + দ্য + বীনস","once in a blue moon|ওয়ান্স ইন আ ব্লু মুন|টানা বলো","under the weather|আন্ডার দ্য ওয়েদার|ওয়েদার-এ th কণ্ঠ কাঁপিয়ে"],
+["How was your exam?|পরীক্ষা কেমন হল?","It was a piece of cake!|খুব সহজ!","I feel under the weather today.|আমি আজ অসুস্থ বোধ করছি।","Take rest. Let's call it a day.|বিশ্রাম নাও। আজ এখানেই শেষ।"],
+"৫টি idiom নিজের জীবনের পরিস্থিতিতে ব্যবহার করে বাক্য বানাও।",
+"idiom শব্দে শব্দে অনুবাদ করো না; ভাবার্থ মুখস্থ করো ও পরিস্থিতিতে বলো।");
+
+D("উন্নত Preposition ও Article","advanced prepositions articles english","কঠিন preposition ও article-এর সঠিক ব্যবহার আয়ত্ত করা।",
+"depend on, interested in, good at, afraid of, responsible for, different from। article: first mention = a/an, পুনরায় = the; the + একমাত্র জিনিস (the sun); the ছাড়া সাধারণ বহুবচন (I like cats)।",
+["I depend on my parents.|আমি বাবা-মায়ের ওপর নির্ভরশীল।|আই ডিপেন্ড অন মাই প্যারেন্টস।","She is afraid of dogs.|সে কুকুরকে ভয় পায়।|শি ইজ অ্যাফ্রেইড অভ ডগস।","He is responsible for the project.|সে প্রকল্পের দায়িত্বে।|হি ইজ রেসপন্সিবল ফর দ্য প্রজেক্ট।","This phone is different from that one.|এই ফোন ওটার থেকে আলাদা।|দিস ফোন ইজ ডিফারেন্ট ফ্রম দ্যাট ওয়ান।","I saw a man. The man was tall.|আমি একজনকে দেখলাম। লোকটি লম্বা ছিল।|আই সো আ ম্যান। দ্য ম্যান ওয়জ টল।"],
+["depend on|নির্ভর করা|ডিপেন্ড অন","afraid of|ভয় পাওয়া|অ্যাফ্রেইড অভ","good at|দক্ষ|গুড অ্যাট","interested in|আগ্রহী|ইন্টারেস্টিড ইন","responsible for|দায়ী|রেসপন্সিবল ফর","different from|আলাদা|ডিফারেন্ট ফ্রম","proud of|গর্বিত|প্রাউড অভ","tired of|বিরক্ত|টায়ার্ড অভ","similar to|অনুরূপ|সিমিলার টু","married to|বিবাহিত|ম্যারিড টু"],
+["responsible|রেসপন্সিবল|স্পন-এ জোর","similar|সিমিলার|সিম-ইলার","married|ম্যারিড|ম্যা-রিড"],
+["Are you interested in music?|গানে আগ্রহী?","Yes, and I am good at singing.|হ্যাঁ, গান গাইতেও ভালো।","Are you afraid of performing?|পারফর্ম করতে ভয় পাও?","No, I am proud of my voice.|না, আমি নিজের গলায় গর্বিত।"],
+"নিজের সম্পর্কে ১০টি বাক্য বলো যেখানে এই preposition জোড়া ব্যবহার করো।",
+"preposition শব্দের সাথে জোড়ায় শেখো: interested + in, afraid + of।");
+
+D("ফেজ ৮ রিভিউ: উন্নত গ্রামার ও সাবলীল প্রকাশ","advanced english grammar review fluency","উন্নত গ্রামার একসাথে ব্যবহার করে ৩ মিনিট বলতে পারা।",
+"কাল্পনিক শর্ত, Reported Speech, Relative clause, Gerund/Infinitive, Question tag, linking word ও idiom — সব মিলিয়ে একটি বিষয়ে বলো।",
+["If I could change one thing, I would improve education.|একটি জিনিস বদলাতে পারলে আমি শিক্ষা উন্নত করতাম।|ইফ আই কুড চেইঞ্জ ওয়ান থিং, আই উড ইম্প্রুভ এডুকেশন।","My teacher, who inspired me, said that I should never give up.|যে শিক্ষক আমাকে অনুপ্রাণিত করেছেন তিনি বলেছিলেন হাল ছেড়ো না।|মাই টীচার, হু ইনস্পায়ার্ড মি, সেড দ্যাট আই শুড নেভার গিভ আপ।","Although it was difficult, I enjoyed learning.|কঠিন হলেও শিখতে ভালো লেগেছিল।|অলদো ইট ওয়জ ডিফিকাল্ট, আই ইনজয়ড লার্নিং।","It is a great chance, isn't it?|এটা দারুণ সুযোগ, তাই না?|ইট ইজ আ গ্রেট চান্স, ইজন্ট ইট?","I will keep going no matter what.|যাই হোক আমি চালিয়ে যাব।|আই উইল কীপ গোইং নো ম্যাটার হোয়াট।"],
+["inspire|অনুপ্রাণিত করা|ইনস্পায়ার","motivate|অনুপ্রেরণা দেওয়া|মোটিভেইট","challenge|চ্যালেঞ্জ|চ্যালেঞ্জ","effort|চেষ্টা|এফোর্ট","patience|ধৈর্য|পেইশেন্স","determination|দৃঢ় সংকল্প|ডিটারমিনেইশন","progress|অগ্রগতি|প্রোগ্রেস","achievement|অর্জন|অ্যাচীভমেন্ট","fluent|সাবলীল|ফ্লুয়েন্ট","confident|আত্মবিশ্বাসী|কনফিডেন্ট"],
+["determination|ডিটারমিনেইশন|ডি-টার-মি-নে-শন","achievement|অ্যাচীভমেন্ট|অ্যাচীভ-মেন্ট","patience|পেইশেন্স|পেই-শেন্স"],
+["What inspired you to learn English?|ইংরেজি শিখতে কী অনুপ্রাণিত করল?","I wanted a better career, so I started.|ভালো ক্যারিয়ার চাইছিলাম, তাই শুরু করি।","Is it difficult?|কঠিন?","It was at first, but now I am improving.|প্রথমে ছিল, এখন উন্নতি হচ্ছে।"],
+"একটি বিষয়ে (আমার স্বপ্ন / আমার শিক্ষক / আমার শহর) উন্নত গ্রামার দিয়ে ৩ মিনিট বলে রেকর্ড করো।",
+"উন্নত গ্রামার অল্প-অল্প ব্যবহার করো; জোর করে সব ঢুকিও না।");
+
+/* ===== ফেজ ৯: বাস্তব জীবনের সাবলীলতা (দিন ৮১–৯০) ===== */
+D("প্রেজেন্টেশন: কাঠামো ও শুরু-শেষ","english presentation skills structure","৩ মিনিটের একটি প্রেজেন্টেশন সাজিয়ে দিতে পারা।",
+"কাঠামো: Opening (greeting + topic) → Agenda (first, second, third) → Body → Conclusion → Questions। শুরু: Good morning everyone, today I'll talk about… / শেষ: To sum up… Thank you.",
+["Good morning everyone. Today I will talk about time management.|সুপ্রভাত সবাই। আজ আমি সময় ব্যবস্থাপনা নিয়ে বলব।|গুড মর্নিং এভরিওয়ান। টুডে আই উইল টক অ্যাবাউট টাইম ম্যানেজমেন্ট।","I will cover three main points.|আমি তিনটি মূল বিষয় আলোচনা করব।|আই উইল কভার থ্রি মেইন পয়েন্টস।","Let me show you this chart.|এই চার্টটি দেখাই।|লেট মি শো ইউ দিস চার্ট।","To sum up, planning saves time.|সংক্ষেপে, পরিকল্পনা সময় বাঁচায়।|টু সাম আপ, প্ল্যানিং সেইভস টাইম।","Thank you. Are there any questions?|ধন্যবাদ। কোনো প্রশ্ন?|থ্যাংক ইউ। আর দেয়ার এনি কোয়েশ্চানস?"],
+["presentation|উপস্থাপনা|প্রেজেন্টেইশন","audience|শ্রোতা|অডিয়েন্স","chart|চার্ট|চার্ট","slide|স্লাইড|স্লাইড","agenda|আলোচ্যসূচি|এজেন্ডা","topic|বিষয়|টপিক","point|পয়েন্ট|পয়েন্ট","summary|সারসংক্ষেপ|সামারি","statistics|পরিসংখ্যান|স্ট্যাটিস্টিকস","feedback|প্রতিক্রিয়া|ফীডব্যাক"],
+["audience|অডিয়েন্স|অ-ডি-য়েন্স","statistics|স্ট্যাটিস্টিকস|টিস-এ জোর","agenda|এজেন্ডা|জেন-এ জোর"],
+["Are you ready for your presentation?|প্রেজেন্টেশনের জন্য প্রস্তুত?","Almost. I have three points.|প্রায়। তিনটি পয়েন্ট আছে।","What is your topic?|বিষয় কী?","Time management. Let me practice for you.|সময় ব্যবস্থাপনা। আপনার সামনে অনুশীলন করি।"],
+"যেকোনো বিষয়ে ৩ মিনিটের প্রেজেন্টেশন (opening, 3 points, conclusion) বলে রেকর্ড করো।",
+"ধীরে বলো, প্রতিটি পয়েন্টের পরে ১ সেকেন্ড থামো।");
+
+D("মিটিং ও দর-কষাকষি (Negotiation)","english business meeting negotiation phrases","মিটিংয়ে মত দেওয়া, সম্মতি ও আপস করার ভাষা শেখা।",
+"মত: I'd like to suggest… / Can we agree on…? / সম্মতি: That works for me. / আপত্তি: I'm afraid that's not possible. / আপস: How about…? / Let's meet halfway।",
+["I would like to suggest a new schedule.|আমি একটি নতুন সূচি প্রস্তাব করতে চাই।|আই উড লাইক টু সাজেস্ট আ নিউ শিডিউল।","That works for me.|এটি আমার জন্য ঠিক আছে।|দ্যাট ওয়ার্কস ফর মি।","I'm afraid that is not possible.|দুঃখিত, তা সম্ভব নয়।|আই'ম অ্যাফ্রেইড দ্যাট ইজ নট পসিবল।","How about we meet halfway?|মাঝামাঝি করলে কেমন হয়?|হাউ অ্যাবাউট উই মীট হাফওয়ে?","Let's confirm the details by email.|চলো ইমেইলে বিস্তারিত নিশ্চিত করি।|লেটস কনফার্ম দ্য ডিটেইলস বাই ঈমেইল।"],
+["negotiate|দর-কষাকষি|নেগোশিয়েট","agree|একমত|অ্যাগ্রী","deal|চুক্তি|ডীল","offer|প্রস্তাব|অফার","budget|বাজেট|বাজেট","deadline|সময়সীমা|ডেডলাইন","contract|চুক্তি|কনট্র্যাক্ট","compromise|আপস|কমপ্রোমাইজ","discount|ছাড়|ডিসকাউন্ট","terms|শর্ত|টার্মস"],
+["compromise|কমপ্রোমাইজ|কম-প্রো-মাইজ","contract|কনট্র্যাক্ট (noun)|শুরুতে জোর","negotiate|নেগোশিয়েট|গো-শি-এইট"],
+["Our budget is lower than that.|আমাদের বাজেট এর চেয়ে কম।","How about a ten percent discount?|দশ শতাংশ ছাড় কেমন?","That works for us if you can deliver by Friday.|শুক্রবারের মধ্যে দিলে আমাদের চলবে।","Deal. I will send the contract today.|চুক্তি। আজই কন্ট্র্যাক্ট পাঠাচ্ছি।"],
+"একটি কাল্পনিক ক্রয়-বিক্রয় বা সময়সূচি নিয়ে মিটিংয়ের দুই ভূমিকা অভিনয় করো।",
+"নেগোশিয়েশনে 'No' এড়িয়ে 'I'm afraid' বা 'How about…' বলো; ভদ্রতা দৃঢ়তাকে কমায় না।");
+
+D("ইমেইল ও চিঠি লেখা","english email writing formal informal","ফরমাল ও ইনফরমাল ইমেইল লেখা।",
+"কাঠামো: Subject → Greeting (Dear Mr. Karim,) → উদ্দেশ্য → বিস্তারিত → ধন্যবাদ → Closing (Best regards, Rina)। ফরমাল: I am writing to… / Please find attached… / I look forward to your reply।",
+["Dear Mr. Karim, I am writing to ask about the job.|প্রিয় করিম সাহেব, আমি চাকরির বিষয়ে জানতে লিখছি।|ডিয়ার মিস্টার করিম, আই অ্যাম রাইটিং টু আস্ক অ্যাবাউট দ্য জব।","Please find my CV attached.|আমার সিভি সংযুক্ত আছে।|প্লিজ ফাইন্ড মাই সিভি অ্যাটাচড।","I look forward to hearing from you.|আপনার উত্তরের অপেক্ষায় রইলাম।|আই লুক ফরওয়ার্ড টু হিয়ারিং ফ্রম ইউ।","Thank you for your quick reply.|দ্রুত উত্তরের জন্য ধন্যবাদ।|থ্যাংক ইউ ফর ইয়োর কুইক রিপ্লাই।","Best regards, Rina Akter|শুভেচ্ছান্তে, রিনা আক্তার।|বেস্ট রিগার্ডস, রিনা আক্তার।"],
+["subject|বিষয়|সাবজেক্ট","attach|সংযুক্ত করা|অ্যাটাচ","reply|উত্তর|রিপ্লাই","forward|ফরওয়ার্ড করা|ফরওয়ার্ড","regards|শুভেচ্ছা|রিগার্ডস","sincerely|আন্তরিকভাবে|সিনসীয়ারলি","request|অনুরোধ|রিকোয়েস্ট","inform|জানানো|ইনফর্ম","confirm|নিশ্চিত|কনফার্ম","enclosed|সংযুক্ত|ইনক্লোজড"],
+["sincerely|সিনসীয়ারলি|সিন-সীয়ার-লি","regards|রিগার্ডস|গার্ডস","enclosed|ইনক্লোজড|ক্লোজ-এ জোর"],
+["Did you send the email?|ইমেইল পাঠিয়েছ?","Yes, I attached my CV.|হ্যাঁ, সিভি সংযুক্ত করেছি।","Did you write a subject line?|বিষয় লিখেছ?","Yes, 'Application for Sales Executive'.|হ্যাঁ, 'সেলস এক্সিকিউটিভ পদের আবেদন'।"],
+"একটি কাল্পনিক চাকরির আবেদনের ইমেইল ৮টি বাক্যে লিখে খাতায় রাখো ও জোরে পড়ো।",
+"ফরমাল ইমেইলে সংক্ষেপ (I'm, don't) এড়াও।");
+
+D("গ্রাহকসেবা ও অভিযোগ নিয়ে কথা","customer service complaint english phrases","অভিযোগ জানানো ও গ্রাহককে সাহায্য করার ভদ্র ভাষা।",
+"অভিযোগ: I'd like to make a complaint about… / সমাধান: I'm sorry for the inconvenience. / We will fix it as soon as possible. / Could I have a refund?",
+["I would like to make a complaint.|আমি একটি অভিযোগ জানাতে চাই।|আই উড লাইক টু মেইক আ কমপ্লেইন্ট।","The product is damaged.|পণ্যটি ক্ষতিগ্রস্ত।|দ্য প্রোডাক্ট ইজ ড্যামেজড।","I am sorry for the inconvenience.|অসুবিধার জন্য দুঃখিত।|আই অ্যাম সরি ফর দি ইনকনভীনিয়েন্স।","Could I have a refund, please?|আমি কি টাকা ফেরত পেতে পারি?|কুড আই হ্যাভ আ রিফান্ড, প্লিজ?","We will replace it within two days.|আমরা দুই দিনের মধ্যে বদলে দেব।|উই উইল রিপ্লেইস ইট উইদিন টু ডেইজ।"],
+["complaint|অভিযোগ|কমপ্লেইন্ট","refund|টাকা ফেরত|রিফান্ড","replace|বদলে দেওয়া|রিপ্লেইস","damaged|ক্ষতিগ্রস্ত|ড্যামেজড","faulty|ত্রুটিপূর্ণ|ফল্টি","warranty|ওয়ারেন্টি|ওয়ারেন্টি","order|অর্ডার|অর্ডার","delivery|ডেলিভারি|ডেলিভারি","inconvenience|অসুবিধা|ইনকনভীনিয়েন্স","apologize|ক্ষমা চাওয়া|অ্যাপোলজাইজ"],
+["inconvenience|ইনকনভীনিয়েন্স|ভী-তে জোর","warranty|ওয়ারেন্টি|ওয়ার-অন-টি","apologize|অ্যাপোলজাইজ|পল-এ জোর"],
+["Hello, how can I help you?|হ্যালো, কীভাবে সাহায্য করতে পারি?","I received a damaged phone.|আমি একটি ক্ষতিগ্রস্ত ফোন পেয়েছি।","I am very sorry. We will replace it.|দুঃখিত। আমরা বদলে দেব।","Thank you. How long will it take?|ধন্যবাদ। কতদিন লাগবে?"],
+"একটি অভিযোগ ও তার সমাধানের ফোনালাপ দুই ভূমিকায় অভিনয় করো।",
+"অভিযোগে রাগ নয়, স্পষ্ট তথ্য ও দৃঢ় ভদ্রতা কাজ করে।");
+
+D("আলোচনা ও বিতর্ক: পক্ষে-বিপক্ষে বলা","english discussion debate agree disagree opinion","যুক্তি দিয়ে একমত বা দ্বিমত প্রকাশ করতে পারা।",
+"মত: In my view… / একমত: I couldn't agree more. / আংশিক: I see your point, but… / দ্বিমত: I don't think that's true because… / উদাহরণ: For instance…",
+["In my view, online learning is effective.|আমার মতে অনলাইনে শেখা কার্যকর।|ইন মাই ভিউ, অনলাইন লার্নিং ইজ ইফেক্টিভ।","I couldn't agree more.|আমি পুরোপুরি একমত।|আই কুডন্ট অ্যাগ্রী মোর।","I see your point, but I disagree.|তোমার কথা বুঝি, কিন্তু আমি একমত নই।|আই সী ইয়োর পয়েন্ট, বাট আই ডিসঅ্যাগ্রী।","For instance, many students lose focus.|যেমন, অনেক ছাত্র মনোযোগ হারায়।|ফর ইনস্ট্যান্স, মেনি স্টুডেন্টস লুজ ফোকাস।","On balance, both methods have value.|সামগ্রিকভাবে দুই পদ্ধতিরই মূল্য আছে।|অন ব্যালেন্স, বোথ মেথডস হ্যাভ ভ্যালু।"],
+["argue|তর্ক করা|আর্গিউ","evidence|প্রমাণ|এভিডেন্স","topic|বিষয়|টপিক","advantage|সুবিধা|অ্যাডভান্টেজ","disadvantage|অসুবিধা|ডিসঅ্যাডভান্টেজ","effective|কার্যকর|ইফেক্টিভ","focus|মনোযোগ|ফোকাস","conclude|সিদ্ধান্তে আসা|কনক্লুড","valid|যথার্থ|ভ্যালিড","balance|ভারসাম্য|ব্যালেন্স"],
+["advantage|অ্যাডভান্টেজ|ভান-এ জোর","evidence|এভিডেন্স|এভ-ই-ডেন্স","valid|ভ্যালিড|ভ্যা-লিড"],
+["Do you think students should use phones in class?|ক্লাসে ছাত্রদের ফোন ব্যবহার করা উচিত?","I disagree because phones distract students.|আমি একমত নই কারণ ফোন মনোযোগ নষ্ট করে।","But phones can help research.|কিন্তু ফোন গবেষণায় সাহায্য করে।","I see your point, but rules are needed.|বুঝি, তবে নিয়ম দরকার।"],
+"যেকোনো একটি বিতর্কিত বিষয়ে ২ মিনিট পক্ষে ও ২ মিনিট বিপক্ষে বলো।",
+"বিতর্কে তথ্য ও উদাহরণ দাও; ব্যক্তিগত আক্রমণ নয়।");
+
+D("সংবাদ ও ভিডিও থেকে সারাংশ","summarize news english summary","শোনা বা পড়া জিনিস নিজের ভাষায় সারাংশ করতে পারা।",
+"কাঠামো: Who? What? When? Where? Why? → The article is about… / The main point is… / According to the speaker… / In short…। পরিবর্তন: নিজের শব্দে বলো, হুবহু মুখস্থ নয়।",
+["The article is about climate change.|প্রবন্ধটি জলবায়ু পরিবর্তন নিয়ে।|দি আর্টিকল ইজ অ্যাবাউট ক্লাইমেট চেঞ্জ।","The main point is that we must act now.|মূল কথা হল এখনই পদক্ষেপ নেওয়া দরকার।|দ্য মেইন পয়েন্ট ইজ দ্যাট উই মাস্ট অ্যাক্ট নাউ।","According to the report, prices have increased.|প্রতিবেদন অনুযায়ী দাম বেড়েছে।|অ্যাকর্ডিং টু দ্য রিপোর্ট, প্রাইসেস হ্যাভ ইনক্রীসড।","It happened in Dhaka last week.|এটি গত সপ্তাহে ঢাকায় ঘটেছিল।|ইট হ্যাপেন্ড ইন ঢাকা লাস্ট উইক।","In short, the situation is serious.|সংক্ষেপে পরিস্থিতি গুরুতর।|ইন শর্ট, দ্য সিচুয়েইশন ইজ সিরিয়াস।"],
+["article|প্রবন্ধ|আর্টিকল","report|প্রতিবেদন|রিপোর্ট","headline|শিরোনাম|হেডলাইন","according to|অনুযায়ী|অ্যাকর্ডিং টু","main idea|মূল ভাব|মেইন আইডিয়া","detail|বিস্তারিত|ডীটেইল","increase|বৃদ্ধি|ইনক্রীস","decrease|হ্রাস|ডিক্রীস","situation|পরিস্থিতি|সিচুয়েইশন","serious|গুরুতর|সিরিয়াস"],
+["increase (noun/verb)|ইনক্রীস / ইনক্রীস|noun-এ প্রথমে জোর","serious|সিরিয়াস|সি-রি-য়াস","headline|হেডলাইন|হেড + লাইন"],
+["What was the news about?|খবরটি কী নিয়ে?","It was about rising prices.|দাম বৃদ্ধি নিয়ে।","What was the main point?|মূল কথা কী?","That people must save more.|মানুষকে আরও সঞ্চয় করতে হবে।"],
+"একটি ৩ মিনিটের সহজ ইংরেজি ভিডিও বা খবর দেখে ১ মিনিটে নিজের ভাষায় সারাংশ বলো।",
+"সারাংশে নিজের শব্দ ব্যবহার করো; মূল বাক্য কপি করো না।");
+
+D("উন্নত ইন্টারভিউ: আচরণগত প্রশ্ন (STAR)","behavioral interview STAR english","উদাহরণসহ উত্তর (STAR পদ্ধতি) দিতে পারা।",
+"STAR = Situation (পরিস্থিতি), Task (দায়িত্ব), Action (কী করলে), Result (ফল)। Tell me about a time when you solved a problem… উত্তর: In my previous job… / My task was… / I decided to… / As a result…",
+["In my previous job, we had a tight deadline.|আগের চাকরিতে আমাদের কঠিন ডেডলাইন ছিল।|ইন মাই প্রিভিয়াস জব, উই হ্যাড আ টাইট ডেডলাইন।","My task was to finish the report.|আমার দায়িত্ব ছিল প্রতিবেদন শেষ করা।|মাই টাস্ক ওয়জ টু ফিনিশ দ্য রিপোর্ট।","I organized the team and shared the work.|আমি দল গুছিয়ে কাজ ভাগ করলাম।|আই অর্গানাইজড দ্য টীম অ্যান্ড শেয়ার্ড দ্য ওয়ার্ক।","As a result, we finished two days early.|ফলে আমরা দুই দিন আগে শেষ করলাম।|অ্যাজ আ রিজাল্ট, উই ফিনিশ্ড টু ডেইজ আর্লি।","I learned the value of teamwork.|আমি দলগত কাজের মূল্য শিখলাম।|আই লার্নড দ্য ভ্যালু অভ টীমওয়ার্ক।"],
+["situation|পরিস্থিতি|সিচুয়েইশন","task|দায়িত্ব|টাস্ক","action|পদক্ষেপ|অ্যাকশন","result|ফল|রিজাল্ট","challenge|চ্যালেঞ্জ|চ্যালেঞ্জ","solve|সমাধান|সলভ","organize|সংগঠিত|অর্গানাইজ","lead|নেতৃত্ব|লীড","achievement|অর্জন|অ্যাচীভমেন্ট","lesson|শিক্ষা|লেসন"],
+["organized|অর্গানাইজড|অর-গা-নাইজড","achievement|অ্যাচীভমেন্ট|অ্যাচীভ-মেন্ট","lesson|লেসন|লেস-ন"],
+["Tell me about a time you solved a problem.|একটি সমস্যা সমাধানের ঘটনা বলুন।","In my previous job we had a tight deadline.|আগের চাকরিতে কঠিন ডেডলাইন ছিল।","What did you do?|আপনি কী করলেন?","I organized the team, and we finished early.|দল গুছিয়ে আগেই শেষ করলাম।"],
+"নিজের জীবনের একটি সমস্যা সমাধানের গল্প STAR কাঠামোয় ২ মিনিটে বলো।",
+"ফলাফলে সংখ্যা বা প্রমাণ দিলে উত্তর শক্তিশালী হয়।");
+
+D("বিদেশ সফর ও বিদেশে বসবাসের ইংরেজি","english abroad airport immigration hotel","বিমানবন্দর, ইমিগ্রেশন, বিদেশে বাড়ি ভাড়া ও দৈনন্দিন কথা বলতে পারা।",
+"Airport: Where is the check-in counter? / Immigration: I am here for study. / Accommodation: I am looking for a room to rent। Daily: Where can I buy a SIM card?",
+["Where is the check-in counter?|চেক-ইন কাউন্টার কোথায়?|হোয়ার ইজ দ্য চেক-ইন কাউন্টার?","I am here for study. I will stay for two years.|আমি পড়াশোনার জন্য এসেছি। দুই বছর থাকব।|আই অ্যাম হিয়ার ফর স্টাডি। আই উইল স্টে ফর টু ইয়ার্স।","I am looking for a room to rent.|আমি ভাড়ার জন্য একটি রুম খুঁজছি।|আই অ্যাম লুকিং ফর আ রুম টু রেন্ট।","Where can I buy a SIM card?|সিম কার্ড কোথায় কিনতে পারি?|হোয়ার ক্যান আই বাই আ সিম কার্ড?","Could you tell me how to use public transport?|পাবলিক ট্রান্সপোর্ট কীভাবে ব্যবহার করব বলবেন?|কুড ইউ টেল মি হাউ টু ইউজ পাবলিক ট্রান্সপোর্ট?"],
+["airport|বিমানবন্দর|এয়ারপোর্ট","immigration|ইমিগ্রেশন|ইমিগ্রেইশন","customs|শুল্ক|কাস্টমস","boarding pass|বোর্ডিং পাস|বোর্ডিং পাস","gate|গেট|গেইট","rent|ভাড়া|রেন্ট","landlord|বাড়িওয়ালা|ল্যান্ডলর্ড","deposit|জামানত|ডিপোজিট","insurance|বীমা|ইনশিওরেন্স","currency|মুদ্রা|কারেন্সি"],
+["immigration|ইমিগ্রেইশন|গ্রে-তে জোর","customs|কাস্টমস|শেষে স","insurance|ইনশিওরেন্স|শুর-এ জোর"],
+["What is the purpose of your visit?|আপনার আসার উদ্দেশ্য কী?","I am here to study for a master's degree.|মাস্টার্স পড়তে এসেছি।","How long will you stay?|কতদিন থাকবেন?","For two years.|দুই বছর।"],
+"বিদেশে প্রথম দিন (বিমানবন্দর → ইমিগ্রেশন → থাকার জায়গা → সিম কার্ড) ৪টি সংলাপ বলো।",
+"বিদেশে ধীরে ও স্পষ্ট বলো; 'Could you repeat?' বলতে লজ্জা পেও না।");
+
+D("ফেজ ৯ রিভিউ: বাস্তব জীবনের সাবলীলতা","real life english fluency review","পেশাদার ও বাস্তব পরিস্থিতিতে আত্মবিশ্বাসে কথা বলতে পারা।",
+"প্রেজেন্টেশন, মিটিং, ইমেইল, অভিযোগ, বিতর্ক, সারাংশ, STAR ইন্টারভিউ ও বিদেশে চলা — একটি করে ১ মিনিটের অনুশীলন।",
+["Good morning. I would like to present our plan.|সুপ্রভাত। আমি আমাদের পরিকল্পনা উপস্থাপন করতে চাই।|গুড মর্নিং। আই উড লাইক টু প্রেজেন্ট আওয়ার প্ল্যান।","I am writing to confirm our meeting.|আমি মিটিং নিশ্চিত করতে লিখছি।|আই অ্যাম রাইটিং টু কনফার্ম আওয়ার মীটিং।","I see your point, but I have a different view.|বুঝি, তবে আমার মত আলাদা।|আই সী ইয়োর পয়েন্ট, বাট আই হ্যাভ আ ডিফারেন্ট ভিউ।","In my previous job, I solved a major problem.|আগের চাকরিতে আমি একটি বড় সমস্যা সমাধান করেছিলাম।|ইন মাই প্রিভিয়াস জব, আই সলভড আ মেজর প্রবলেম।","Could you help me find the way?|পথ খুঁজে পেতে সাহায্য করবেন?|কুড ইউ হেল্প মি ফাইন্ড দ্য ওয়ে?"],
+["professional|পেশাদার|প্রফেশনাল","fluent|সাবলীল|ফ্লুয়েন্ট","confident|আত্মবিশ্বাসী|কনফিডেন্ট","clear|স্পষ্ট|ক্লিয়ার","polite|ভদ্র|পোলাইট","accurate|নির্ভুল|অ্যাকিউরেট","natural|স্বাভাবিক|ন্যাচারাল","pace|গতি|পেইস","pause|বিরতি|পজ","tone|সুর|টোন"],
+["professional|প্রফেশনাল|ফেশ-এ জোর","accurate|অ্যাকিউরেট|অ্যাক-ইউ-রেট","natural|ন্যাচারাল|ন্যাচ-রাল"],
+["How was your week of practice?|অনুশীলনের সপ্তাহ কেমন?","I practiced presentations and meetings.|প্রেজেন্টেশন ও মিটিং অনুশীলন করেছি।","Do you feel more confident?|আরও আত্মবিশ্বাসী?","Yes, much more than before.|হ্যাঁ, আগের চেয়ে অনেক বেশি।"],
+"৫ মিনিটের পূর্ণ সিমুলেশন: প্রেজেন্টেশন → প্রশ্নোত্তর → মিটিং আলাপ। রেকর্ড করে নিজেকে নম্বর দাও।",
+"নিজের রেকর্ডিংয়ে গতি, বিরতি ও সুর লক্ষ্য করো।");
+
+/* ===== ফেজ ১০: দক্ষতা ও চূড়ান্ত অনুশীলন (দিন ৯১–১০০) ===== */
+D("উচ্চারণ মাস্টারি ১: স্বরধ্বনির সূক্ষ্ম পার্থক্য","english vowel sounds minimal pairs","সূক্ষ্ম স্বরধ্বনি (ship/sheep, full/fool) পার্থক্য করে বলতে পারা।",
+"Minimal pair = একটি ধ্বনির তফাতে অর্থ বদলায়: ship (জাহাজ) / sheep (ভেড়া), full / fool, bad / bed। ছোট ধ্বনি দ্রুত ও আলগা, লম্বা ধ্বনি টানা।",
+["The ship is in the sea, and the sheep are on the hill.|জাহাজ সাগরে, ভেড়া পাহাড়ে।|দ্য শিপ ইজ ইন দ্য সী, অ্যান্ড দ্য শীপ আর অন দ্য হিল।","This bed is bad.|এই বিছানা খারাপ।|দিস বেড ইজ ব্যাড।","The cat sat on the cot.|বিড়ালটি খাটে বসল।|দ্য ক্যাট স্যাট অন দ্য কট।","I full the glass with fool.|(ভুল উদাহরণ — পার্থক্য শোনো)|আই ফুল দ্য গ্লাস উইথ ফুল।","Put the pot in the pit.|হাঁড়ি গর্তে রাখো।|পুট দ্য পট ইন দ্য পিট।"],
+["ship / sheep|শিপ / শীপ|ছোট ই / লম্বা ঈ","full / fool|ফুল / ফুল|ছোট উ / লম্বা ঊ","bad / bed|ব্যাড / বেড|অ্যা / এ","cut / cot|কাট / কট|আ / অ","pit / pet|পিট / পেট|ই / এ","live / leave|লিভ / লীভ|ছোট / লম্বা","pull / pool|পুল / পুল|ছোট উ / লম্বা ঊ","hat / hut|হ্যাট / হাট|অ্যা / আ","fit / feet|ফিট / ফীট|ছোট / লম্বা","luck / lock|লাক / লক|আ / অ"],
+["ship / sheep|শিপ / শীপ|সময়ে পার্থক্য","bad / bed|ব্যাড / বেড|মুখ কত খোলা","cut / cot|কাট / কট|ঠোঁট কেমন"],
+["Where is the sheep?|ভেড়া কোথায়?","The sheep is on the hill. The ship is at sea.|ভেড়া পাহাড়ে, জাহাজ সাগরে।","Which is bigger?|কোনটি বড়?","The ship is bigger.|জাহাজ।"],
+"১০টি minimal pair ধীরে ও দ্রুত বলো; রেকর্ড করে শোনো কি পার্থক্য স্পষ্ট।",
+"লম্বা ধ্বনিতে গলা টানো, ছোট ধ্বনিতে দ্রুত শেষ করো।");
+
+D("উচ্চারণ মাস্টারি ২: শব্দের stress ও বাক্যের ছন্দ","english word stress sentence rhythm","শব্দ ও বাক্যের stress আয়ত্ত করে স্বাভাবিক ছন্দে বলা।",
+"ইংরেজি stress-timed: মূল শব্দ (noun, verb, adjective) লম্বা ও জোরালো; ছোট শব্দ (a, the, of, to) দ্রুত ও হালকা। I WANT to GO to the MARket। Schwa (ə) সবচেয়ে সাধারণ ধ্বনি: about, banana।",
+["I WANT to GO to the MARket.|আমি বাজারে যেতে চাই।|আই ওয়ান্ট টু গো টু দ্য মার্কেট।","She is a TEAcher of ENglish.|সে ইংরেজির শিক্ষক।|শি ইজ আ টীচার অভ ইংলিশ।","The a-BOUT is a schwa.|about শব্দের 'a' হালকা।|দি আ-বাউট ইজ আ শোয়া।","I'll CALL you toMORrow.|আমি কাল ফোন করব।|আইল কল ইউ টুমরো।","Don't FORget to BRING your BOOK.|বই আনতে ভুলো না।|ডোন্ট ফরগেট টু ব্রিং ইয়োর বুক।"],
+["about|আবাউট|a হালকা (schwa)","banana|বানানা|প্রথম ও শেষ a হালকা","computer|কমপিউটার|প্রথম অংশ হালকা","photograph|ফোটোগ্রাফ|PHO-to-graph","photographer|ফটোগ্রাফার|pho-TOG-ra-pher","important|ইমপোর্ট্যান্ট|im-POR-tant","opportunity|অপরচুনিটি|op-por-TU-ni-ty","education|এডুকেশন|ed-u-CA-tion","communication|কমিউনিকেশন|com-mu-ni-CA-tion","pronunciation|প্রনানসিয়েশন|pro-nun-ci-A-tion"],
+["photograph / photographer|ফোটোগ্রাফ / ফটোগ্রাফার|stress সরে","record (noun) / record (verb)|রেকর্ড / রিকর্ড|noun-এ প্রথমে","present (noun) / present (verb)|প্রেজেন্ট / প্রিজেন্ট|ঐ নিয়ম"],
+["Can you say it with the right rhythm?|ঠিক ছন্দে বলতে পারবে?","I WANT to GO to the MARket.|আমি বাজারে যেতে চাই।","Good. Now faster.|ভালো। এবার দ্রুত।","I WANT to GO to the MARket.|আমি বাজারে যেতে চাই।"],
+"১০টি বাক্য (stress বড় অক্ষরে চিহ্নিত) তাল রেখে (টেবিলে টোকা দিয়ে) বলো।",
+"ছন্দ ঠিক হলে দ্রুত বললেও স্পষ্ট শোনায়।");
+
+D("মাতৃভাষীর গতিতে শোনা ও ধরা (Native Speed Listening)","native speed english listening practice","মাতৃভাষীর স্বাভাবিক গতির কথা বোঝার কৌশল আয়ত্ত করা।",
+"৪ ধাপ: ১) পুরোটা শোনো (মূল ভাব) ২) আবার শুনে নোট ৩) ট্রান্সক্রিপ্ট মেলাও ৪) shadowing। না বুঝলেও থেমো না; প্রসঙ্গ থেকে অনুমান করো।",
+["Could you play it again, please?|দয়া করে আবার চালাবে?|কুড ইউ প্লে ইট অগেন, প্লিজ?","I caught the main idea.|আমি মূল ভাব ধরেছি।|আই কট দ্য মেইন আইডিয়া।","I missed the last part.|শেষ অংশ ধরতে পারিনি।|আই মিসড দ্য লাস্ট পার্ট।","The speaker talks very fast.|বক্তা খুব দ্রুত বলে।|দ্য স্পীকার টকস ভেরি ফাস্ট।","Let me check the transcript.|ট্রান্সক্রিপ্ট মিলিয়ে দেখি।|লেট মি চেক দ্য ট্র্যান্সক্রিপ্ট।"],
+["listen|শোনা|লিসেন","catch|ধরা|ক্যাচ","miss|ধরতে না পারা|মিস","guess|অনুমান করা|গেস","context|প্রসঙ্গ|কনটেক্সট","transcript|ট্রান্সক্রিপ্ট|ট্র্যান্সক্রিপ্ট","accent|উচ্চারণ-ভঙ্গি|অ্যাকসেন্ট","speed|গতি|স্পীড","clue|সূত্র|ক্লু","gist|সারকথা|জিস্ট"],
+["transcript|ট্র্যান্সক্রিপ্ট|ট্র্যান-স্ক্রিপ্ট","context|কনটেক্সট|কন-টেক্সট","gist|জিস্ট|g = জ"],
+["Did you understand the podcast?|পডকাস্ট বুঝেছ?","I got the main idea but missed some details.|মূল ভাব বুঝেছি, কিছু বিস্তারিত বাদ গেছে।","Listen again with the transcript.|ট্রান্সক্রিপ্ট দেখে আবার শোনো।","Good idea. I will do that.|ভালো কথা। তাই করব।"],
+"৫ মিনিটের একটি ইংরেজি পডকাস্ট (BBC Learning English বা TED) ৪ ধাপে অনুশীলন করো।",
+"রোজ ১০ মিনিট শোনা, সপ্তাহে একবার ৩০ মিনিটের চেয়ে ভালো।");
+
+D("পড়ার দক্ষতা: প্রবন্ধ পড়া ও শব্দ অনুমান","english reading skills article vocabulary guess","ইংরেজি প্রবন্ধ পড়ে মূল ভাব ও নতুন শব্দের অর্থ অনুমান করা।",
+"কৌশল: Skim (দ্রুত চোখ বুলাও) → Scan (নির্দিষ্ট তথ্য খোঁজো) → নতুন শব্দ: প্রসঙ্গ থেকে অনুমান → পরে অভিধানে মেলাও। উপসর্গ: un-, re-, dis- ; প্রত্যয়: -ful, -less, -ness।",
+["Skim the text first, then read it carefully.|আগে দ্রুত চোখ বুলাও, তারপর মনোযোগ দিয়ে পড়ো।|স্কিম দ্য টেক্সট ফার্স্ট, দেন রীড ইট কেয়ারফুলি।","I can guess the meaning from context.|আমি প্রসঙ্গ থেকে অর্থ অনুমান করতে পারি।|আই ক্যান গেস দ্য মীনিং ফ্রম কনটেক্সট।","'Unhappy' means not happy.|'আনহ্যাপি' মানে সুখী নয়।|আনহ্যাপি মীনস নট হ্যাপি।","'Helpful' means full of help.|'হেল্পফুল' মানে সাহায্যে ভরা।|হেল্পফুল মীনস ফুল অভ হেল্প।","I underline new words and check them later.|নতুন শব্দ দাগ দিয়ে পরে দেখি।|আই আন্ডারলাইন নিউ ওয়ার্ডস অ্যান্ড চেক দেম লেইটার।"],
+["skim|দ্রুত পড়া|স্কিম","scan|খুঁজে পড়া|স্ক্যান","prefix|উপসর্গ|প্রিফিক্স","suffix|প্রত্যয়|সাফিক্স","guess|অনুমান|গেস","meaning|অর্থ|মীনিং","paragraph|অনুচ্ছেদ|প্যারাগ্রাফ","title|শিরোনাম|টাইটেল","author|লেখক|অথর","summary|সারসংক্ষেপ|সামারি"],
+["paragraph|প্যারাগ্রাফ|প্যা-রা-গ্রাফ","author|অথর|th নয়, অ-থর","suffix|সাফিক্স|সাফ-ইক্স"],
+["How do you read English articles?|ইংরেজি প্রবন্ধ কীভাবে পড়ো?","I skim first, then I read carefully.|আগে চোখ বুলাই, তারপর মনোযোগ দিয়ে পড়ি।","What about new words?|নতুন শব্দ?","I guess the meaning from context first.|আগে প্রসঙ্গ থেকে অনুমান করি।"],
+"একটি ছোট ইংরেজি প্রবন্ধ (BBC Learning English) পড়ো, ৫টি নতুন শব্দ লিখে অর্থ অনুমান করো।",
+"রোজ ১টি ছোট প্রবন্ধ পড়ো — এক মাসে শব্দভান্ডার অনেক বাড়বে।");
+
+D("Speaking Test: Part 1 (পরিচিত বিষয়ে প্রশ্ন)","english speaking test part 1 familiar topics","পরিচিত বিষয়ে (বাড়ি, কাজ, শখ) সংক্ষিপ্ত ও সাবলীল উত্তর দেওয়া।",
+"উত্তরের নিয়ম: সরাসরি উত্তর + কারণ + উদাহরণ (২–৩ বাক্য)। Do you like…? → Yes, I do. I like it because… For example…",
+["Yes, I enjoy cooking because it is relaxing.|হ্যাঁ, রান্না করতে ভালো লাগে কারণ এটি স্বস্তিদায়ক।|ইয়েস, আই ইনজয় কুকিং বিকজ ইট ইজ রিল্যাক্সিং।","I live in a small apartment in Dhaka.|আমি ঢাকায় একটি ছোট ফ্ল্যাটে থাকি।|আই লিভ ইন আ স্মল অ্যাপার্টমেন্ট ইন ঢাকা।","In my free time, I usually read novels.|অবসরে আমি সাধারণত উপন্যাস পড়ি।|ইন মাই ফ্রী টাইম, আই ইউজুয়ালি রীড নভেলস।","I prefer tea to coffee.|আমি কফির চেয়ে চা বেশি পছন্দ করি।|আই প্রিফার টী টু কফি।","My hometown is famous for its rivers.|আমার শহর নদীর জন্য বিখ্যাত।|মাই হোমটাউন ইজ ফেইমাস ফর ইটস রিভার্স।"],
+["apartment|ফ্ল্যাট|অ্যাপার্টমেন্ট","relaxing|স্বস্তিদায়ক|রিল্যাক্সিং","novel|উপন্যাস|নভেল","hometown|নিজের শহর|হোমটাউন","famous|বিখ্যাত|ফেইমাস","prefer|বেশি পছন্দ|প্রিফার","usually|সাধারণত|ইউজুয়ালি","enjoy|উপভোগ|ইনজয়","interest|আগ্রহ|ইন্টারেস্ট","describe|বর্ণনা|ডিস্ক্রাইব"],
+["apartment|অ্যাপার্টমেন্ট|পার্ট-এ জোর","novel|নভেল|ন-ভেল","describe|ডিস্ক্রাইব|ক্রাইব-এ জোর"],
+["Do you work or study?|তুমি কাজ করো না পড়ো?","I work as a software tester.|আমি সফটওয়্যার টেস্টার।","Do you like your job?|কাজটি কেমন লাগে?","Yes, because it is challenging. For example, I solve new problems every day.|হ্যাঁ, কারণ চ্যালেঞ্জিং। যেমন রোজ নতুন সমস্যা সমাধান করি।"],
+"১০টি পরিচিত প্রশ্নের উত্তর (প্রতিটি ২–৩ বাক্য) দাও ও রেকর্ড করো।",
+"'Yes/No' বলে থেমে যেও না; কারণ ও উদাহরণ যোগ করো।");
+
+D("Speaking Test: Part 2 (২ মিনিটের একক বক্তব্য)","english speaking test part 2 long turn cue card","১ মিনিট প্রস্তুতি নিয়ে ২ মিনিট একটানা বলতে পারা।",
+"Cue card: Describe a person/place/event… কাঠামো: Who/what/where → বিস্তারিত (3 পয়েন্ট) → অনুভূতি/কারণ। সংযোগ: Let me tell you about… / What I like most is… / The reason is that…",
+["Let me tell you about my best friend.|আমি আমার সেরা বন্ধুর কথা বলি।|লেট মি টেল ইউ অ্যাবাউট মাই বেস্ট ফ্রেন্ড।","We have known each other since childhood.|আমরা ছোটবেলা থেকে একে অপরকে চিনি।|উই হ্যাভ নোন ইচ আদার সিন্স চাইল্ডহুড।","What I like most is his sense of humor.|আমার সবচেয়ে ভালো লাগে তার রসবোধ।|হোয়াট আই লাইক মোস্ট ইজ হিজ সেন্স অভ হিউমার।","The reason is that he always supports me.|কারণ সে সবসময় আমাকে সমর্থন করে।|দ্য রীজন ইজ দ্যাট হি অলওয়েজ সাপোর্টস মি।","That is why he is special to me.|এ জন্যই সে আমার কাছে বিশেষ।|দ্যাট ইজ হোয়াই হি ইজ স্পেশাল টু মি।"],
+["describe|বর্ণনা করা|ডিস্ক্রাইব","memorable|স্মরণীয়|মেমোরেবল","sense of humor|রসবোধ|সেন্স অভ হিউমার","support|সমর্থন|সাপোর্ট","childhood|শৈশব|চাইল্ডহুড","special|বিশেষ|স্পেশাল","reason|কারণ|রীজন","feeling|অনুভূতি|ফীলিং","experience|অভিজ্ঞতা|ইক্সপীরিয়েন্স","detail|বিস্তারিত|ডীটেইল"],
+["memorable|মেমোরেবল|মেম-র-ব্ল","humor|হিউমার|h উচ্চারিত","experience|ইক্সপীরিয়েন্স|পীর-এ জোর"],
+["Describe a memorable person.|একজন স্মরণীয় মানুষের বর্ণনা দাও।","I will talk about my teacher.|আমি আমার শিক্ষকের কথা বলব।","Please begin now.|এবার শুরু করো।","Let me tell you about my teacher.|আমার শিক্ষক সম্পর্কে বলি।"],
+"৫টি cue card বিষয়ে (একজন মানুষ, জায়গা, ঘটনা, জিনিস, অভিজ্ঞতা) প্রতিটি ২ মিনিট বলে রেকর্ড করো।",
+"প্রস্তুতির ১ মিনিটে ৫টি কী-পয়েন্ট লিখো; পুরো বাক্য নয়।");
+
+D("Speaking Test: Part 3 (গভীর আলোচনা)","english speaking test part 3 discussion abstract","বিমূর্ত ও সামাজিক বিষয়ে যুক্তি দিয়ে আলোচনা করতে পারা।",
+"কৌশল: PREP = Point (মত) → Reason (কারণ) → Example (উদাহরণ) → Point (পুনরায়)। ভাষা: It depends on… / Generally speaking… / One possible reason is… / On the whole…",
+["Generally speaking, young people prefer online shopping.|সাধারণত তরুণরা অনলাইনে কেনাকাটা পছন্দ করে।|জেনারেলি স্পীকিং, ইয়াং পিপল প্রিফার অনলাইন শপিং।","It depends on the situation.|এটা পরিস্থিতির ওপর নির্ভর করে।|ইট ডিপেন্ডস অন দ্য সিচুয়েইশন।","One possible reason is convenience.|একটি সম্ভাব্য কারণ সুবিধা।|ওয়ান পসিবল রীজন ইজ কনভীনিয়েন্স।","For example, people can compare prices easily.|যেমন মানুষ সহজে দাম তুলনা করতে পারে।|ফর ইগজ্যাম্পল, পিপল ক্যান কমপেয়ার প্রাইসেস ঈজিলি।","On the whole, I think it is a positive change.|সামগ্রিকভাবে আমি একে ইতিবাচক পরিবর্তন মনে করি।|অন দ্য হোল, আই থিংক ইট ইজ আ পজিটিভ চেঞ্জ।"],
+["convenience|সুবিধা|কনভীনিয়েন্স","society|সমাজ|সোসাইটি","trend|প্রবণতা|ট্রেন্ড","impact|প্রভাব|ইমপ্যাক্ট","generation|প্রজন্ম|জেনারেইশন","environment|পরিবেশ|এনভায়রনমেন্ট","government|সরকার|গভর্নমেন্ট","responsibility|দায়িত্ব|রেসপন্সিবিলিটি","development|উন্নয়ন|ডেভেলপমেন্ট","benefit|সুবিধা|বেনিফিট"],
+["environment|এনভায়রনমেন্ট|ভাই-র-ন-মেন্ট","responsibility|রেসপন্সিবিলিটি|বিল-এ জোর","government|গভর্নমেন্ট|n নীরব-ই"],
+["Why do people prefer online shopping?|মানুষ কেন অনলাইনে কেনাকাটা পছন্দ করে?","One reason is convenience.|একটি কারণ সুবিধা।","Is it always better?|সবসময়ই কি ভালো?","It depends. Sometimes shops are better for quality.|নির্ভর করে। কখনো দোকান মান যাচাইয়ে ভালো।"],
+"৫টি বিমূর্ত প্রশ্ন (প্রযুক্তি, পরিবেশ, শিক্ষা) PREP কাঠামোয় ১ মিনিট করে উত্তর দাও।",
+"যুক্তি দুর্বল হলে সৎভাবে বলো 'It depends'; জোর করে ভুল বলো না।");
+
+D("আত্মবিশ্বাসী পাবলিক স্পিকিং ও ভুল সংশোধনের অভ্যাস","public speaking self correction english","মঞ্চে আত্মবিশ্বাসে বলা ও নিজের ভুল নিজে ধরার কৌশল।",
+"মঞ্চ-কৌশল: চোখে চোখ রাখো, ধীরে বলো, বিরতি দাও, হাত ব্যবহার করো। ভুল ধরা: রেকর্ড → শোনো → ভুল তালিকা → ঠিক করে আবার → একই ভুল ৩ সপ্তাহে কমাও।",
+["Take a deep breath and speak slowly.|গভীর শ্বাস নাও ও ধীরে বলো।|টেইক আ ডীপ ব্রেথ অ্যান্ড স্পীক স্লোলি।","Make eye contact with the audience.|শ্রোতাদের সাথে চোখে চোখ রাখো।|মেইক আই কনট্যাক্ট উইথ দি অডিয়েন্স।","I will pause for effect.|আমি জোর দিতে একটু থামব।|আই উইল পজ ফর ইফেক্ট।","Sorry, let me say that again.|দুঃখিত, আবার বলি।|সরি, লেট মি সে দ্যাট অগেন।","Mistakes are part of learning.|ভুল শেখার অংশ।|মিসটেইকস আর পার্ট অভ লার্নিং।"],
+["eye contact|চোখে চোখ|আই কনট্যাক্ট","pause|বিরতি|পজ","gesture|অঙ্গভঙ্গি|জেসচার","nervous|নার্ভাস|নার্ভাস","calm|শান্ত|কাম","breathe|শ্বাস নেওয়া|ব্রীদ","stage|মঞ্চ|স্টেইজ","courage|সাহস|কারেজ","correct|সংশোধন|কারেক্ট","habit|অভ্যাস|হ্যাবিট"],
+["breathe|ব্রীদ|th কণ্ঠ কাঁপিয়ে","courage|কারেজ|শেষে জ","gesture|জেসচার|জে-স-চার"],
+["I feel nervous before speaking.|বলার আগে আমি নার্ভাস থাকি।","Take a deep breath and speak slowly.|গভীর শ্বাস নাও ও ধীরে বলো।","Does it work?|কাজ হয়?","Yes, it helps me stay calm.|হ্যাঁ, শান্ত থাকতে সাহায্য করে।"],
+"বন্ধু/পরিবারের সামনে ৩ মিনিটের একটি বক্তব্য দাও; ভিডিও রেকর্ড করে নিজের হাত-চোখ-গলার সুর দেখো।",
+"নার্ভাস লাগা স্বাভাবিক; ধীরে শ্বাস ও ধীর গতিই সবচেয়ে কার্যকর।");
+
+D("কোর্স সমাপ্তি: ১০০ দিনের চূড়ান্ত মূল্যায়ন ও ভবিষ্যৎ পরিকল্পনা","english course final assessment graduation next steps","১০০ দিনের উন্নতি মাপা, উদযাপন ও পরবর্তী ধাপের পরিকল্পনা করা।",
+"দিন ১ ও দিন ১০ ও দিন ৬০-এর রেকর্ডিংয়ের সাথে আজকের ৫ মিনিটের বক্তৃতা তুলনা করো। পরবর্তী পরিকল্পনা: রোজ ৩০ মিনিট (শোনা, বলা), সপ্তাহে ১টি নতুন বিষয়, মাসে ১টি বই/পডকাস্ট সিরিজ।",
+["I have completed one hundred days of practice.|আমি একশো দিনের অনুশীলন সম্পন্ন করেছি।|আই হ্যাভ কমপ্লিটেড ওয়ান হান্ড্রেড ডেইজ অভ প্র্যাকটিস।","My speaking has become much clearer.|আমার কথা অনেক স্পষ্ট হয়েছে।|মাই স্পীকিং হ্যাজ বিকাম মাচ ক্লিয়ারার।","I am proud of my progress.|আমি আমার অগ্রগতিতে গর্বিত।|আই অ্যাম প্রাউড অভ মাই প্রোগ্রেস।","I will keep practicing every day.|আমি রোজ অনুশীলন চালিয়ে যাব।|আই উইল কীপ প্র্যাকটিসিং এভরি ডে।","English has opened new doors for me.|ইংরেজি আমার সামনে নতুন দরজা খুলেছে।|ইংলিশ হ্যাজ ওপেনড নিউ ডোরস ফর মি।"],
+["graduate|সমাপ্ত করা|গ্র্যাজুয়েট","accomplish|সম্পন্ন করা|অ্যাকমপ্লিশ","proud|গর্বিত|প্রাউড","journey|যাত্রা|জার্নি","goal|লক্ষ্য|গোল","future|ভবিষ্যৎ|ফিউচার","opportunity|সুযোগ|অপরচুনিটি","grateful|কৃতজ্ঞ|গ্রেটফুল","continue|চালিয়ে যাওয়া|কনটিনিউ","celebrate|উদযাপন|সেলিব্রেট"],
+["accomplish|অ্যাকমপ্লিশ|কম-প-এ জোর","journey|জার্নি|জ + আর্নি","grateful|গ্রেটফুল|গ্রেইট-ফুল"],
+["How do you feel after one hundred days?|একশো দিন পর কেমন লাগছে?","I feel proud and confident.|গর্বিত ও আত্মবিশ্বাসী।","What is your next goal?|পরের লক্ষ্য কী?","To speak English fluently with anyone, anywhere.|যে কারও সাথে যেকোনো জায়গায় সাবলীল ইংরেজি বলা।"],
+"৫ মিনিটের চূড়ান্ত বক্তৃতা: আমার ১০০ দিনের যাত্রা, যা শিখলাম, যা পারি, পরবর্তী লক্ষ্য। রেকর্ড করে সংরক্ষণ করো।",
+"তুমি ১০০ দিন নিয়মিত ছিলে — এটাই সবচেয়ে বড় সাফল্য। এখন রোজ ৩০ মিনিট বলা চালিয়ে যাও।");
+D("সামাজিক আড্ডা ও নেটওয়ার্কিং","english small talk networking social","অপরিচিতদের সাথে আলাপ জমানো ও সম্পর্ক তৈরি করা।",
+"শুরু: Hi, I don't think we've met. / প্রশ্ন: What do you do? / সংযোগ: That sounds interesting! / বিদায়: It was great talking to you. Let's keep in touch।",
+["Hi, I don't think we have met. I am Rina.|হাই, মনে হয় আমাদের দেখা হয়নি। আমি রিনা।|হাই, আই ডোন্ট থিংক উই হ্যাভ মেট। আই অ্যাম রিনা।","What brings you to this event?|আপনি এই অনুষ্ঠানে কেন এসেছেন?|হোয়াট ব্রিংস ইউ টু দিস ইভেন্ট?","That sounds really interesting!|এটা সত্যিই মজার শোনাচ্ছে!|দ্যাট সাউন্ডস রিয়্যালি ইন্টারেস্টিং!","Here is my card. Let's keep in touch.|এই নিন আমার কার্ড। যোগাযোগ রাখি।|হিয়ার ইজ মাই কার্ড। লেটস কীপ ইন টাচ।","It was great talking to you.|আপনার সাথে কথা বলে ভালো লাগল।|ইট ওয়জ গ্রেট টকিং টু ইউ।"],
+["network|যোগাযোগের জাল|নেটওয়ার্ক","event|অনুষ্ঠান|ইভেন্ট","introduce|পরিচয় করানো|ইন্ট্রোডিউস","business card|ব্যবসায়িক কার্ড|বিজনেস কার্ড","connect|যুক্ত হওয়া|কানেক্ট","interesting|মজার|ইন্টারেস্টিং","colleague|সহকর্মী|কলীগ","industry|শিল্প|ইন্ডাস্ট্রি","keep in touch|যোগাযোগ রাখা|কীপ ইন টাচ","follow up|পরে যোগাযোগ|ফলো আপ"],
+["interesting|ইন্টারেস্টিং|IN-ter-est-ing (৩ অংশ)","industry|ইন্ডাস্ট্রি|ইন-ডা-স্ট্রি","colleague|কলীগ|শেষে 'গ'"],
+["Hi, I am Rina. What do you do?|হাই, আমি রিনা। আপনি কী করেন?","I work in marketing. And you?|মার্কেটিংয়ে। আর আপনি?","I am a teacher. That sounds interesting!|শিক্ষক। শুনতে মজার!","Let's keep in touch.|যোগাযোগ রাখি।"],
+"একটি কাল্পনিক অনুষ্ঠানে ৩ জনের সাথে আলাপ জমানোর অভিনয় করো (৩ মিনিট)।",
+"প্রশ্ন করো, মনোযোগ দিয়ে শোনো, নিজের কথাও যোগ করো — ভারসাম্য রাখো।");
+
+D("শব্দভান্ডার মাস্টারি: Collocation ও Word Family","english collocations word family vocabulary","শব্দ জোড়ায় (collocation) শেখা এবং এক শব্দ থেকে একাধিক রূপ বানানো।",
+"Collocation = যে শব্দ একসাথে স্বাভাবিক শোনায়: make a decision (do a decision ✗), take a break, heavy rain, strong tea। Word family: succeed → success → successful → successfully।",
+["I need to make a decision soon.|আমাকে শিগগির সিদ্ধান্ত নিতে হবে।|আই নীড টু মেইক আ ডিসিশন সুন।","Let's take a break for ten minutes.|দশ মিনিট বিরতি নিই।|লেটস টেইক আ ব্রেইক ফর টেন মিনিটস।","It was heavy rain all night.|সারা রাত ভারী বৃষ্টি ছিল।|ইট ওয়জ হেভি রেইন অল নাইট।","She achieved great success.|সে দারুণ সাফল্য অর্জন করেছে।|শি অ্যাচীভড গ্রেট সাকসেস।","He successfully completed the project.|সে সফলভাবে প্রকল্প সম্পন্ন করেছে।|হি সাকসেসফুলি কমপ্লিটেড দ্য প্রজেক্ট।"],
+["make a decision|সিদ্ধান্ত নেওয়া|মেইক আ ডিসিশন","take a break|বিরতি নেওয়া|টেইক আ ব্রেইক","do homework|হোমওয়ার্ক করা|ডু হোমওয়ার্ক","heavy rain|ভারী বৃষ্টি|হেভি রেইন","strong tea|কড়া চা|স্ট্রং টী","succeed|সফল হওয়া|সাকসীড","success|সাফল্য|সাকসেস","successful|সফল|সাকসেসফুল","successfully|সফলভাবে|সাকসেসফুলি","pay attention|মনোযোগ দেওয়া|পে অ্যাটেনশন"],
+["success|সাকসেস|সেস-এ জোর","successful|সাকসেসফুল|সেস-এ জোর","attention|অ্যাটেনশন|টেন-এ জোর"],
+["Why are you smiling?|হাসছ কেন?","I made an important decision today.|আজ একটি গুরুত্বপূর্ণ সিদ্ধান্ত নিয়েছি।","What is it?|কী সেটা?","I will take a break from work and learn English full time.|কাজ থেকে বিরতি নিয়ে পুরো সময় ইংরেজি শিখব।"],
+"১০টি collocation দিয়ে নিজের জীবনের বাক্য বানাও এবং ৩টি শব্দের word family লিখে বলো।",
+"অভিধানে শব্দ দেখলে তার collocation ও উদাহরণ বাক্যও পড়ো।");
+
+(()=>{const x=C60.splice(98,2);C60.splice(88,0,x[0]);C60.splice(98,0,x[1])})();
 const NDAYS=C60.length,MINUTES=150;
 const PH_META=[
  {n:"ভিত্তি",d:"বর্ণমালা, ধ্বনি ও প্রথম বাক্য",len:10},
@@ -558,7 +921,11 @@ const PH_META=[
  {n:"প্রশ্ন ও শব্দভান্ডার",d:"প্রশ্ন, না-বাচক, preposition ও বিশেষণ",len:10},
  {n:"দৈনন্দিন সংলাপ",d:"দোকান, রেস্তোরাঁ, পথ, ডাক্তার, ফোন",len:10},
  {n:"কথা চালানো",d:"মত, গল্প, ভ্রমণ, কর্মজীবন ও ইন্টারভিউ",len:10},
- {n:"আত্মবিশ্বাস",d:"ভিসা, ফরমাল, শোনা ও উচ্চারণ",len:10}];
+ {n:"আত্মবিশ্বাস",d:"ভিসা, ফরমাল, শোনা ও উচ্চারণ",len:10},
+ {n:"মধ্যম গ্রামার",d:"Perfect, Modal, Passive, Conditional",len:10},
+ {n:"উন্নত গ্রামার",d:"Reported speech, Relative clause, Idiom",len:10},
+ {n:"বাস্তব সাবলীলতা",d:"প্রেজেন্টেশন, মিটিং, ইমেইল, বিতর্ক",len:10},
+ {n:"দক্ষতা ও মাস্টারি",d:"উচ্চারণ, শোনা, পড়া, Speaking Test",len:10}];
 const PHASES=[];{let i=0;PH_META.forEach(m=>{PHASES.push({n:m.n,d:m.d,days:C60.slice(i,i+m.len).map(x=>[x.bn,x.kw,null,x.sp]),c:C60.slice(i,i+m.len)});i+=m.len})}
 const CONTENT=C60.map(x=>({g:x.g,pat:x.pat,S:x.S,V:x.V,P:x.P,L:x.L,tip:x.tip}));
 
@@ -587,16 +954,20 @@ function build(kw,sp){return[
 ]}
 const DAYS=[];PHASES.forEach((p,pi)=>p.days.forEach(x=>DAYS.push({pi,bn:x[0],kw:x[1],sp:x[3]})));
 const CURR={about:{
- who:"যাঁরা ইংরেজি একদমই শুরু করতে চান বা বাংলা দিয়ে বুঝে ধাপে ধাপে বলতে শিখতে চান। কোর্সটি 'সবকিছু পারি না কোর্স (PuroPuri English Shikhi)'-র ক্রম (বর্ণমালা → ধ্বনি → শব্দ → \"I\" ছাঁচ → প্রশ্ন → না-বাচক → preposition → বিশেষণ → পড়া) এবং 10 Minute School-এর Spoken English কোর্সের ৬০ ক্লাসের রূপরেখা (Easy → Medium → Hard; Daily Use, Daily Routine, Job, Visa Interview, Formal Introduction) অনুসরণ করে বানানো।",
- time:"প্রতিদিন ২ ঘণ্টা ৩০ মিনিট (১৫০ মিনিট) × ৬০ দিন = ১৫০ ঘণ্টা। চাইলে দুই ভাগে পড়তে পারো: সকালে ১ ঘণ্টা ১৫ মিনিট (কাজ ১-৩), রাতে ১ ঘণ্টা ১৫ মিনিট (কাজ ৪-৬)।",
+ who:"যাঁরা ইংরেজি একদমই শুরু করতে চান বা বাংলা দিয়ে বুঝে ধাপে ধাপে বলতে শিখতে চান। কোর্সটি 'সবকিছু পারি না কোর্স (PuroPuri English Shikhi)'-র ক্রম (বর্ণমালা → ধ্বনি → শব্দ → \"I\" ছাঁচ → প্রশ্ন → না-বাচক → preposition → বিশেষণ → পড়া) এবং 10 Minute School-এর Spoken English কোর্সের ৬০ ক্লাসের রূপরেখা (এরপর আরও ৪০ দিন উন্নত স্তর) (Easy → Medium → Hard; Daily Use, Daily Routine, Job, Visa Interview, Formal Introduction) অনুসরণ করে বানানো।",
+ time:"প্রতিদিন ২ ঘণ্টা ৩০ মিনিট (১৫০ মিনিট) × ৬০ দিন = ২৫০ ঘণ্টা। চাইলে দুই ভাগে পড়তে পারো: সকালে ১ ঘণ্টা ১৫ মিনিট (কাজ ১-৩), রাতে ১ ঘণ্টা ১৫ মিনিট (কাজ ৪-৬)।",
  method:[["📚 ৩০ মি — শব্দ","প্রতিদিন ১০টি নতুন শব্দ + পুরোনো শব্দের ঝালাই (spaced repetition)।"],["🔤 ২৫ মি — উচ্চারণ","কঠিন ধ্বনি, stress ও 🔊 শুনে নকল।"],["🧩 ৩০ মি — ছাঁচ","একটি ছাঁচ + ৫ বাক্য + নিজের ১০ বাক্য।"],["🎧 ২৫ মি — শোনা","কথোপকথন শোনা ও shadowing।"],["💬 ২৫ মি — বলা","পরিস্থিতিভিত্তিক বলা ও role-play।"],["🎙️ ১৫ মি — রেকর্ড","রেকর্ড, ভুল ধরা, ডায়েরি লেখা।"]],
  tips:["প্রতিদিন একই সময়ে বসো; সময় বাঁধা থাকলে অভ্যাস তৈরি হয়।","শব্দ জোরে বলো — নীরবে পড়লে উচ্চারণ হয় না।","ভুল হলে থামো না; আগে বলার সাহস, পরে নির্ভুলতা।","প্রতি ১০ দিন পরপর রিভিউ দিনে পুরোনো শব্দ ও ছাঁচ আবার করো।","সপ্তাহে একবার নিজের রেকর্ডিং আগের সপ্তাহের সাথে তুলনা করো।","সব কাজ একদিনে না পারলে ২ ভাগে সকাল-রাতে ভাগ করো।"],
- faq:[["২.৫ ঘণ্টা একসাথে বসতে না পারলে?","কাজগুলো দুই বা তিন ভাগে ভাগ করো। যেকোনো ক্রমে করা যায়, তবে ১ম কাজ (শব্দ) সবার আগে করলে ভালো।"],["কোনো দিন বাদ গেলে?","পরের দিন ওই দিনটি আগে শেষ করো, তারপর নতুন দিন। চেইন ভাঙলেও আবার শুরু করো।"],["উচ্চারণ ঠিক হচ্ছে কি না কীভাবে বুঝব?","🔊 শুনে নিজের রেকর্ডিংয়ের সাথে মেলাও, YouGlish-এ মাতৃভাষীর উচ্চারণ শোনো, এবং AI পার্টনারকে শুনে ভুল ধরতে বলো।"],["বাংলা ব্যবহার করব কেন?","শুরুতে বাংলা অর্থ ও উচ্চারণ বোঝাপড়া দ্রুত করে। ৪০ দিনের পর ধীরে ধীরে ইংরেজিতে ভাবার অভ্যাস করো।"]]},
+ faq:[["২.৫ ঘণ্টা একসাথে বসতে না পারলে?","কাজগুলো দুই বা তিন ভাগে ভাগ করো। যেকোনো ক্রমে করা যায়, তবে ১ম কাজ (শব্দ) সবার আগে করলে ভালো।"],["কোনো দিন বাদ গেলে?","পরের দিন ওই দিনটি আগে শেষ করো, তারপর নতুন দিন। চেইন ভাঙলেও আবার শুরু করো।"],["উচ্চারণ ঠিক হচ্ছে কি না কীভাবে বুঝব?","🔊 শুনে নিজের রেকর্ডিংয়ের সাথে মেলাও, YouGlish-এ মাতৃভাষীর উচ্চারণ শোনো, এবং AI পার্টনারকে শুনে ভুল ধরতে বলো।"],["বাংলা ব্যবহার করব কেন?","শুরুতে বাংলা অর্থ ও উচ্চারণ বোঝাপড়া দ্রুত করে। প্রথম ৬০ দিনের পর ধীরে ধীরে ইংরেজিতে ভাবার অভ্যাস করো।"]]},
  phases:[
  {goal:"বর্ণমালা, স্বরধ্বনি ও কঠিন ধ্বনি আয়ত্ত করা এবং \"I\" দিয়ে প্রথম বাক্য বলা।",outcomes:["A–Z নাম ও ধ্বনি চেনা","a / an / the ঠিকভাবে বসানো","I am / I + verb / -ing / past / will দিয়ে বাক্য বলা","নিজের পরিচয় ১ মিনিটে বলা"],check:["বর্ণমালা দেখে বানান বলতে পারি","th, v, w, r ধ্বনি স্পষ্ট বলতে পারি","১–২০ গুনতে পারি","৫টি ছাঁচে নিজের বাক্য বলতে পারি"],test:"১ মিনিটের 'আমার পরিচয়' রেকর্ড করে সংরক্ষণ করো।"},
  {goal:"have, have to, want to, should, can ও ব্যক্তি-সর্বনাম দিয়ে সহজ বাক্য বলা।",outcomes:["পছন্দ-অপছন্দ ও চাহিদা বলা","this/that/these/those ব্যবহার","সংখ্যা, সময় ও দাম বলা","ছোট গল্প পড়া ও বলা"],check:["I have / has সঠিক ব্যবহার করি","I want to / should / can দিয়ে ৫টি বাক্য বলতে পারি","সময় ও দাম ইংরেজিতে বলতে পারি","ছোট গল্প ৮ বাক্যে বলতে পারি"],test:"নিজের একটি ছোট গল্প ৮–১০ বাক্যে বলো।"},
  {goal:"প্রশ্ন করা, না-বাচক বাক্য, preposition ও বিশেষণ আয়ত্ত করা।",outcomes:["Wh-ও Yes/No প্রশ্ন","don't/doesn't/didn't ব্যবহার","in/on/at সঠিক ব্যবহার","তুলনা (bigger, the best)"],check:["৫টি Wh-প্রশ্ন করতে পারি","না-বাচক বাক্য সঠিক বানাতে পারি","জিনিস কোথায় তা বলতে পারি","দুটি জিনিসের তুলনা করতে পারি"],test:"একজনের ১০টি প্রশ্নের সাক্ষাৎকার রেকর্ড করো।"},
  {goal:"দৈনন্দিন পরিস্থিতিতে (দোকান, রেস্তোরাঁ, পথ, ডাক্তার, ফোন, অনুষ্ঠান) কথা বলা।",outcomes:["রুটিন ধারাবাহিকভাবে বলা","কেনাকাটা ও অর্ডার করা","পথ জিজ্ঞাসা ও বোঝানো","ফোনে কথা বলা"],check:["রুটিন ১ মিনিটে বলতে পারি","দোকানে দরদাম করতে পারি","পথ বলতে পারি","ফোনে নিজের পরিচয় দিতে পারি"],test:"৫টি পরিস্থিতির সংলাপ রেকর্ড করো।"},
  {goal:"মত, গল্প, ভ্রমণ ও কর্মজীবনের ইংরেজি এবং চাকরির ইন্টারভিউয়ের প্রস্তুতি।",outcomes:["কারণসহ মত দেওয়া","অতীতের গল্প বলা","চাকরির ইন্টারভিউয়ে নিজের পরিচয় ও শক্তি বলা","২–৩ মিনিট স্বাধীন বক্তব্য"],check:["মত ও কারণ বলতে পারি","গল্প শুরু-মাঝ-শেষে বলতে পারি","'Tell me about yourself' বলতে পারি","২ মিনিট থামা ছাড়া বলতে পারি"],test:"৩ মিনিটের স্বাধীন বক্তৃতা রেকর্ড করো।"},
- {goal:"ভিসা ইন্টারভিউ, ফরমাল ইংরেজি, দ্রুত শোনা, উচ্চারণ-ছন্দ ও আত্মবিশ্বাস।",outcomes:["ভিসা ইন্টারভিউয়ের উত্তর","ফরমাল পরিচিতি","সংযুক্ত উচ্চারণ বোঝা","৬০ দিনের মূল্যায়ন"],check:["ভিসা ইন্টারভিউয়ের ৫টি প্রশ্নের উত্তর পারি","ফরমাল পরিচয় ৩০ সেকেন্ডে দিতে পারি","gonna/wanna বুঝতে পারি","দিন ১০-এর সাথে নিজের রেকর্ডিং তুলনা করেছি"],test:"৩ মিনিটের চূড়ান্ত বক্তৃতা রেকর্ড করে দিন ১০-এর রেকর্ডিংয়ের সাথে তুলনা করো।"}]};
+ {goal:"ভিসা ইন্টারভিউ, ফরমাল ইংরেজি, দ্রুত শোনা, উচ্চারণ-ছন্দ ও আত্মবিশ্বাস।",outcomes:["ভিসা ইন্টারভিউয়ের উত্তর","ফরমাল পরিচিতি","সংযুক্ত উচ্চারণ বোঝা","৬০ দিনের মূল্যায়ন"],check:["ভিসা ইন্টারভিউয়ের ৫টি প্রশ্নের উত্তর পারি","ফরমাল পরিচয় ৩০ সেকেন্ডে দিতে পারি","gonna/wanna বুঝতে পারি","দিন ১০-এর সাথে নিজের রেকর্ডিং তুলনা করেছি"],test:"৩ মিনিটের চূড়ান্ত বক্তৃতা রেকর্ড করে দিন ১০-এর রেকর্ডিংয়ের সাথে তুলনা করো।"},
+ {goal:"Present Perfect, Past Continuous/Perfect, Modal, Used to, Passive ও First Conditional আয়ত্ত করা।",outcomes:["অভিজ্ঞতা ও অতীতের কাজ নির্ভুলভাবে বলা","সম্ভাবনা ও বাধ্যবাধকতা প্রকাশ","Passive দিয়ে নিরপেক্ষ বাক্য","শর্তযুক্ত বাক্য"],check:["Present Perfect ও Past Simple আলাদা করতে পারি","৫টি modal সঠিকভাবে ব্যবহার করতে পারি","Passive voice-এ ৫টি বাক্য বলতে পারি","If-বাক্য সঠিকভাবে বলতে পারি"],test:"নিজের জীবনের গল্প ৩ মিনিটে সব tense মিলিয়ে বলো।"},
+ {goal:"কাল্পনিক শর্ত, Reported Speech, Relative Clause, Gerund/Infinitive, Question Tag ও Linking Word আয়ত্ত করা।",outcomes:["অবাস্তব ও অতীতের শর্ত","অন্যের কথা বর্ণনা","দীর্ঘ ও সংযুক্ত বাক্য","idiom ও phrasal verb ব্যবহার"],check:["Second/Third Conditional-এ ৫টি বাক্য বলতে পারি","Reported speech সঠিক ব্যবহার করি","Relative clause দিয়ে বর্ণনা করতে পারি","৫টি idiom ব্যবহার করতে পারি"],test:"একটি বিষয়ে উন্নত গ্রামার দিয়ে ৩ মিনিট বলে রেকর্ড করো।"},
+ {goal:"প্রেজেন্টেশন, মিটিং, ইমেইল, গ্রাহকসেবা, বিতর্ক, STAR ইন্টারভিউ ও বিদেশে চলার ইংরেজি।",outcomes:["৩ মিনিটের প্রেজেন্টেশন","ফরমাল ইমেইল লেখা","বিতর্কে যুক্তি দেওয়া","উন্নত ইন্টারভিউ উত্তর"],check:["প্রেজেন্টেশনের কাঠামো জানি","ফরমাল ইমেইল লিখতে পারি","পক্ষে-বিপক্ষে বলতে পারি","STAR উত্তর দিতে পারি"],test:"৫ মিনিটের পূর্ণ সিমুলেশন (প্রেজেন্টেশন + প্রশ্নোত্তর) রেকর্ড করো।"},
+ {goal:"উচ্চারণ, ছন্দ, শোনা, পড়া, Speaking Test ও চূড়ান্ত আত্মবিশ্বাস অর্জন।",outcomes:["সূক্ষ্ম ধ্বনি ও stress আয়ত্ত","স্বাভাবিক গতির ইংরেজি বোঝা","Speaking Test-এর ৩ পর্বে প্রস্তুতি","আত্মবিশ্বাসী পাবলিক স্পিকিং"],check:["minimal pair পার্থক্য করতে পারি","পডকাস্টের মূল ভাব ধরতে পারি","২ মিনিট একটানা বলতে পারি","নিজের ভুল নিজে ধরতে পারি"],test:"৫ মিনিটের চূড়ান্ত বক্তৃতা রেকর্ড করে দিন ১, ১০ ও ৬০-এর সাথে তুলনা করো।"}]};
 const dayMin=()=>MINUTES;

@@ -12,7 +12,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>৬০ দিনের Spoken English Roadmap</title>
+<title>১০০ দিনের Spoken English Roadmap</title>
 <link rel="stylesheet" href="ext.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
 <style>
@@ -356,7 +356,7 @@ function renderSide(){
   const n=doneDays(),pc=Math.round(n/NDAYS*100),nd=nextDay();
   const on=x=>route.n===x?'on':'';
   $('side').innerHTML=`
-  <div class="brand"><img src="icon-192.png" alt=""><div><b>Spoken English</b><small>৬০ দিনের রোডম্যাপ</small></div></div>
+  <div class="brand"><img src="icon-192.png" alt=""><div><b>Spoken English</b><small>১০০ দিনের রোডম্যাপ</small></div></div>
   <a href="#profile" class="pmini">${avatar(40)}<span><b>${state.profile?esc(state.profile.name):''}</b><small>প্রোফাইল ও অগ্রগতি</small></span></a><div class="sprog"><div class="r"><span>অগ্রগতি</span><b>${bn(pc)}%</b></div><div class="bar"><i style="width:${pc}%"></i></div><div class="r" style="margin-top:6px"><span>${bn(n)}/${bn(NDAYS)} দিন</span><span>🔥 ${bn(streak())} টানা</span></div></div>
   <nav class="nav">
     <a href="#home" class="${on('home')}"><span class="i">🏠</span>হোম</a>
@@ -403,7 +403,7 @@ function vHome(){
 function dayRow(d,i){const D=DAYS[d-1],c=cnt(d);
   return`<button class="dr card st ${c===6?'done':''}" style="--i:${i}" data-go="day-${d}"><div class="badge"><small>দিন</small>${bn(d)}</div><div class="dt"><b>${D.bn}</b><span>${bn(c)}/৬ কাজ সম্পন্ন</span><div class="mb" style="margin-top:6px"><i style="width:${c/6*100}%"></i></div></div><span class="chev">›</span></button>`}
 function vRoadmap(){
-  let h=`<div class="view"><h1 class="pt st">পুরো রোডম্যাপ</h1><p class="sub st" style="--i:1">৬টি ফেজ · ${bn(NDAYS)} দিন · যেকোনো দিনে ট্যাপ করো</p>`;let i=2;
+  let h=`<div class="view"><h1 class="pt st">পুরো রোডম্যাপ</h1><p class="sub st" style="--i:1">${bn(PHASES.length)}টি ফেজ · ${bn(NDAYS)} দিন · যেকোনো দিনে ট্যাপ করো</p>`;let i=2;
   PHASES.forEach((p,pi)=>{const[a,b]=phaseRange(pi);h+=`<div class="phh st" style="--i:${i++}" id="ph${pi}"><div class="n">${bn(pi+1)}</div><div><b>${p.n}</b><small>${p.d}</small></div></div>`;for(let d=a;d<=b;d++)h+=dayRow(d,Math.min(i++,14))});
   return h+`</div>`}
 
@@ -568,7 +568,7 @@ $('rfile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-task]')){e.preventDefault();const[d,k]=e.target.dataset.task.split('-').map(Number);openTask(d,k)}});
 
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
-loadState().then(()=>{boot();if(state.migrated){delete state.migrated;save();setTimeout(()=>toast('নতুন ৬০ দিনের কোর্স শুরু! পুরোনো টিক আলাদা রাখা হয়েছে।'),1800)}});
+loadState().then(()=>{boot();if(state.migrated){delete state.migrated;save();setTimeout(()=>toast('নতুন কোর্স! পুরোনো ৪০ দিনের টিক আলাদা রাখা হয়েছে।'),1800)}});
 </script>
 </body>
 </html>
