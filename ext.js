@@ -164,7 +164,7 @@ function lockApp(){try{sessionStorage.removeItem('se40-ok')}catch(e){}closeReade
    দৈনিক মনিটরিং
    ===================================================================== */
 function dayStats(){const m={};
-  for(const k of Object.keys(state.at||{})){const[d,t]=k.split('-').map(Number);if(!state.t[k]||!(d>=1&&d<=40))continue;
+  for(const k of Object.keys(state.at||{})){const[d,t]=k.split('-').map(Number);if(!state.t[k]||!(d>=1&&d<=NDAYS))continue;
    const key=dk(state.at[k]),T=tasksOf(d)[t];m[key]=m[key]||{n:0,min:0};m[key].n++;m[key].min+=T?T.m:0}
   return m}
 function calStreak(S){
@@ -207,7 +207,7 @@ function vProfile(){
   <div class="kpi st" style="--i:8">
    <div class="card sc"><b>🔥 ${bn(st.cur)}</b><span>বর্তমান টানা দিন</span></div>
    <div class="card sc"><b>🏅 ${bn(st.best)}</b><span>সর্বোচ্চ টানা দিন</span></div>
-   <div class="card sc"><b>${bn(doneDays())}/৪০</b><span>দিন সম্পন্ন</span></div>
+   <div class="card sc"><b>${bn(doneDays())}/${bn(NDAYS)}</b><span>দিন সম্পন্ন</span></div>
    <div class="card sc"><b>${bn(totTasks)}</b><span>কাজ শেষ (তারিখসহ)</span></div>
    <div class="card sc"><b>${hm(totMin)}</b><span>মোট পড়াশোনা</span></div>
    <div class="card sc"><b>${hm(totRead)}</b><span>বই পড়ার সময়</span></div>

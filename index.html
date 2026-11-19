@@ -12,7 +12,7 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>৪০ দিনের Spoken English Roadmap</title>
+<title>৬০ দিনের Spoken English Roadmap</title>
 <link rel="stylesheet" href="ext.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
 <style>
@@ -291,96 +291,10 @@ details.faq p{margin:6px 0 0;color:var(--mute);font-size:.9rem}
 <div class="toast" id="toast" role="status"></div>
 
 <script src="ext.js"></script>
-<script src="content.js"></script>
+<script src="plan.js"></script>
 <script>
-/* [বাংলা শিরোনাম, ইংরেজি কীওয়ার্ড, ৩টি উদাহরণ বাক্য, বলার বিষয় (বাংলায়)] */
-const PHASES=[
-{n:"ভিত্তি",d:"উচ্চারণ, সহজ বাক্য আর নিজের পরিচয়",days:[
- ["নিজের পরিচয় দাও","self introduction",["My name is Rina, and I live in Dhaka.","I am a teacher, and I love reading.","Nice to meet you. How about you?"],"নিজের নাম, কোথায় থাকো, কী করো ও কী ভালোবাসো — ৪–৫টি বাক্যে বলো।"],
- ["Vowel sound ও উচ্চারণ","English vowel sounds",["Sit down, please. / Seat is here.","Full of food. / Fool me not.","Cat, cut, cot — say them slowly."],"৫টি করে মিনিমাল-পেয়ার (ship/sheep, full/fool) জোরে বলে রেকর্ড করো।"],
- ["কঠিন ধ্বনি: th, v, w, r","th v w r pronunciation",["Thank you for the three things.","Very well, we will visit on Wednesday.","Run right to the red road."],"th, v, w, r আছে এমন ১০টি শব্দ বলো এবং নিজের উচ্চারণ ভিডিওর সাথে মেলাও।"],
- ["বাক্য গঠন: am / is / are","English sentence structure",["I am happy today.","She is a good cook.","They are at home."],"আজকের আবহাওয়া, নিজের অনুভূতি ও ঘরের মানুষদের নিয়ে ৫টি বাক্য বলো।"],
- ["Present Simple: দৈনন্দিন রুটিন","present simple daily routine",["I wake up at six every day.","She cooks breakfast for the kids.","We don't watch TV in the morning."],"সকাল থেকে রাত পর্যন্ত নিজের রুটিন ১ মিনিটে বলো।"],
- ["সংখ্যা, সময়, তারিখ","numbers time dates",["It's half past seven.","My birthday is on the fifth of May.","The bill is one thousand two hundred taka."],"এখন কটা বাজে, আজ কত তারিখ, ফোন নম্বর ও দাম — ইংরেজিতে বলো।"],
- ["Greetings ও Small Talk","greetings and small talk",["Hi, how's it going?","Long time no see! What have you been up to?","It was nice talking to you."],"অচেনা কারও সাথে প্রথম ৩০ সেকেন্ডের কথোপকথন কল্পনা করে বলো। সপ্তাহের রিভিউ করো।"]]},
-{n:"দৈনন্দিন বাক্য",d:"Tense, প্রশ্ন আর প্রতিদিনের শব্দভাণ্ডার",days:[
- ["Present Continuous","present continuous tense",["I am cooking dinner right now.","The kids are playing outside.","What are you doing?"],"এই মুহূর্তে ঘরে সবাই কী করছে — ৫টি বাক্যে বর্ণনা করো।"],
- ["Past Simple: গতকালের কথা","past simple tense",["I went to the market yesterday.","We watched a movie last night.","She didn't call me."],"গতকাল সারাদিন কী করেছ ১ মিনিটে বলো।"],
- ["Irregular Verbs (২০টি)","irregular verbs",["I ate rice and fish.","He came late and said sorry.","They bought a new phone."],"go-went-gone, eat-ate-eaten ধরনের ১০টি verb দিয়ে নিজের বাক্য বানাও।"],
- ["Future: will / going to","will vs going to",["I will call you tomorrow.","We are going to visit my aunt.","It will probably rain tonight."],"আগামী সপ্তাহে কী করবে — ৫টি পরিকল্পনা বলো।"],
- ["Wh- Questions","wh questions English",["What do you do?","Where are you from?","Why did you come late?"],"কাল্পনিক ইন্টারভিউয়ে ৮টি প্রশ্ন করো ও উত্তর দাও।"],
- ["Yes/No প্রশ্ন, Negative, can","yes no questions can cannot",["Do you like tea?","Can you help me, please?","I can't speak very fast yet."],"নিজের ৫টি যা পারো আর ৫টি যা পারো না — বলো।"],
- ["ঘর ও খাবারের শব্দ","home and food vocabulary",["Please put the plates on the table.","The rice is too hot.","Could you pass me the salt?"],"নিজের রান্নাঘর ঘুরে ২০টি জিনিসের নাম ইংরেজিতে বলো। সপ্তাহের রিভিউ করো।"]]},
-{n:"শোনা ও অনুকরণ",d:"Shadowing, intonation আর স্বাভাবিক বাক্য",days:[
- ["Shadowing শুরু","English shadowing technique",["Listen first, then repeat after the speaker.","Try to copy the rhythm, not only the words.","Speak a little after the speaker."],"১ মিনিটের একটি ভিডিও ৫ বার শ্যাডোইং করো, শেষবার রেকর্ড করো।"],
- ["Common Phrasal Verbs","common phrasal verbs",["Please turn off the light.","I woke up late and ran out of time.","Let's catch up soon."],"৫টি phrasal verb দিয়ে নিজের জীবনের বাক্য বানাও।"],
- ["Connectors: and, but, because, so","linking words because so but",["I was tired, so I slept early.","I like tea, but I don't like coffee.","She is happy because she passed."],"একটি ছোট গল্প বলো, প্রতিটি বাক্যে connector ব্যবহার করো।"],
- ["Word Stress ও Intonation","word stress and intonation",["PHOtograph, phoTOgrapher, photoGRAPHic.","Are you COMing? (rising)","I'm FINE. (falling)"],"একই বাক্য ৩ ভিন্ন সুরে বলো: প্রশ্ন, বিস্ময়, সাধারণ।"],
- ["Connected Speech","connected speech gonna wanna",["I'm gonna go now.","What do you wanna eat?","Give me a lot of it."],"৫টি বাক্য আস্তে ও স্বাভাবিক গতিতে — দু'ভাবেই বলো।"],
- ["Polite Requests","polite requests English",["Could you help me, please?","Would you mind closing the window?","Excuse me, is this seat taken?"],"বাসা, রাস্তা ও দোকানে ৬টি ভদ্র অনুরোধ বলো।"],
- ["পথ জিজ্ঞাসা ও সাহায্য চাওয়া","asking for directions English",["Excuse me, how do I get to the station?","Go straight and turn left.","It's next to the bank."],"নিজের বাড়ি থেকে বাজারের পথ ইংরেজিতে বোঝাও। সপ্তাহের রিভিউ করো।"]]},
-{n:"প্রবাহ তৈরি",d:"বর্ণনা, গল্প বলা আর বেশি সময় ধরে বলা",days:[
- ["জায়গার বর্ণনা","describing a place English",["My room is small but cozy.","There is a big tree in front of my house.","It's very noisy near the road."],"নিজের এলাকা ১ মিনিটে বর্ণনা করো।"],
- ["মানুষ ও অনুভূতির বর্ণনা","describing people and feelings",["He is tall, kind, and funny.","I feel nervous before speaking.","She looked really excited."],"পরিবারের একজনকে বর্ণনা করো — চেহারা, স্বভাব, কেমন লাগে।"],
- ["অতীতের গল্প বলা","storytelling in English past",["Last year, I visited my village.","Suddenly, it started to rain.","In the end, everything was fine."],"জীবনের একটি স্মরণীয় ঘটনা শুরু-মাঝ-শেষ সাজিয়ে বলো।"],
- ["Present Perfect","present perfect tense",["I have lived here for ten years.","She has already eaten.","Have you ever been to Cox's Bazar?"],"জীবনে কী কী করেছ — ৫টি 'I have…' বাক্য বলো।"],
- ["তুলনা: bigger, the best","comparatives and superlatives",["This phone is cheaper than that one.","Dhaka is the busiest city in Bangladesh.","Tea is better than coffee for me."],"দুটি জিনিস বা জায়গার তুলনা করে ১ মিনিট বলো।"],
- ["মত, কারণ ও উদাহরণ","giving opinions with reasons",["In my opinion, children should read daily.","For example, I read ten pages every night.","That's why I think it helps."],"'মোবাইল শিশুদের জন্য ভালো না খারাপ?' — মত, কারণ, উদাহরণসহ ১ মিনিট বলো।"],
- ["২ মিনিটের টপিক টক","two minute speaking practice",["Let me tell you about my favorite day.","First of all… Secondly… Finally…","To sum up, it was a wonderful day."],"একটি বিষয় নিয়ে ২ মিনিট থামা ছাড়া বলো ও রেকর্ড করো। সপ্তাহের রিভিউ করো।"]]},
-{n:"বাস্তব কথোপকথন",d:"ফোন, বাজার, ডাক্তার, স্কুল — বাস্তব পরিস্থিতি",days:[
- ["ফোনে কথা বলা","English phone conversation",["Hello, this is Rina speaking.","Could I speak to Mr. Karim, please?","Sorry, could you repeat that?"],"ফোনে অ্যাপয়েন্টমেন্ট নেওয়ার ভূমিকা-অভিনয় করো।"],
- ["দোকান ও রেস্টুরেন্ট","shopping and restaurant English",["How much is this?","I'd like a cup of tea, please.","Can I have the bill, please?"],"দোকানে দরদাম ও রেস্টুরেন্টে অর্ডারের পুরো কথোপকথন বলো।"],
- ["ডাক্তার ও স্বাস্থ্য","English at the doctor",["I have a headache and a fever.","How long have you had this?","Take this medicine twice a day."],"ডাক্তারকে নিজের (বা শিশুর) সমস্যা বোঝানোর কথোপকথন বলো।"],
- ["বাচ্চা ও স্কুল নিয়ে কথা","talking about children school English",["My son is in class five.","How is my daughter doing in class?","She needs help with her homework."],"শিক্ষকের সাথে সন্তানের অগ্রগতি নিয়ে কথা বলার অভিনয় করো।"],
- ["কাজ/পড়াশোনার কথোপকথন","workplace English conversation",["Could we reschedule the meeting?","I'll send you the details by evening.","Let me check and get back to you."],"নিজের কাজ বা পড়াশোনা সম্পর্কে ১ মিনিট বলো।"],
- ["Role-play ও সপ্তাহ রিভিউ","English conversation practice role play",["Let's practice a real conversation.","Could you give me feedback?","Let me try that again."],"AI বা বন্ধুর সাথে ৫ মিনিট কথোপকথন করো, ভুলগুলো টুকে রাখো।"]]},
-{n:"আত্মবিশ্বাস",d:"ভুল শোধরানো, দ্রুত চিন্তা আর ফাইনাল পরীক্ষা",days:[
- ["নিজের Common Mistakes ঠিক করো","common English mistakes Bengali speakers",["I am agree. ✗ → I agree. ✓","He don't know. ✗ → He doesn't know. ✓","I have 25 years. ✗ → I am 25. ✓"],"আগের রেকর্ডিং শুনে ৫টি পুনরাবৃত্ত ভুল লেখো ও সঠিকভাবে ৩ বার করে বলো।"],
- ["Idioms ও Natural Phrases","common English idioms",["It's a piece of cake.","I'm all ears.","Let's call it a day."],"৫টি idiom দিয়ে নিজের পরিস্থিতির বাক্য বানাও।"],
- ["প্রস্তুতি ছাড়া বলা (Impromptu)","impromptu speaking practice",["Let me think for a second.","That's a good question.","What I mean is…"],"র‍্যান্ডম একটি শব্দ নাও (যেমন 'rain') এবং ১ মিনিট অনর্গল বলো।"],
- ["ভিডিও/খবরের সারাংশ","summarize a video in English",["The video is about…","The main point is…","In short, the speaker says that…"],"৩ মিনিটের ভিডিও দেখো, নিজের ভাষায় ১ মিনিটে সারাংশ বলো।"],
- ["Mock Conversation","English speaking mock interview",["Tell me a little about yourself.","What are your strengths?","Where do you see yourself in five years?"],"কাউকে বা AI-কে দিয়ে ১০ মিনিটের মক কথোপকথন করো।"],
- ["ফাইনাল ৫ মিনিটের স্পিচ","five minute speech English",["Good morning, everyone. Today I'll talk about…","My first point is…","Thank you for listening."],"নিজের পছন্দের বিষয়ে ৫ মিনিটের স্পিচ রেকর্ড করো, দিন ১-এর রেকর্ডিংয়ের সাথে তুলনা করো। পরবর্তী ৩০ দিনের লক্ষ্য ঠিক করো।"]]}
-];
-const q=encodeURIComponent;
-const yt=s=>"https://www.youtube.com/results?search_query="+q(s);
-function build(kw,ex,sp){return[
- {ic:"📚",t:"শব্দ ও বাক্য শেখো",m:10,
-  d:"নিচের ৫টি উদাহরণ একটি একটি করে পড়ো: ইংরেজি → বাংলা অর্থ → উচ্চারণ। 🔊 চেপে শোনো, তারপর খাতায় লেখো এবং প্রতিটির আদলে নিজের একটি বাক্য বানাও।",
-  ex:ex,
-  r:[["Cambridge Dictionary — শব্দের অর্থ ও উচ্চারণ","dictionary.cambridge.org","https://dictionary.cambridge.org/search/english/direct/?q="+q(kw)],
-     ["YouTube — "+kw+" vocabulary","ভিডিও লেসন",yt(kw+" vocabulary spoken English")]]},
- {ic:"🧩",t:"প্যাটার্ন ও গ্রামার",m:10,
-  d:"আজকের টপিকের গঠন বুঝো: কখন ব্যবহার হয়, বাক্যের সাজ কেমন। ৩টি উদাহরণ দেখে একই ছাঁচে ৩টি নিজের বাক্য লেখো।",
-  ex:null,
-  r:[["British Council LearnEnglish — Grammar","learnenglish.britishcouncil.org","https://learnenglish.britishcouncil.org/grammar"],
-     ["YouTube — "+kw+" lesson","গ্রামার ব্যাখ্যা",yt(kw+" English lesson")]]},
- {ic:"🎧",t:"শোনো",m:10,
-  d:"১০ মিনিট ইংরেজি শোনো (সাবটাইটেলসহ)। প্রথমবার পুরোটা বোঝার চেষ্টা, দ্বিতীয়বার নতুন শব্দ নোট করো।",
-  ex:null,
-  r:[["BBC 6 Minute English","ছোট পডকাস্ট + ট্রান্সক্রিপ্ট","https://www.bbc.co.uk/learningenglish/english/features/6-minute-english"],
-     ["ELLLO — বিভিন্ন উচ্চারণে শোনা","elllo.org","https://elllo.org/"],
-     ["YouTube — "+kw+" conversation","বাস্তব উদাহরণ",yt(kw+" English conversation")]]},
- {ic:"🗣️",t:"Shadowing ও উচ্চারণ",m:10,
-  d:"প্রতিটি উদাহরণ 🔊 শুনে স্পিকারের পরপরই একই সুর, গতি ও stress-এ বলো। নিচের উচ্চারণ-ফোকাসের কঠিন শব্দগুলো আলাদা করে ৫ বার বলো।",
-  ex:ex,
-  r:[["YouGlish — বাস্তব মানুষের উচ্চারণ শোনো","youglish.com","https://youglish.com/pronounce/"+q(kw)+"/english"],
-     ["Rachel's English — উচ্চারণ লেসন","YouTube",yt("Rachel's English "+kw)]]},
- {ic:"💬",t:"বলার অনুশীলন",m:15,
-  d:sp,
-  ex:null,
-  r:[["AI পার্টনারের সাথে অনুশীলন","claude.ai-তে লেখো: “আমার সাথে "+kw+" নিয়ে কথোপকথন করো ও আমার ভুল ঠিক করো”","https://claude.ai/"],
-     ["YouTube — "+kw+" sample answers","নমুনা উত্তর শুনে তুলনা করো",yt(kw+" speaking practice sample")]]},
- {ic:"🎙️",t:"রেকর্ড ও রিভিউ",m:10,
-  d:"আজকের বলার অনুশীলন ১ মিনিট ফোনে রেকর্ড করো। শোনো এবং ২টি ভুল (উচ্চারণ/গ্রামার) লেখো, তারপর ঠিক করে আবার রেকর্ড করো। রেকর্ডিং সংরক্ষণ করো — ফাইনাল দিনে তুলনা করবে।",
-  ex:null,
-  r:[["Dictation.io — বলো, লেখা দেখো (উচ্চারণ ঠিক কি না যাচাই)","dictation.io","https://dictation.io/speech"],
-     ["Google Translate — বাংলা থেকে ইংরেজি যাচাই","translate.google.com","https://translate.google.com/?sl=bn&tl=en"]]}
-]}
-const DAYS=[];PHASES.forEach((p,pi)=>p.days.forEach(x=>DAYS.push({pi,bn:x[0],kw:x[1],ex:x[2],sp:x[3]})));
-
 const KEY="se40-v1";
-const fresh=()=>({v:3,t:{},c:{},at:{},seen:{},read:{},updated:0});
+const fresh=()=>({v:4,t:{},c:{},at:{},seen:{},read:{},updated:0});
 let state=fresh();
 const store={idb:false,persisted:null};
 /* IndexedDB — প্রধান ডেটাবেস; localStorage — ব্যাকআপ কপি */
@@ -388,7 +302,8 @@ let dbp=null;
 function getDB(){return dbp||(dbp=new Promise(res=>{try{const r=indexedDB.open('se40-db',2);r.onupgradeneeded=()=>{const d=r.result;['kv','meta','blobs'].forEach(n=>{if(!d.objectStoreNames.contains(n))d.createObjectStore(n)})};r.onsuccess=()=>res(r.result);r.onerror=()=>res(null);r.onblocked=()=>res(null)}catch(e){res(null)}}))}
 async function idbGet(k){const db=await getDB();if(!db)return undefined;return new Promise(res=>{try{const q=db.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>res(q.result);q.onerror=()=>res(undefined)}catch(e){res(undefined)}})}
 async function idbSet(k,v){const db=await getDB();if(!db)return false;return new Promise(res=>{try{const tx=db.transaction('kv','readwrite');tx.objectStore('kv').put(v,k);tx.oncomplete=()=>res(true);tx.onerror=()=>res(false);tx.onabort=()=>res(false)}catch(e){res(false)}})}
-function normalize(o){const f=fresh();if(!o||typeof o!=='object')return f;return Object.assign(f,o,{t:o.t||{},c:o.c||{},at:o.at||{},seen:o.seen||{},read:o.read||{}})}
+function normalize(o){const f=fresh();if(!o||typeof o!=='object')return f;const r=Object.assign(f,o,{t:o.t||{},c:o.c||{},at:o.at||{},seen:o.seen||{},read:o.read||{}});
+  if((o.v||0)<4){if(Object.keys(r.t).length)r.old40={t:r.t,at:r.at,c:r.c};r.t={};r.at={};r.c={};r.v=4;r.migrated=1}return r}
 async function loadState(){
   let a=null,b=null;
   try{a=await idbGet('state')}catch(e){}
@@ -404,15 +319,16 @@ const bn=n=>String(n).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);
 const $=id=>document.getElementById(id);
 const cnt=d=>[0,1,2,3,4,5].filter(k=>state.t[d+"-"+k]).length;
 const isDone=d=>cnt(d)===6;
-const doneDays=()=>{let n=0;for(let d=1;d<=40;d++)if(isDone(d))n++;return n};
+const doneDays=()=>{let n=0;for(let d=1;d<=NDAYS;d++)if(isDone(d))n++;return n};
 const totalTasks=()=>Object.values(state.t).filter(Boolean).length;
-const streak=()=>{let b=0,r=0;for(let d=1;d<=40;d++){if(isDone(d)){r++;b=Math.max(b,r)}else r=0}return b};
-const nextDay=()=>{for(let d=1;d<=40;d++)if(!isDone(d))return d;return 40};
+const streak=()=>{let b=0,r=0;for(let d=1;d<=NDAYS;d++){if(isDone(d)){r++;b=Math.max(b,r)}else r=0}return b};
+const nextDay=()=>{for(let d=1;d<=NDAYS;d++)if(!isDone(d))return d;return NDAYS};
 const phaseRange=pi=>{let s=1;for(let i=0;i<pi;i++)s+=PHASES[i].days.length;return[s,s+PHASES[pi].days.length-1]};
 const phaseDone=pi=>{const[a,b]=phaseRange(pi);let c=0;for(let d=a;d<=b;d++)if(isDone(d))c++;return c};
 const cache={};
-const tasksOf=d=>cache[d]||(cache[d]=(()=>{const T=build(DAYS[d-1].kw,null,DAYS[d-1].sp),C=(typeof CONTENT!=='undefined'&&CONTENT[d-1])||{};
-  T.forEach(t=>t.ex=null);T.goal=C.g||'';T[0].exr=C.ex||null;T[3].exr=C.ex||null;T[3].pw=C.pw||null;T[3].tip=C.tip||'';return T})());
+const tasksOf=d=>cache[d]||(cache[d]=(()=>{const T=build(DAYS[d-1].kw,DAYS[d-1].sp),C=CONTENT[d-1]||{};
+  T.goal=C.g||'';
+  T[0].vocab=C.V;T[1].pw=C.P;T[1].vocab=C.V;T[1].tip=C.tip||'';T[2].pat=C.pat;T[2].exr=C.S;T[3].dlg=C.L;T[4].dlg=C.L;T[4].roleplay=true;return T})());
 const ring=(r,p,sw)=>{const c=2*Math.PI*r;return`<svg viewBox="0 0 ${2*(r+sw)} ${2*(r+sw)}" width="100%" height="100%"><circle cx="${r+sw}" cy="${r+sw}" r="${r}" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="${sw}"/><circle cx="${r+sw}" cy="${r+sw}" r="${r}" fill="none" stroke="#fff" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}" style="transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.2,1)"/></svg>`};
 
 /* ---------- উচ্চারণ শোনা (ডিভাইসের Text-to-Speech) ---------- */
@@ -428,7 +344,7 @@ function speak(text,rate,btn){
 /* ---------- routing ---------- */
 let route={n:'home'},pendingScroll=null;
 function parse(){const h=location.hash.slice(1);let m;
-  if(m=h.match(/^day-(\d+)$/)){const d=+m[1];if(d>=1&&d<=40)return{n:'day',d}}
+  if(m=h.match(/^day-(\d+)$/)){const d=+m[1];if(d>=1&&d<=NDAYS)return{n:'day',d}}
   if(h==='roadmap'||h==='progress'||h==='curriculum'||h==='library'||h==='profile')return{n:h};
   if(m=h.match(/^read-([a-z0-9]+)$/))return{n:'read',id:m[1]};
   return{n:'home'}}
@@ -437,11 +353,11 @@ window.addEventListener('hashchange',onRoute);
 
 /* ---------- sidebar & nav ---------- */
 function renderSide(){
-  const n=doneDays(),pc=Math.round(n/40*100),nd=nextDay();
+  const n=doneDays(),pc=Math.round(n/NDAYS*100),nd=nextDay();
   const on=x=>route.n===x?'on':'';
   $('side').innerHTML=`
-  <div class="brand"><img src="icon-192.png" alt=""><div><b>Spoken English</b><small>৪০ দিনের রোডম্যাপ</small></div></div>
-  <a href="#profile" class="pmini">${avatar(40)}<span><b>${state.profile?esc(state.profile.name):''}</b><small>প্রোফাইল ও অগ্রগতি</small></span></a><div class="sprog"><div class="r"><span>অগ্রগতি</span><b>${bn(pc)}%</b></div><div class="bar"><i style="width:${pc}%"></i></div><div class="r" style="margin-top:6px"><span>${bn(n)}/৪০ দিন</span><span>🔥 ${bn(streak())} টানা</span></div></div>
+  <div class="brand"><img src="icon-192.png" alt=""><div><b>Spoken English</b><small>৬০ দিনের রোডম্যাপ</small></div></div>
+  <a href="#profile" class="pmini">${avatar(40)}<span><b>${state.profile?esc(state.profile.name):''}</b><small>প্রোফাইল ও অগ্রগতি</small></span></a><div class="sprog"><div class="r"><span>অগ্রগতি</span><b>${bn(pc)}%</b></div><div class="bar"><i style="width:${pc}%"></i></div><div class="r" style="margin-top:6px"><span>${bn(n)}/${bn(NDAYS)} দিন</span><span>🔥 ${bn(streak())} টানা</span></div></div>
   <nav class="nav">
     <a href="#home" class="${on('home')}"><span class="i">🏠</span>হোম</a>
     <a href="#day-${nd}" class="${route.n==='day'&&route.d===nd?'on':''}"><span class="i">▶️</span>আজকের পাঠ (দিন ${bn(nd)})</a>
@@ -467,14 +383,14 @@ function taskRow(d,k,i){const t=tasksOf(d)[k],ck=!!state.t[d+'-'+k];
   return`<div class="tk card st ${ck?'ck':''}" style="--i:${i}" data-task="${d}-${k}" role="button" tabindex="0"><div class="ic">${t.ic}</div><div class="tt"><b>${k+1}. ${t.t}</b><span>⏱ ${bn(t.m)} মিনিট · রিসোর্স দেখতে ট্যাপ করো</span></div><button class="tickhit" data-toggle="${d}-${k}" aria-label="সম্পন্ন চিহ্নিত করো"><span class="tick">✓</span></button></div>`}
 
 function vHome(){
-  const n=doneDays(),nd=nextDay(),all=n===40,D=DAYS[nd-1],c=cnt(nd);
+  const n=doneDays(),nd=nextDay(),all=n===NDAYS,D=DAYS[nd-1],c=cnt(nd);
   const showInstall=!isStandalone()&&!state.seen.inst;
   return`<div class="view">
   <div class="hero st">${state.profile?`<div class="greet">${avatar(40)}<span>হ্যালো, ${esc(state.profile.name.split(' ')[0])} 👋</span></div>`:''}
-    <h2>${all?'🎉 অভিনন্দন! ৪০ দিন শেষ':'আজকের লক্ষ্য: দিন '+bn(nd)}</h2>
+    <h2>${all?'🎉 অভিনন্দন! '+bn(NDAYS)+' দিন শেষ':'আজকের লক্ষ্য: দিন '+bn(nd)}</h2>
     <p>${all?'এখন পরবর্তী ৩০ দিনের লক্ষ্য ঠিক করো।':D.bn}</p>
-    <div class="hr"><div class="ring">${ring(36,n/40,9)}<b>${bn(Math.round(n/40*100))}%</b></div>
-      <div class="stats"><div class="stat"><b>${bn(n)}</b><span>দিন শেষ</span></div><div class="stat"><b>${bn(40-n)}</b><span>বাকি</span></div><div class="stat"><b>${bn(streak())}</b><span>🔥 টানা</span></div></div></div>
+    <div class="hr"><div class="ring">${ring(36,n/NDAYS,9)}<b>${bn(Math.round(n/NDAYS*100))}%</b></div>
+      <div class="stats"><div class="stat"><b>${bn(n)}</b><span>দিন শেষ</span></div><div class="stat"><b>${bn(NDAYS-n)}</b><span>বাকি</span></div><div class="stat"><b>${bn(streak())}</b><span>🔥 টানা</span></div></div></div>
     <button class="btn w blk" data-go="day-${nd}">${all?'আবার দেখো':(c?'চালিয়ে যাও ▶':'শুরু করো ▶')}</button>
   </div>
   ${showInstall?`<div class="banner card st" style="--i:1"><div class="ic">📲</div><div><b>ফোনে অ্যাপ হিসেবে রাখো</b><small>হোম স্ক্রিন থেকে এক ট্যাপে খুলবে, অফলাইনেও চলবে</small></div><button class="btn p" data-act="install">ইনস্টল</button></div>`:''}
@@ -487,7 +403,7 @@ function vHome(){
 function dayRow(d,i){const D=DAYS[d-1],c=cnt(d);
   return`<button class="dr card st ${c===6?'done':''}" style="--i:${i}" data-go="day-${d}"><div class="badge"><small>দিন</small>${bn(d)}</div><div class="dt"><b>${D.bn}</b><span>${bn(c)}/৬ কাজ সম্পন্ন</span><div class="mb" style="margin-top:6px"><i style="width:${c/6*100}%"></i></div></div><span class="chev">›</span></button>`}
 function vRoadmap(){
-  let h=`<div class="view"><h1 class="pt st">পুরো রোডম্যাপ</h1><p class="sub st" style="--i:1">৬টি ফেজ · ৪০ দিন · যেকোনো দিনে ট্যাপ করো</p>`;let i=2;
+  let h=`<div class="view"><h1 class="pt st">পুরো রোডম্যাপ</h1><p class="sub st" style="--i:1">৬টি ফেজ · ${bn(NDAYS)} দিন · যেকোনো দিনে ট্যাপ করো</p>`;let i=2;
   PHASES.forEach((p,pi)=>{const[a,b]=phaseRange(pi);h+=`<div class="phh st" style="--i:${i++}" id="ph${pi}"><div class="n">${bn(pi+1)}</div><div><b>${p.n}</b><small>${p.d}</small></div></div>`;for(let d=a;d<=b;d++)h+=dayRow(d,Math.min(i++,14))});
   return h+`</div>`}
 
@@ -495,17 +411,17 @@ function vDay(d){
   const D=DAYS[d-1],c=cnt(d),pi=D.pi;
   return`<div class="view"><button class="back" data-go="roadmap">‹ রোডম্যাপ</button>
   <div class="card dhead st"><div class="row"><div class="badge" style="${c===6?'background:var(--ok);color:#fff':''}"><small>দিন</small>${bn(d)}</div><div style="flex:1;min-width:0"><small style="color:var(--mute)">ফেজ ${bn(pi+1)}: ${PHASES[pi].n}</small><h1 class="pt" style="font-size:1.2rem;margin:0">${D.bn}</h1></div></div>
-  <div class="mb" style="margin-top:14px"><i style="width:${c/6*100}%"></i></div><div class="cnt" style="font-size:.8rem;color:var(--mute);margin-top:6px">${bn(c)}/৬ কাজ সম্পন্ন · প্রায় ৬৫ মিনিট</div>
-  <div class="goalbox">🎯 <b>লক্ষ্য:</b> ${tasksOf(d).goal}</div><div class="dnav"><button class="btn g" data-go="day-${d-1}" ${d<=1?'disabled':''}>‹ আগের দিন</button><button class="btn g" data-go="day-${d+1}" ${d>=40?'disabled':''}>পরের দিন ›</button></div></div>
+  <div class="mb" style="margin-top:14px"><i style="width:${c/6*100}%"></i></div><div class="cnt" style="font-size:.8rem;color:var(--mute);margin-top:6px">${bn(c)}/৬ কাজ সম্পন্ন · ২ ঘণ্টা ৩০ মিনিট</div>
+  <div class="goalbox">🎯 <b>লক্ষ্য:</b> ${tasksOf(d).goal}</div><div class="dnav"><button class="btn g" data-go="day-${d-1}" ${d<=1?'disabled':''}>‹ আগের দিন</button><button class="btn g" data-go="day-${d+1}" ${d>=NDAYS?'disabled':''}>পরের দিন ›</button></div></div>
   ${[0,1,2,3,4,5].map(k=>taskRow(d,k,k+1)).join('')}</div>`}
 
 function vProgress(){
   const n=doneDays();
   return`<div class="view"><h1 class="pt st">আমার অগ্রগতি</h1><p class="sub st" style="--i:1">তুমি কতদূর এসেছ</p>
-  <div class="hero st" style="--i:2"><div class="hr" style="margin:0"><div class="ring" style="width:110px;height:110px">${ring(36,n/40,9)}<b>${bn(Math.round(n/40*100))}%</b></div><div style="position:relative;z-index:1"><h2>${bn(n)}/৪০ দিন</h2><p>${n===40?'সব শেষ! 🎉':'চালিয়ে যাও, তুমি পারবে!'}</p></div></div></div>
-  <div class="sg st" style="--i:3"><div class="card sc"><b>${bn(n)}</b><span>দিন শেষ</span></div><div class="card sc"><b>${bn(totalTasks())}/২৪০</b><span>কাজ শেষ</span></div><div class="card sc"><b>${bn(streak())}</b><span>🔥 টানা দিন</span></div><div class="card sc"><b>${bn(40-n)}</b><span>দিন বাকি</span></div></div>
-  <div class="h3 st" style="--i:4"><b>৪০ দিনের মানচিত্র</b></div>
-  <div class="card st" style="--i:5;padding:14px"><div class="heat">${Array.from({length:40},(_,i)=>{const d=i+1,c=cnt(d);return`<button class="hc ${c===6?'f':c?'p':''}" data-go="day-${d}" aria-label="দিন ${d}">${bn(d)}</button>`}).join('')}</div>
+  <div class="hero st" style="--i:2"><div class="hr" style="margin:0"><div class="ring" style="width:110px;height:110px">${ring(36,n/NDAYS,9)}<b>${bn(Math.round(n/NDAYS*100))}%</b></div><div style="position:relative;z-index:1"><h2>${bn(n)}/${bn(NDAYS)} দিন</h2><p>${n===NDAYS?'সব শেষ! 🎉':'চালিয়ে যাও, তুমি পারবে!'}</p></div></div></div>
+  <div class="sg st" style="--i:3"><div class="card sc"><b>${bn(n)}</b><span>দিন শেষ</span></div><div class="card sc"><b>${bn(totalTasks())}/${bn(NDAYS*6)}</b><span>কাজ শেষ</span></div><div class="card sc"><b>${bn(streak())}</b><span>🔥 টানা দিন</span></div><div class="card sc"><b>${bn(NDAYS-n)}</b><span>দিন বাকি</span></div></div>
+  <div class="h3 st" style="--i:4"><b>${bn(NDAYS)} দিনের মানচিত্র</b></div>
+  <div class="card st" style="--i:5;padding:14px"><div class="heat">${Array.from({length:NDAYS},(_,i)=>{const d=i+1,c=cnt(d);return`<button class="hc ${c===6?'f':c?'p':''}" data-go="day-${d}" aria-label="দিন ${d}">${bn(d)}</button>`}).join('')}</div>
   <div style="display:flex;gap:14px;font-size:.75rem;color:var(--mute);margin-top:10px"><span>⬜ শুরু হয়নি</span><span style="color:var(--acc)">🟦 আংশিক</span><span style="color:var(--ok)">🟩 সম্পন্ন</span></div></div>
   <div class="h3 st" style="--i:6"><b>সেটিংস</b></div>
   <div class="card st" style="--i:7;padding:14px;display:flex;flex-direction:column;gap:10px"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button><button class="btn d blk" data-act="reset">🗑️ সব অগ্রগতি রিসেট করো</button><small style="color:var(--mute);text-align:center">অগ্রগতি শুধু এই ডিভাইসে সেভ থাকে।</small></div>
@@ -519,7 +435,7 @@ function lastActive(){const v=Object.values(state.at||{});if(!v.length)return '�
 const openAcc=new Set([0]);
 function vCurriculum(){
   const A=CURR.about;
-  let h=`<div class="view"><h1 class="pt st">কোর্স কারিকুলাম</h1><p class="sub st" style="--i:1">৪০ দিনের পুরো পরিকল্পনা, লক্ষ্য ও মূল্যায়ন</p>
+  let h=`<div class="view"><h1 class="pt st">কোর্স কারিকুলাম</h1><p class="sub st" style="--i:1">${bn(NDAYS)} দিনের পুরো পরিকল্পনা, লক্ষ্য ও মূল্যায়ন</p>
   <div class="card info st" style="--i:2"><b>🎓 কোর্স পরিচিতি</b><p style="margin-top:6px">${A.who}</p><p>⏱ ${A.time}</p><b style="display:block;margin-top:8px">প্রতিদিনের ৩ ধাপ</b><div class="steps">${A.method.map(m=>`<div><b>${m[0]}</b>${m[1]}</div>`).join('')}</div></div>
   <div class="h3 st" style="--i:3"><b>ফেজ অনুযায়ী পরিকল্পনা</b></div>`;
   PHASES.forEach((p,pi)=>{const[a,b]=phaseRange(pi),c=phaseDone(pi),t=b-a+1,P=CURR.phases[pi],ck=P.check.filter((_,j)=>state.c[pi+'-'+j]).length;
@@ -566,10 +482,13 @@ $('bd').onclick=closeLayer;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('layer').classList.contains('on'))closeLayer();else openDrawer(false)}});
 
 function sheetHTML(d,k){
-  const t=tasksOf(d)[k],ck=!!state.t[d+'-'+k],prev=k>0||d>1,next=k<5||d<40;
+  const t=tasksOf(d)[k],ck=!!state.t[d+'-'+k],prev=k>0||d>1,next=k<5||d<NDAYS;
   return`<div class="sheet" id="sheet"><div class="grab"></div>
   <div class="sh" id="shh"><div class="ic">${t.ic}</div><div class="tt"><small>দিন ${bn(d)} · কাজ ${bn(k+1)}/৬ · ⏱ ${bn(t.m)} মিনিট</small><b>${t.t}</b></div><button class="x" data-act="close" aria-label="বন্ধ করো" data-autofocus>✕</button></div>
   <div class="sb"><div class="goal">🎯 <b>আজকের লক্ষ্য:</b> ${tasksOf(d).goal}</div><p>${t.d}</p>
+  ${t.pat?`<div class="tipbox" style="margin:10px 0">📐 <b>ছাঁচ / নিয়ম:</b> ${t.pat}</div>`:''}
+  ${t.vocab&&t.vocab.length&&(t.m===30||t.pw)?`<div class="rt">📚 ${t.m===30?'আজকের ১০টি শব্দ':'আজকের শব্দের উচ্চারণ'}</div>${t.vocab.map(w=>`<div class="pwc"><div class="w"><b>${w[0]} <span style="display:inline;color:var(--acc)">— ${w[1]}</span></b><span>🔤 ${w[2]}</span></div><button data-say="${esc(w[0])}" data-rate="0.8" aria-label="শোনো">🔊</button></div>`).join('')}`:''}
+  ${t.dlg?`<div class="rt" style="margin-top:14px">${t.roleplay?'🎭 Role-play (দুই ভূমিকায় বলো)':'🎧 কথোপকথন (শোনো ও নকল করো)'}</div>${t.dlg.map((e,i)=>`<div class="exc"><div class="en"><b>${i%2?'B':'A'}:</b> ${e[0]}</div><div class="bnm">${e[1]}</div><div class="spb"><button data-say="${esc(e[0])}" data-rate="0.95">🔊 শোনো</button><button data-say="${esc(e[0])}" data-rate="0.6">🐢 ধীরে</button></div></div>`).join('')}`:''}
   ${t.exr?`<div class="rt">✍️ উদাহরণ ও উচ্চারণ</div>${t.exr.map(e=>`<div class="exc"><div class="en">${e[0]}</div><div class="bnm">${e[1]}</div><div class="pr"><b>🔤 উচ্চারণ:</b> ${e[2]}</div><div class="spb"><button data-say="${esc(e[0])}" data-rate="0.95">🔊 শোনো</button><button data-say="${esc(e[0])}" data-rate="0.6">🐢 ধীরে</button></div></div>`).join('')}`:''}
   ${t.pw?`<div class="rt" style="margin-top:14px">🎯 উচ্চারণ ফোকাস (কঠিন শব্দ)</div>${t.pw.map(w=>`<div class="pwc"><div class="w"><b>${w[0]} <span style="display:inline;color:var(--acc)">— ${w[1]}</span></b><span>${w[2]}</span></div><button data-say="${esc(w[0])}" data-rate="0.7" aria-label="শোনো">🔊</button></div>`).join('')}`:''}
   ${t.tip?`<div class="tipbox">💡 <b>টিপ:</b> ${t.tip}</div>`:''}
@@ -578,7 +497,7 @@ function sheetHTML(d,k){
 function openTask(d,k){cur={d,k};
   if($('layer').classList.contains('on')){$('lc').innerHTML=sheetHTML(d,k);attachDrag();return}
   layer(sheetHTML(d,k));setTimeout(attachDrag,50)}
-function stepTask(s){let{d,k}=cur;k+=s;if(k>5){k=0;d++}if(k<0){k=5;d--}if(d<1||d>40)return;
+function stepTask(s){let{d,k}=cur;k+=s;if(k>5){k=0;d++}if(k<0){k=5;d--}if(d<1||d>NDAYS)return;
   const sb=$('sheet');openTask(d,k);if(sb)$('sheet').style.transition='none',requestAnimationFrame(()=>$('sheet').style.transition='')}
 
 function attachDrag(){
@@ -601,8 +520,8 @@ function toggle(d,k,fromSheet){
   const tk=document.querySelector(`[data-toggle="${key}"] .tick`);if(tk&&state.t[key])tk.classList.add('pop');
   if(fromSheet&&cur){const sh=$('sheet');if(sh){const b=sh.querySelector('[data-toggle]');const ck=!!state.t[key];b.className='btn '+(ck?'done':'p');b.textContent=ck?'✓ সম্পন্ন (বাতিল করো)':'✓ সম্পন্ন করো'}}
   if(isDone(d)&&!was){
-    setTimeout(()=>{confetti();const all=doneDays()===40;
-      layer(`<div class="modal"><div class="em">${all?'🏆':'🎉'}</div><h3>${all?'৪০ দিন সম্পন্ন!':'দিন '+bn(d)+' সম্পন্ন!'}</h3><p>${all?'অসাধারণ! তুমি পুরো রোডম্যাপ শেষ করেছ।':'চমৎকার! '+bn(doneDays())+'/৪০ দিন শেষ। এভাবেই চালিয়ে যাও।'}</p><div class="btns">${!all&&d<40?`<button class="btn p" data-go="day-${d+1}" data-act="close" data-autofocus>পরের দিনে যাও ▶</button>`:''}<button class="btn g" data-act="close">এখন নয়</button></div></div>`,true)},fromSheet?250:150);
+    setTimeout(()=>{confetti();const all=doneDays()===NDAYS;
+      layer(`<div class="modal"><div class="em">${all?'🏆':'🎉'}</div><h3>${all?bn(NDAYS)+' দিন সম্পন্ন!':'দিন '+bn(d)+' সম্পন্ন!'}</h3><p>${all?'অসাধারণ! তুমি পুরো রোডম্যাপ শেষ করেছ।':'চমৎকার! '+bn(doneDays())+'/'+bn(NDAYS)+' দিন শেষ। এভাবেই চালিয়ে যাও।'}</p><div class="btns">${!all&&d<NDAYS?`<button class="btn p" data-go="day-${d+1}" data-act="close" data-autofocus>পরের দিনে যাও ▶</button>`:''}<button class="btn g" data-act="close">এখন নয়</button></div></div>`,true)},fromSheet?250:150);
     if(fromSheet){$('layer').classList.remove('on')}
   }
 }
@@ -644,12 +563,12 @@ document.addEventListener('click',e=>{
   const g=t.closest('[data-go]');if(g){go(g.dataset.go);return}
 });
 document.addEventListener('change',e=>{const c=e.target.closest&&e.target.closest('input[data-chk]');if(c){state.c[c.dataset.chk]=c.checked;save();const pi=+c.dataset.chk.split('-')[0];const w=c.closest('.acc'),P=CURR.phases[pi],n=P.check.filter((_,j)=>state.c[pi+'-'+j]).length,sm=w.querySelector('.ah small');if(sm)sm.textContent=sm.textContent.replace(/চেকপয়েন্ট .*$/,'চেকপয়েন্ট '+bn(n)+'/'+bn(P.check.length));if(c.checked)toast('✅ চেকপয়েন্ট সম্পন্ন!')}});
-function backup(){try{const blob=new Blob([JSON.stringify({app:'spoken-english-40',exported:new Date().toISOString(),data:state},null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='spoken-english-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast('ব্যাকআপ ফাইল নামানো হয়েছে')}catch(e){toast('ব্যাকআপ নামানো যায়নি')}}
+function backup(){try{const blob=new Blob([JSON.stringify({app:'spoken-english-60',exported:new Date().toISOString(),data:state},null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='spoken-english-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast('ব্যাকআপ ফাইল নামানো হয়েছে')}catch(e){toast('ব্যাকআপ নামানো যায়নি')}}
 $('rfile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const j=JSON.parse(r.result),d=j.data||j;if(!d||typeof d.t!=='object')throw 0;state=normalize(d);save();paint(false);toast('✅ অগ্রগতি ফিরে এসেছে');if(G('gate')){state.profile?showUnlock():showOnboarding()}}catch(x){toast('ফাইলটি সঠিক নয়')}e.target.value=''};r.readAsText(f)});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-task]')){e.preventDefault();const[d,k]=e.target.dataset.task.split('-').map(Number);openTask(d,k)}});
 
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
-loadState().then(()=>boot());
+loadState().then(()=>{boot();if(state.migrated){delete state.migrated;save();setTimeout(()=>toast('নতুন ৬০ দিনের কোর্স শুরু! পুরোনো টিক আলাদা রাখা হয়েছে।'),1800)}});
 </script>
 </body>
 </html>
