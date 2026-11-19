@@ -13,6 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>৪০ দিনের Spoken English Roadmap</title>
+<link rel="stylesheet" href="ext.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap">
 <style>
 :root{--bg:#f3f5fb;--card:#fff;--ink:#1b2236;--mute:#636d86;--line:#e2e6f0;--acc:#2f6fed;--acc2:#6a4df0;--accbg:#eaf1ff;--ok:#1f9d63;--okbg:#e7f7ee;--shadow:0 6px 24px rgba(30,40,90,.08);--sat:env(safe-area-inset-top);--sab:env(safe-area-inset-bottom)}
@@ -279,6 +280,7 @@ details.faq p{margin:6px 0 0;color:var(--mute);font-size:.9rem}
       <button class="menu" id="menuBtn" aria-label="মেনু খুলুন">☰</button>
       <div class="t" id="ttl">Spoken English</div>
       <div class="pill" id="pill">০%</div>
+      <a href="#profile" class="tbav" id="tbav" aria-label="প্রোফাইল"></a>
     </header>
     <main id="view"></main>
   </div>
@@ -288,6 +290,7 @@ details.faq p{margin:6px 0 0;color:var(--mute);font-size:.9rem}
 <input type="file" id="rfile" accept=".json,application/json" hidden>
 <div class="toast" id="toast" role="status"></div>
 
+<script src="ext.js"></script>
 <script src="content.js"></script>
 <script>
 /* [বাংলা শিরোনাম, ইংরেজি কীওয়ার্ড, ৩টি উদাহরণ বাক্য, বলার বিষয় (বাংলায়)] */
@@ -377,15 +380,15 @@ function build(kw,ex,sp){return[
 const DAYS=[];PHASES.forEach((p,pi)=>p.days.forEach(x=>DAYS.push({pi,bn:x[0],kw:x[1],ex:x[2],sp:x[3]})));
 
 const KEY="se40-v1";
-const fresh=()=>({v:2,t:{},c:{},at:{},seen:{},updated:0});
+const fresh=()=>({v:3,t:{},c:{},at:{},seen:{},read:{},updated:0});
 let state=fresh();
 const store={idb:false,persisted:null};
 /* IndexedDB — প্রধান ডেটাবেস; localStorage — ব্যাকআপ কপি */
 let dbp=null;
-function getDB(){return dbp||(dbp=new Promise(res=>{try{const r=indexedDB.open('se40-db',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>res(null);r.onblocked=()=>res(null)}catch(e){res(null)}}))}
+function getDB(){return dbp||(dbp=new Promise(res=>{try{const r=indexedDB.open('se40-db',2);r.onupgradeneeded=()=>{const d=r.result;['kv','meta','blobs'].forEach(n=>{if(!d.objectStoreNames.contains(n))d.createObjectStore(n)})};r.onsuccess=()=>res(r.result);r.onerror=()=>res(null);r.onblocked=()=>res(null)}catch(e){res(null)}}))}
 async function idbGet(k){const db=await getDB();if(!db)return undefined;return new Promise(res=>{try{const q=db.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>res(q.result);q.onerror=()=>res(undefined)}catch(e){res(undefined)}})}
 async function idbSet(k,v){const db=await getDB();if(!db)return false;return new Promise(res=>{try{const tx=db.transaction('kv','readwrite');tx.objectStore('kv').put(v,k);tx.oncomplete=()=>res(true);tx.onerror=()=>res(false);tx.onabort=()=>res(false)}catch(e){res(false)}})}
-function normalize(o){const f=fresh();if(!o||typeof o!=='object')return f;return Object.assign(f,o,{t:o.t||{},c:o.c||{},at:o.at||{},seen:o.seen||{}})}
+function normalize(o){const f=fresh();if(!o||typeof o!=='object')return f;return Object.assign(f,o,{t:o.t||{},c:o.c||{},at:o.at||{},seen:o.seen||{},read:o.read||{}})}
 async function loadState(){
   let a=null,b=null;
   try{a=await idbGet('state')}catch(e){}
@@ -426,7 +429,8 @@ function speak(text,rate,btn){
 let route={n:'home'},pendingScroll=null;
 function parse(){const h=location.hash.slice(1);let m;
   if(m=h.match(/^day-(\d+)$/)){const d=+m[1];if(d>=1&&d<=40)return{n:'day',d}}
-  if(h==='roadmap'||h==='progress'||h==='curriculum')return{n:h};
+  if(h==='roadmap'||h==='progress'||h==='curriculum'||h==='library'||h==='profile')return{n:h};
+  if(m=h.match(/^read-([a-z0-9]+)$/))return{n:'read',id:m[1]};
   return{n:'home'}}
 function go(h){if(location.hash.slice(1)===h){onRoute();}else location.hash=h}
 window.addEventListener('hashchange',onRoute);
@@ -437,19 +441,21 @@ function renderSide(){
   const on=x=>route.n===x?'on':'';
   $('side').innerHTML=`
   <div class="brand"><img src="icon-192.png" alt=""><div><b>Spoken English</b><small>৪০ দিনের রোডম্যাপ</small></div></div>
-  <div class="sprog"><div class="r"><span>অগ্রগতি</span><b>${bn(pc)}%</b></div><div class="bar"><i style="width:${pc}%"></i></div><div class="r" style="margin-top:6px"><span>${bn(n)}/৪০ দিন</span><span>🔥 ${bn(streak())} টানা</span></div></div>
+  <a href="#profile" class="pmini">${avatar(40)}<span><b>${state.profile?esc(state.profile.name):''}</b><small>প্রোফাইল ও অগ্রগতি</small></span></a><div class="sprog"><div class="r"><span>অগ্রগতি</span><b>${bn(pc)}%</b></div><div class="bar"><i style="width:${pc}%"></i></div><div class="r" style="margin-top:6px"><span>${bn(n)}/৪০ দিন</span><span>🔥 ${bn(streak())} টানা</span></div></div>
   <nav class="nav">
     <a href="#home" class="${on('home')}"><span class="i">🏠</span>হোম</a>
     <a href="#day-${nd}" class="${route.n==='day'&&route.d===nd?'on':''}"><span class="i">▶️</span>আজকের পাঠ (দিন ${bn(nd)})</a>
+    <a href="#library" class="${on('library')}"><span class="i">📚</span>আমার লাইব্রেরি</a>
     <a href="#curriculum" class="${on('curriculum')}"><span class="i">📘</span>কারিকুলাম</a>
     <a href="#roadmap" class="${on('roadmap')}"><span class="i">🗺️</span>পুরো রোডম্যাপ</a>
+    <a href="#profile" class="${on('profile')}"><span class="i">👤</span>প্রোফাইল</a>
     <a href="#progress" class="${on('progress')}"><span class="i">📊</span>আমার অগ্রগতি</a>
   </nav>
   <div class="sec">ফেজ</div>
   <div class="pl">${PHASES.map((p,i)=>{const[a,b]=phaseRange(i),c=phaseDone(i);return`<a href="#roadmap" data-ph="${i}" class="${c===b-a+1?'full':''}"><span>${bn(i+1)}. ${p.n}</span><span class="c">${bn(c)}/${bn(b-a+1)}</span></a>`}).join('')}</div>
   <div class="sfoot"><button class="btn g blk" data-act="install">📲 ফোনে ইনস্টল করো</button></div>`;
-  $('pill').textContent=bn(pc)+'%';
-  $('bnav').innerHTML=[['home','🏠','হোম','#home'],['curriculum','📘','কারিকুলাম','#curriculum'],['today','▶️','আজ','#day-'+nd],['roadmap','🗺️','রোডম্যাপ','#roadmap'],['progress','📊','অগ্রগতি','#progress']]
+  $('pill').textContent=bn(pc)+'%';$('tbav').innerHTML=avatar(34);
+  $('bnav').innerHTML=[['home','🏠','হোম','#home'],['today','▶️','আজ','#day-'+nd],['library','📚','লাইব্রেরি','#library'],['roadmap','🗺️','রোডম্যাপ','#roadmap'],['profile','👤','প্রোফাইল','#profile']]
    .map(x=>`<a href="${x[3]}" class="${(x[0]==='today'?route.n==='day':route.n===x[0])?'on':''}"><span class="i">${x[1]}</span>${x[2]}</a>`).join('');
 }
 function openDrawer(o){$('side').classList.toggle('open',o);$('scrim').classList.toggle('on',o);document.body.classList.toggle('lock',o)}
@@ -464,7 +470,7 @@ function vHome(){
   const n=doneDays(),nd=nextDay(),all=n===40,D=DAYS[nd-1],c=cnt(nd);
   const showInstall=!isStandalone()&&!state.seen.inst;
   return`<div class="view">
-  <div class="hero st">
+  <div class="hero st">${state.profile?`<div class="greet">${avatar(40)}<span>হ্যালো, ${esc(state.profile.name.split(' ')[0])} 👋</span></div>`:''}
     <h2>${all?'🎉 অভিনন্দন! ৪০ দিন শেষ':'আজকের লক্ষ্য: দিন '+bn(nd)}</h2>
     <p>${all?'এখন পরবর্তী ৩০ দিনের লক্ষ্য ঠিক করো।':D.bn}</p>
     <div class="hr"><div class="ring">${ring(36,n/40,9)}<b>${bn(Math.round(n/40*100))}%</b></div>
@@ -527,15 +533,17 @@ function vCurriculum(){
   <div class="h3 st" style="--i:13"><b>সাধারণ প্রশ্ন</b></div><div class="card info st" style="--i:14">${A.faq.map(f=>`<details class="faq"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}</div></div>`;
   return h}
 
-function titleFor(){return route.n==='day'?'দিন '+bn(route.d):route.n==='roadmap'?'রোডম্যাপ':route.n==='progress'?'অগ্রগতি':route.n==='curriculum'?'কারিকুলাম':'Spoken English'}
+function titleFor(){return route.n==='day'?'দিন '+bn(route.d):route.n==='roadmap'?'রোডম্যাপ':route.n==='progress'?'অগ্রগতি':route.n==='curriculum'?'কারিকুলাম':route.n==='library'?'লাইব্রেরি':route.n==='profile'?'প্রোফাইল':'Spoken English'}
 function paint(keepScroll){
   const y=window.scrollY;
-  $('view').innerHTML=route.n==='day'?vDay(route.d):route.n==='roadmap'?vRoadmap():route.n==='progress'?vProgress():route.n==='curriculum'?vCurriculum():vHome();
+  $('view').innerHTML=route.n==='day'?vDay(route.d):route.n==='roadmap'?vRoadmap():route.n==='progress'?vProgress():route.n==='curriculum'?vCurriculum():route.n==='library'?vLibrary():route.n==='profile'?vProfile():vHome();
   $('ttl').textContent=titleFor();renderSide();
   if(keepScroll){window.scrollTo(0,y);document.querySelectorAll('.st,.view').forEach(e=>e.style.animation='none')}
 }
 function onRoute(){
-  route=parse();openDrawer(false);paint(false);
+  route=parse();openDrawer(false);
+  if(route.n==='read'){const r=route;route={n:'library'};if(!$('view').innerHTML)paint(false);route=r;openReader(r.id);return}
+  closeReaderIfAny();paint(false);if(route.n==='library')storageInfo();
   if(pendingScroll!==null){const el=$('ph'+pendingScroll);pendingScroll=null;if(el)setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),60)}else window.scrollTo(0,0);
 }
 
@@ -616,6 +624,7 @@ function install(){
 function resetAsk(){layer(`<div class="modal"><div class="em">⚠️</div><h3>রিসেট করবে?</h3><p>সব অগ্রগতি মুছে যাবে। এটি ফেরানো যাবে না।</p><div class="btns"><button class="btn d" data-act="reset-yes">হ্যাঁ, রিসেট করো</button><button class="btn g" data-act="close" data-autofocus>না, থাক</button></div></div>`,true)}
 
 document.addEventListener('click',e=>{
+  if(typeof extClick==='function'&&extClick(e))return;
   const t=e.target;
   const tg=t.closest('[data-toggle]');
   if(tg){e.stopPropagation();const[d,k]=tg.dataset.toggle.split('-').map(Number);toggle(d,k,!!tg.dataset.inshet);return}
@@ -624,7 +633,7 @@ document.addEventListener('click',e=>{
     if(a==='close'){const g=ac.dataset.go;closeLayer();if(g)go(g);return}
     if(a==='install'){openDrawer(false);install();return}
     if(a==='reset'){resetAsk();return}
-    if(a==='reset-yes'){const sn=state.seen;state=fresh();state.seen=sn;save();closeLayer();toast('রিসেট হয়েছে');paint(false);return}
+    if(a==='reset-yes'){const sn=state.seen,pr=state.profile,sh=state.shelves;state=fresh();state.seen=sn;state.profile=pr;if(sh)state.shelves=sh;save();closeLayer();toast('রিসেট হয়েছে');paint(false);return}
     if(a==='backup'){backup();return}
     if(a==='restore'){$('rfile').click();return}}
   const sy=t.closest('[data-say]');if(sy){speak(sy.dataset.say,+sy.dataset.rate||1,sy);return}
@@ -636,11 +645,11 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('change',e=>{const c=e.target.closest&&e.target.closest('input[data-chk]');if(c){state.c[c.dataset.chk]=c.checked;save();const pi=+c.dataset.chk.split('-')[0];const w=c.closest('.acc'),P=CURR.phases[pi],n=P.check.filter((_,j)=>state.c[pi+'-'+j]).length,sm=w.querySelector('.ah small');if(sm)sm.textContent=sm.textContent.replace(/চেকপয়েন্ট .*$/,'চেকপয়েন্ট '+bn(n)+'/'+bn(P.check.length));if(c.checked)toast('✅ চেকপয়েন্ট সম্পন্ন!')}});
 function backup(){try{const blob=new Blob([JSON.stringify({app:'spoken-english-40',exported:new Date().toISOString(),data:state},null,1)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='spoken-english-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast('ব্যাকআপ ফাইল নামানো হয়েছে')}catch(e){toast('ব্যাকআপ নামানো যায়নি')}}
-$('rfile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const j=JSON.parse(r.result),d=j.data||j;if(!d||typeof d.t!=='object')throw 0;state=normalize(d);save();paint(false);toast('✅ অগ্রগতি ফিরে এসেছে')}catch(x){toast('ফাইলটি সঠিক নয়')}e.target.value=''};r.readAsText(f)});
+$('rfile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const j=JSON.parse(r.result),d=j.data||j;if(!d||typeof d.t!=='object')throw 0;state=normalize(d);save();paint(false);toast('✅ অগ্রগতি ফিরে এসেছে');if(G('gate')){state.profile?showUnlock():showOnboarding()}}catch(x){toast('ফাইলটি সঠিক নয়')}e.target.value=''};r.readAsText(f)});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-task]')){e.preventDefault();const[d,k]=e.target.dataset.task.split('-').map(Number);openTask(d,k)}});
 
 if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})})}
-loadState().then(()=>{onRoute()});
+loadState().then(()=>boot());
 </script>
 </body>
 </html>
